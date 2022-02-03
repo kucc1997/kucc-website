@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# KUCC WEBSITE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+KUCC Website is an open-source web application project for Kathmandu University Computer Club being built with [ReactJ])(https://reactjs.org/).
 
-## Available Scripts
+## Running locally in development mode
 
-In the project directory, you can run:
+To get started, just clone the repository and run `npm install && npm run dev`:
 
-### `npm start`
+    git clone https://github.com/kucc1997/kucc-website.git
+    npm install
+    npm run dev
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Note: If you are running on Windows run install --noptional flag (i.e. `npm install --no-optional`) which will skip installing fsevents.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Building and deploying in production
 
-### `npm test`
+If you wanted to run this site in production, you should install modules then build the site with `npm run build` and run it with `npm start`:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    npm install
+    npm run build
+    npm start
 
-### `npm run build`
+You should run `npm run build` again any time you make changes to the site.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Note: If you are already running a webserver on port 80 (e.g. Macs usually have the Apache webserver running on port 80) you can still start the example in production mode by passing a different port as an Environment Variable when starting (e.g. `PORT=3000 npm start`).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to contribute?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Submit bugs and feature requests](https://github.com/kucc1997/kucc-website/issues)
+- We also welcome code contribution to this project. To do the code contributions please follow these steps.
+  - Choose an existing issue labelled as **help wanted**, **good first contribution**, **easy fix** or create your own issue.
+  - Fork this repository.
+  - Clone the forked repository to your machine.
+  - Create a new branch named after the issue you're working on.
+  - Commit your changes, push the changes to GitHub.
+  - Open a pull request [here](https://github.com/kucc1997/kucc-website/pulls)
 
-### `npm run eject`
+## License
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+KUCC Website is BSD 3-Clause licensed, as found in the [LICENSE](LICENSE) file.
