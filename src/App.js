@@ -1,14 +1,8 @@
 import React from "react";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import Layout from "./HOC/Layout";
+
 const App = () => {
-  return (
-    <>
-      <Header />
-      <div>KUCC WEBSITE</div>
-      <Footer />
-    </>
-  );
+  return <Layout />;
 };
 
 export default App;
