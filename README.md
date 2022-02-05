@@ -1,6 +1,17 @@
 # KUCC WEBSITE
 
 KUCC Website is an open-source web application project for Kathmandu University Computer Club being built with [ReactJS](https://reactjs.org/).
+## PHASE 1
+- Homepage
+- Our Team section
+- Code of Conduct section
+- Contact section
+- Events Section
+- Member Application Section
+
+## PHASE 2
+- Publications (Blogs, IT Express)
+
 
 ## Running locally in development mode
 
