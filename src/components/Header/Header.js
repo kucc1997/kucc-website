@@ -1,7 +1,7 @@
 import React from "react";
 
-const index = () => {
-  return <div>Header</div>;
+const Header = () => {
+  return <>KUCC</>;
 };
 
-export default index;
+export default Header;
