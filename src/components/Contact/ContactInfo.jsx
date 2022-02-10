@@ -20,7 +20,7 @@ import React from 'react'
 
 const ContactInfo = () => {
   return (
-    <Card sx={{ backgroundColor: '#402880', maxWidth: '500px', boxShadow: 3, padding: 2 }}>
+    <Card sx={{ backgroundColor: '#402880', maxWidth: '500px', boxShadow: 4, padding: 2 }}>
       <Box
         sx={{
           width: '100%',
@@ -87,7 +87,7 @@ const ContactInfo = () => {
         <IconButton>
           <Instagram sx={{ color: 'text.light' }} />
         </IconButton>
-        <IconButton>
+        <IconButton >
           <Twitter sx={{ color: 'text.light' }} />
         </IconButton>
         <IconButton>
