@@ -17,6 +17,10 @@ const theme = createTheme({
       secondary: COLORS.medium,
       light: COLORS.light,
     },
+    btn: {
+      main: '#402880',
+      contrastText: '#fff',
+    },
   },
 })
 
