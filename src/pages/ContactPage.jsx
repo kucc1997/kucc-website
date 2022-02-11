@@ -34,7 +34,7 @@ const ContactPage = () => {
             width="100%"
             height="450"
             style={{border: 0}}
-            allowfullscreen="true"
+            allowFullScreen
             loading="lazy"
           ></iframe>
         </Grid>
