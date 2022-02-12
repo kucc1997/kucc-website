@@ -9,8 +9,9 @@ import AdvBoardPage from './pages/teams/AdvBoard'
 import DocTeamPage from './pages/teams/DocTeam'
 import CommunityCoPage from './pages/teams/CommunityCo'
 import CodeOfConductPage from './pages/CodeOfConductPage'
-import "./App.css"
 import ContactPage from './pages/ContactPage'
+import RegisterPage from './pages/member/RegisterPage'
+import './App.css'
 
 const App = () => {
   return (
@@ -23,8 +24,9 @@ const App = () => {
             <Route path="executive-committee" element={<ExCommunityPage />} />
             <Route path="community-coordinators" element={<CommunityCoPage />} />
             <Route path="documentation-teams" element={<DocTeamPage />} />
-            <Route path='code-of-conduct' element={<CodeOfConductPage />} />
-            <Route path='contact' element={<ContactPage />} />
+            <Route path="code-of-conduct" element={<CodeOfConductPage />} />
+            <Route path="contact" element={<ContactPage />} />
+            <Route path="register" element={<RegisterPage />} />
           </Route>
         </Routes>
       </Router>
