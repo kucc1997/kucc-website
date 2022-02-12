@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   Card,
   CardActions,
@@ -16,9 +17,21 @@ import {
   Twitter,
   GitHub,
 } from '@mui/icons-material'
-import React from 'react'
+
+import { makeStyles } from '@mui/styles'
+
+const useStyles = makeStyles({
+  lightCol: {
+    color: 'white',
+  },
+  formText: {
+    color: 'white',
+    marginLeft: 20,
+  },
+})
 
 const ContactInfo = () => {
+  const classes = useStyles()
   return (
     <Card sx={{ backgroundColor: '#402880', maxWidth: '500px', boxShadow: 4, padding: 2 }}>
       <Box
@@ -50,8 +63,8 @@ const ContactInfo = () => {
             display: 'flex',
           }}
         >
-          <LocalPhone sx={{ color: 'text.light' }} />
-          <Typography variant="subtitle2" color="text.light" ml={4}>
+          <LocalPhone className={classes.lightCol} />
+          <Typography variant="subtitle2" className={classes.formText}>
             {' '}
             +980-0000000
           </Typography>
@@ -62,8 +75,8 @@ const ContactInfo = () => {
             display: 'flex',
           }}
         >
-          <Email sx={{ color: 'text.light' }} />
-          <Typography variant="subtitle2" color="text.light" ml={4}>
+          <Email className={classes.lightCol} />
+          <Typography variant="subtitle2" className={classes.formText}>
             kucc@ku.edu.np
           </Typography>
         </Box>
@@ -72,9 +85,8 @@ const ContactInfo = () => {
             display: 'flex',
           }}
         >
-          <LocationOn sx={{ color: 'text.light' }} />
-          <Typography variant="subtitle2" color="text.light" ml={4}>
-            {' '}
+          <LocationOn className={classes.lightCol} />
+          <Typography variant="subtitle2" className={classes.formText}>
             Dhulikhel-4, Kavrepalanchok
           </Typography>
         </Box>
@@ -82,23 +94,22 @@ const ContactInfo = () => {
 
       <CardActions sx={{ marginTop: 4 }}>
         <IconButton>
-          <FacebookOutlined sx={{ color: 'text.light' }} />
+          <FacebookOutlined className={classes.lightCol} />
         </IconButton>
         <IconButton>
-          <Instagram sx={{ color: 'text.light' }} />
-        </IconButton>
-        <IconButton >
-          <Twitter sx={{ color: 'text.light' }} />
+          <Instagram className={classes.lightCol} />
         </IconButton>
         <IconButton>
-          <GitHub sx={{ color: 'text.light' }} />
+          <Twitter className={classes.lightCol} />
+        </IconButton>
+        <IconButton>
+          <GitHub className={classes.lightCol} />
         </IconButton>
         <Container
           sx={{
             position: 'relative',
           }}
         >
-     
           <Box
             sx={{
               width: 300,
@@ -107,7 +118,7 @@ const ContactInfo = () => {
               borderRadius: '50%',
               position: 'absolute',
               top: -70,
-              left: 50
+              left: 50,
             }}
           ></Box>
         </Container>

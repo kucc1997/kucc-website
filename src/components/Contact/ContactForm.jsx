@@ -17,25 +17,19 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('Form submitted!')
-    {
-      fullName == '' && setNameError(true)
-    }
+      fullName === '' && setNameError(true)
 
-    {
-      email == '' && setEmailError(true)
-    }
-    {
-      phone == '' && setPhoneError(true)
-    }
-    {
-      message == '' && setMessageError(true)
-    }
+      email === '' && setEmailError(true)
+
+      phone === '' && setPhoneError(true)
+
+      message === '' && setMessageError(true)
   }
   return (
-    <Container sx={{py: 6}}>
+    <Container sx={{ py: 6 }}>
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
         <Grid container rowSpacing={6} columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-          <Grid item lg={12} sm={12} md={12} xs={12}>
+          <Grid item xs={12}>
             <TextField
               onChange={(e) => setFullName(e.target.value)}
               label="Full Name"
@@ -45,7 +39,7 @@ const ContactForm = () => {
               error={nameError}
             />
           </Grid>
-          <Grid item lg={6} md={6} sm={6} xs={12}>
+          <Grid item sm={6} xs={12}>
             <TextField
               onChange={(e) => setEmail(e.target.value)}
               label="Email"
@@ -54,7 +48,7 @@ const ContactForm = () => {
               error={emailError}
             />
           </Grid>
-          <Grid item lg={6} md={6} sm={6} xs={12}>
+          <Grid item sm={6} xs={12}>
             <TextField
               onChange={(e) => setPhone(e.target.value)}
               label="Phone"
@@ -63,7 +57,7 @@ const ContactForm = () => {
               error={phoneError}
             />
           </Grid>
-          <Grid item llg={12} sm={12} md={12} xs={12}>
+          <Grid item xs={12}>
             <TextField
               onChange={(e) => setMessage(e.target.value)}
               label="Message"
