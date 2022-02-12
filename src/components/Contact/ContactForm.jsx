@@ -32,7 +32,7 @@ const ContactForm = () => {
     }
   }
   return (
-    <Container sx={{py: 6}}>
+    <Container sx={{ py: 6 }}>
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
         <Grid container rowSpacing={6} columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
           <Grid item lg={12} sm={12} md={12} xs={12}>

@@ -1,279 +1,280 @@
-import React, { useState } from 'react'
-import { Button, Container, Grid, TextField, Stack, Box, MenuItem } from '@mui/material'
+import * as React from 'react'
+import { Button, TextField, Stack, Box, MenuItem, Typography } from '@mui/material'
 import { Send } from '@mui/icons-material'
 
-const currencies = [
+const years = [
   {
-    value: 'USD',
-    label: '$',
+    value: 'first',
+    label: 'First',
   },
   {
-    value: 'EUR',
-    label: '€',
+    value: 'second',
+    label: 'Second',
   },
   {
-    value: 'BTC',
-    label: '฿',
+    value: 'third',
+    label: 'Third',
   },
   {
-    value: 'JPY',
-    label: '¥',
+    value: 'fourth',
+    label: 'Fourth',
   },
 ]
 
+const semesters = [
+  {
+    value: 'firstSem',
+    label: 'First',
+  },
+  {
+    value: 'secondSem',
+    label: 'Second',
+  },
+]
+
+const programs = [
+  {
+    value: 'CE',
+    label: 'Computer Engineering',
+  },
+  {
+    value: 'CS',
+    label: 'Computer Science',
+  },
+  {
+    value: 'AI',
+    label: 'BTech in AI',
+  },
+]
+
+const forWhichKey = {
+  ACADEMIC: 'academic',
+  CONTACT: 'contact',
+}
+
+const fieldKeys = {
+  YEAR: 'year',
+  SEMESTER: 'semester',
+  PROGRAM: 'program',
+  FIRST_NAME: 'firstName',
+  LAST_NAME: 'lastName',
+  EMAIL: 'email',
+  PASSWORD: 'password',
+  CONFIRM_PASSWORD: 'confirmPassword',
+  CONTACT_NUMBER: 'contactNumber',
+}
+
 const RegisterForm = () => {
-  const [currency, setCurrency] = React.useState('EUR')
+  const [academicDetails, setAcademicDetails] = React.useState({
+    year: 'First',
+    semester: 'Second',
+    program: 'Computer Engineering',
+  })
 
-  const handleChange = (event) => {
-    setCurrency(event.target.value)
+  const [contactDetails, setContactDetails] = React.useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    contactNumber: '',
+  })
+
+  const [voucherDetail, setVoucherDetail] = React.useState('')
+
+  const handleChange = (event, forWhich, key) => {
+    if (forWhich === forWhichKey.ACADEMIC) {
+      setAcademicDetails({ ...academicDetails, [key]: event.target.value })
+    }
+
+    if (forWhich === forWhichKey.CONTACT) {
+      setContactDetails({ ...contactDetails, [key]: event.target.value })
+    }
   }
-  const [fullName, setFullName] = useState('')
-  const [email, setEmail] = useState('')
-  const [phone, setPhone] = useState('')
-  const [message, setMessage] = useState('')
 
-  const [nameError, setNameError] = useState(false)
-  const [emailError, setEmailError] = useState(false)
-  const [phoneError, setPhoneError] = useState(false)
-  const [messageError, setMessageError] = useState(false)
+  // const [nameError, setNameError] = useState(false)
+  // const [emailError, setEmailError] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('Form submitted!')
-    {
-      fullName == '' && setNameError(true)
-    }
-
-    {
-      email == '' && setEmailError(true)
-    }
-    {
-      phone == '' && setPhoneError(true)
-    }
-    {
-      message == '' && setMessageError(true)
-    }
+    console.log({ ...academicDetails, ...contactDetails, voucher: voucherDetail })
   }
   return (
-    <Container sx={{ py: 6 }}>
-      <Box
-        component="form"
-        noValidate
-        sx={{
-          mx: 'auto',
-          mt: { xs: 3, md: 0 },
-          mb: 3,
-          p: 3,
-          backgroundColor: 'background.paper',
-          boxShadow: 3,
-          '& .MuiFormHelperText-root': { color: 'rgba(0, 0, 0, 0.55)' },
-          '& .MuiFormControl-root': {
-            my: 1.5,
-          },
-        }}
-        onSubmit={handleSubmit}
-      >
-        <Stack spacing={2} direction="row">
-          <TextField
-            onChange={(e) => setFullName(e.target.value)}
-            label="First Name"
-            fullWidth
-            required
-            error={nameError}
-            size="small"
-          />
-          <TextField
-            onChange={(e) => setFullName(e.target.value)}
-            label="Last Name"
-            fullWidth
-            required
-            error={nameError}
-            size="small"
-          />
-        </Stack>
-        <Stack spacing={2} direction="row">
-          <TextField
-            id="outlined-select-currency"
-            select
-            fullWidth
-            label="Year"
-            value={currency}
-            onChange={handleChange}
-            helperText="Please choose year"
-            size="small"
-          >
-            {currencies.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
-              </MenuItem>
-            ))}
-          </TextField>
-          <TextField
-            id="outlined-select-currency"
-            select
-            fullWidth
-            label="Semester"
-            value={currency}
-            onChange={handleChange}
-            helperText="Please choose semester"
-            size="small"
-          >
-            {currencies.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
-              </MenuItem>
-            ))}
-          </TextField>
-        </Stack>
-        <Stack spacing={2} direction="row">
-          <TextField
-            id="outlined-select-currency"
-            select
-            fullWidth
-            label="Program"
-            value={currency}
-            onChange={handleChange}
-            helperText="Please select enrolled program"
-            size="small"
-          >
-            {currencies.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
-              </MenuItem>
-            ))}
-          </TextField>
-          <TextField
-            onChange={(e) => setFullName(e.target.value)}
-            label="Contact Number"
-            fullWidth
-            required
-            type="number"
-            error={nameError}
-            size="small"
-          />
-        </Stack>
-        <Stack spacing={2} direction="row">
-          <TextField
-            onChange={(e) => setEmail(e.target.value)}
-            label="User Email"
-            fullWidth
-            required
-            error={emailError}
-            size="small"
-          />
-          <TextField
-            onChange={(e) => setEmail(e.target.value)}
-            label="Email"
-            fullWidth
-            required
-            error={emailError}
-            size="small"
-          />
-        </Stack>
-        <Stack spacing={2} direction="row">
-          <TextField
-            onChange={(e) => setEmail(e.target.value)}
-            label="Password"
-            type="password"
-            fullWidth
-            required
-            error={emailError}
-            size="small"
-          />
-          <TextField
-            onChange={(e) => setEmail(e.target.value)}
-            label="Confirm Password"
-            type="password"
-            fullWidth
-            required
-            error={emailError}
-            size="small"
-          />
-        </Stack>
-        <Stack>
-          <TextField
-            onChange={(e) => setFullName(e.target.value)}
-            label="Voucher Number"
-            fullWidth
-            required
-            error={nameError}
-            size="small"
-          />
-        </Stack>
+    <Box
+      component="form"
+      noValidate
+      sx={{
+        mx: 'auto',
+        mt: { xs: 3, md: 0 },
+        p: 4,
+        backgroundColor: 'background.paper',
+        boxShadow: 3,
+        '& .MuiFormHelperText-root': { color: 'rgba(0, 0, 0, 0.55)' },
+        '& .MuiFormControl-root': {
+          my: 3,
+        },
+      }}
+      onSubmit={handleSubmit}
+    >
+      <Typography variant="h1" fontSize="32px" fontWeight="bold" mb={2}>
+        KUCC Member Registration
+      </Typography>
+      <Stack spacing={3} direction="row">
+        <TextField
+          onChange={(e) => handleChange(e, forWhichKey.CONTACT, fieldKeys.FIRST_NAME)}
+          value={contactDetails.firstName}
+          label="First Name"
+          fullWidth
+          required
+          // error={nameError}
+          size="small"
+        />
+        <TextField
+          onChange={(e) => handleChange(e, forWhichKey.CONTACT, fieldKeys.LAST_NAME)}
+          label="Last Name"
+          value={contactDetails.lastName}
+          fullWidth
+          required
+          // error={nameError}
+          size="small"
+        />
+      </Stack>
+      <Stack spacing={3} direction="row">
+        <TextField
+          select
+          fullWidth
+          label="Year"
+          // value={academicDetails.year}
+          onChange={(e) => handleChange(e, forWhichKey.ACADEMIC, fieldKeys.YEAR)}
+          helperText="Please choose year"
+          size="small"
+        >
+          {years.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+        <TextField
+          select
+          fullWidth
+          label="Semester"
+          // value={academicDetails.semester}
+          onChange={(e) => handleChange(e, forWhichKey.ACADEMIC, fieldKeys.SEMESTER)}
+          helperText="Please choose semester"
+          size="small"
+        >
+          {semesters.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+      </Stack>
+      <Stack spacing={3} direction="row">
+        <TextField
+          select
+          fullWidth
+          label="Program"
+          // value={academicDetails.program}
+          onChange={(e) => handleChange(e, forWhichKey.ACADEMIC, fieldKeys.PROGRAM)}
+          helperText="Please select enrolled program"
+          size="small"
+        >
+          {programs.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+        <TextField
+          onChange={(e) => handleChange(e, forWhichKey.CONTACT, fieldKeys.CONTACT_NUMBER)}
+          label="Contact Number"
+          value={contactDetails.contactNumber}
+          inputProps={{
+            maxLength: 10,
+          }}
+          fullWidth
+          required
+          type="number"
+          size="small"
+        />
+      </Stack>
+      <Stack spacing={3} direction="row">
+        <TextField
+          onChange={(e) => handleChange(e, forWhichKey.CONTACT, fieldKeys.EMAIL)}
+          value={contactDetails.email}
+          label="User Email"
+          fullWidth
+          required
+          // error={emailError}
+          size="small"
+        />
+        <TextField
+          value={contactDetails.email}
+          label="Email"
+          fullWidth
+          required
+          // error={emailError}
+          size="small"
+        />
+      </Stack>
+      <Stack spacing={3} direction="row">
+        <TextField
+          onChange={(e) => handleChange(e, forWhichKey.CONTACT, fieldKeys.PASSWORD)}
+          value={contactDetails.password}
+          label="Password"
+          type="password"
+          fullWidth
+          required
+          // error={emailError}
+          size="small"
+        />
+        <TextField
+          onChange={(e) => handleChange(e, forWhichKey.CONTACT, fieldKeys.CONFIRM_PASSWORD)}
+          value={contactDetails.confirmPassword}
+          label="Confirm Password"
+          type="password"
+          fullWidth
+          required
+          // error={emailError}
+          size="small"
+        />
+      </Stack>
+      <Stack spacing={3} direction="row">
+        <TextField
+          onChange={(e) => setVoucherDetail(e.target.value)}
+          value={voucherDetail}
+          label="Voucher Number"
+          fullWidth
+          required
+          // error={nameError}
+          size="small"
+        />
 
-        {/* <Stack spacing={2}>
-          <TextField
-            variant="outlined"
-            label="Account"
-            size="small"
-            value={formData.account}
-            error={!isAccValid}
-            helperText="Only letters, underscore and numbers, max 13 characters"
-            required
-            onChange={(e) => handleChange(e, 'account')}
-            onFocus={handleOnFocus}
-          />
-          <TextField
-            variant="outlined"
-            label="Nickname"
-            value={formData.account}
-            size="small"
-            helperText="Same as account"
-            inputProps={{ readOnly: true }}
-            required
-          />
-          <TextField
-            id="select"
-            label="User Role"
-            value={formData.role}
-            select
-            size="small"
-            SelectProps={{ multiple: false }}
-            onChange={(e) => handleChange(e, 'role')}
-          >
-            {options?.map((item, index) => (
-              <MenuItem key={index} value={item}>
-                {item}
-              </MenuItem>
-            ))}
-            {!options && <MenuItem value="user-role">User Role</MenuItem>}
-          </TextField>
-          <TextField
-            type="password"
-            variant="outlined"
-            label="Login Password"
-            value={formData.password}
-            size="small"
-            error={!isPassValid}
-            helperText="Letters, underscore & numbers"
-            required
-            onChange={(e) => handleChange(e, 'password')}
-            onFocus={handleOnFocus}
-          />
-          <TextField
-            type="password"
-            variant="outlined"
-            label="Confirm Password"
-            value={formData.confirmPassword}
-            size="small"
-            error={diffConfirmPass}
-            helperText={
-              diffConfirmPass ? 'Confirm password do not match' : 'Please re-enter the password'
-            }
-            required
-            onChange={(e) => handleChange(e, 'confirmPassword')}
-          />
-          <LoadingButton
-            variant="contained"
-            fullWidth
-            type="submit"
-            loading={isLoading?.usedFor === 'newUserReg' && isLoading.status}
-          >
-            Save
-          </LoadingButton>
-        </Stack> */}
+        <TextField
+          type="file"
+          fullWidth
+          // required
+          // error={nameError}
+          size="small"
+          helperText="Upload pdf or image. Max allowed size - 1 Mb"
+        />
+      </Stack>
+
+      <Box
+        sx={{
+          marginTop: 4,
+          display: 'flex',
+          justifyContent: 'flex-end',
+        }}
+      >
+        <Button type="submit" variant="contained" color="btn" size="large" endIcon={<Send />}>
+          Submit
+        </Button>
       </Box>
-    </Container>
+    </Box>
   )
 }
 
