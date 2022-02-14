@@ -1,8 +1,9 @@
 import { hover } from "@testing-library/user-event/dist/hover";
-import React, { Component, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import "./header-style.css";
 // import searchIcon from "@mui/icons-material/Search";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -41,26 +42,26 @@ const NavBar = () => {
     <Container>
       <Wrapper>
         <LogoContainer>
-          <Logo src={"./kucc-logo.png"} />
+          <Logo src={"kucc-logo.png"} />
         </LogoContainer>
         <UList>
           <li class="list-item">
-            <a href="/">HOME</a>
+            <Link to="/">HOME</Link>
           </li>
           <li class="list-item">
             OUR TEAM
             <ul class="hidden-list">
               <li class="list-item">
-                <a href="/executive-committee-2020-21/">EXECUTIVE COMMITTEE</a>
+                <Link to="executive-committee">EXECUTIVE COMMITTEE</Link>
               </li>
               <li class="list-item">
-                <a href="/advisory-board/">ADVISORY BOARD</a>
+                <Link to="advisory-board">ADVISORY BOARD</Link>
               </li>
               <li class="list-item">
-                <a href="/community-coordinators/">COMMUNITY COORDINATORS</a>
+                <Link to="community-coordinators">COMMUNITY COORDINATORS</Link>
               </li>
               <li class="list-item">
-                <a href="/elementor-478/">DOCUMENTATION TEAM</a>
+                <Link to="documentation-teams">DOCUMENTATION TEAM</Link>
               </li>
             </ul>
           </li>
@@ -68,27 +69,27 @@ const NavBar = () => {
             PUBLICATIONS
             <ul class="hidden-list">
               <li class="list-item">
-                <a href="/it-express">IT EXPRESS</a>
+                <Link to="it-express">IT EXPRESS</Link>
               </li>
               <li class="list-item">
-                <a href="/blogs">STUDENT BLOGS</a>
+                <Link to="blogs">STUDENT BLOGS</Link>
               </li>
             </ul>
           </li>
           <li class="list-item">
-            <a href="/news-and-notices">NEWS AND NOTICES</a>
+            <Link to="news-and-notices">NEWS AND NOTICES</Link>
           </li>
           <li class="list-item">
-            <a href="/events">EVENTS</a>
+            <Link to="events">EVENTS</Link>
           </li>
           <li class="list-item">
-            <a href="/code-of-conduct">CODE OF CONDUCT</a>
+            <Link to="code-of-conduct">CODE OF CONDUCT</Link>
           </li>
           <li class="list-item">
-            <a href="/contact">CONTACT</a>
+            <Link to="contact">CONTACT</Link>
           </li>
           <li class="list-item">
-            <a href="/register">APPLY TO BE A MEMBER</a>
+            <Link to="register">APPLY TO BE A MEMBER</Link>
           </li>
         </UList>
       </Wrapper>
