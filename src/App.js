@@ -12,6 +12,10 @@ import CodeOfConductPage from './pages/CodeOfConductPage'
 import ContactPage from './pages/ContactPage'
 import RegisterPage from './pages/member/RegisterPage'
 import './App.css'
+import NewsNoticePage from './pages/newsAndNotices/NewsNoticePage'
+import EventsPage from './pages/events/EventsPage'
+import ItExpressPage from './pages/publications/ItExpressPage'
+import BlogsPage from './pages/publications/ItExpressPage'
 
 const App = () => {
   return (
@@ -27,6 +31,10 @@ const App = () => {
             <Route path="code-of-conduct" element={<CodeOfConductPage />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="register" element={<RegisterPage />} />
+            <Route path="events" element={<EventsPage />} />
+            <Route path="it-express" element={<ItExpressPage />} />
+            <Route path="blogs" element={<BlogsPage />} />
+            <Route path="news-and-notices" element={<NewsNoticePage />} />
           </Route>
         </Routes>
       </Router>
