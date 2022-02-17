@@ -8,8 +8,8 @@ const ContactPage = () => {
   return (
     <Container sx={{ py: 8 }}>
       <Box textAlign="center" mb={6}>
-        <Typography variant="h5">Contact Us</Typography>
-        <Typography variant="subtitle1" color="text.secondary">
+        <Typography variant="h5" sx={{fontWeight: 'bold'}}>Contact Us</Typography>
+        <Typography variant="subtitle1" color="text.secondary" >
           Any question or remarks? Write to us.
         </Typography>
       </Box>
