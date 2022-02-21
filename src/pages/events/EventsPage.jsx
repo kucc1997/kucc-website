@@ -1,6 +1,7 @@
 import { collection, onSnapshot } from '@firebase/firestore'
 import React, { useEffect } from 'react'
 import db from '../../config/firebase'
+import EventItem from '../../components/Event/EventItem'
 
 const EventsPage = () => {
   useEffect(() => {
@@ -10,7 +11,7 @@ const EventsPage = () => {
     })
   }, [])
 
-  return <div>EventsPage</div>
+  return <EventItem />
 }
 
 export default EventsPage
