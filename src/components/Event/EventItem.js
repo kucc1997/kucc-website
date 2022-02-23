@@ -11,10 +11,12 @@ import LocationOnIcon from '@mui/icons-material/LocationOn'
 
 export default function EventItem() {
   return (
-    <Card sx={{ display: 'flex', width: 500, height: 200 }}>
+    <Card
+      sx={{ display: 'flex', width: { md: 600, xs: 500 }, height: { md: 200, xs: 300 }, mb: 4 }}
+    >
       <CardMedia
         component="img"
-        sx={{ width: 180 }}
+        sx={{ width: 250 }}
         image="/assets/images/cards/event-placeholder.jpg"
         alt="Live from space album cover"
       />
@@ -48,9 +50,9 @@ export default function EventItem() {
           sx={{
             display: 'flex',
             alignItems: 'center',
-            ml: '120px',
+            ml: { md: '150px', xs: 3 },
             py: 2,
-            justifyContent: 'flex-end',
+            justifyContent: { md: 'flex-end' },
           }}
         >
           <Button type="submit" variant="contained" color="btn" endIcon={<ArrowForwardIosIcon />}>

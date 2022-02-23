@@ -39,9 +39,15 @@ const FilterBar = () => {
 
   return (
     <Card sx={{ bgcolor: 'grey.100', boxShadow: 0 }}>
-      <CardContent sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-        <Box>
-          <Stack direction="row">
+      <CardContent
+        sx={{
+          display: { md: 'flex' },
+          flexDirection: { md: 'row' },
+          justifyContent: 'space-between',
+        }}
+      >
+        <Box sx={{ mb: { xs: 2, md: 0 } }}>
+          <Stack direction={{ md: 'row', xs: 'column' }}>
             <TextField
               type="date"
               variant="outlined"
@@ -61,7 +67,7 @@ const FilterBar = () => {
               variant="contained"
               color="btn"
               onClick={() => searchByDate(startDate, endDate)}
-              sx={{ mx: 2 }}
+              sx={{ mx: { md: 2 }, my: { md: 0, xs: 2 } }}
             >
               Search
             </Button>

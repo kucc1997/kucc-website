@@ -1,7 +1,7 @@
 import { collection, onSnapshot } from '@firebase/firestore'
 import React, { useEffect } from 'react'
 import db from '../../config/firebase'
-import EventItem from '../../components/Event/EventItem'
+import EventList from '../../components/Event/EventList'
 import EventFilter from '../../components/EventFilter/EventFilter'
 import { Container, Box, Typography } from '@mui/material'
 
@@ -22,7 +22,7 @@ const EventsPage = () => {
         <EventFilter />
       </Box>
       <Box sx={{ my: 5, display: 'flex', justifyContent: 'center' }}>
-        <EventItem />
+        <EventList />
       </Box>
     </Container>
   )
