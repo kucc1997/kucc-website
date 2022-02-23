@@ -1,8 +1,12 @@
 import React from 'react'
-
+import { Helmet } from 'react-helmet'
 const NewsNoticePage = () => {
   return (
-    <div>NewsNoticePage</div>
+    <>
+      <Helmet>
+        <title> News and Notices - KUCC</title>
+      </Helmet>
+    </>
   )
 }
 
