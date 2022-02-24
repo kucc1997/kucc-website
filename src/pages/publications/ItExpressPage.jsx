@@ -1,32 +1,24 @@
 import { Container, Typography, Box, Stack, Link } from '@mui/material'
-import React from 'react'
-import { ArrowRight } from '@mui/icons-material'
-import IT2018 from '../../data/itexpress/IT-EXPRESS-2018.pdf'
+import React, { useEffect, useState } from 'react'
+import { FileOpen } from '@mui/icons-material'
 import { Helmet } from 'react-helmet'
+import db from '../../config/firebase'
+import { collection, onSnapshot } from 'firebase/firestore'
 
 const ItExpressPage = () => {
-  const itExpresses = [
-    {
-      year: 2021,
-      url: IT2018,
-    },
-    {
-      year: 2020,
-      url: IT2018,
-    },
-    {
-      year: 2019,
-      url: IT2018,
-    },
-    {
-      year: 2018,
-      url: IT2018,
-    },
-  ]
+  const [data, setData] = useState(null)
 
-  const handleClick = (e) => {
-    console.log('clicked', e.target)
+  const getData = () => {
+    onSnapshot(collection(db, 'itexpress'), (snapshot) => {
+      const itExpressList = snapshot.docs.map((doc) => doc.data())
+      itExpressList.sort((a, b) => b.year - a.year)
+      setData(itExpressList)
+    })
   }
+
+  useEffect(() => {
+    getData()
+  }, [])
 
   return (
     <>
@@ -36,7 +28,7 @@ const ItExpressPage = () => {
       <Container sx={{ py: 8 }}>
         <Box textAlign="center" mb={4}>
           <Typography variant="h5" mb={2} sx={{ fontWeight: 'bold' }}>
-            IT Express{' '}
+            IT Express
           </Typography>
           <Typography variant="body1" color="text.secondary">
             IT Express is a magazine published every year by the KUCC. It includes articles
@@ -46,17 +38,19 @@ const ItExpressPage = () => {
           </Typography>
         </Box>
         <Stack spacing={4} sx={{ marginBottom: 1 }}>
-          {itExpresses.map((itexp) => (
-            <Link href={itexp.url} key={itexp.year} target="_blank" onClick={handleClick}>
-              <Box
-                sx={{ display: 'flex', alignItems: 'center', borderBottom: '1px solid #d4d4d4' }}
-              >
-                <ArrowRight fontSize="large" sx={{ color: '#25bcea' }} />
-                <Typography variant="subtitle" color="#25bcea" sx={{ fontWeight: 'bold' }}>
+          {data && data.map((itexp) => (
+            <Box key={itexp.year} sx={{ display: 'flex', alignItems: 'center', borderBottom: '1px solid #d4d4d4' }}>
+              <Link href={itexp.url}  target="_blank">
+                <FileOpen fontSize="small" sx={{ color: '#25bcea' }} />
+                <Typography
+                  variant="subtitle"
+                  color="#25bcea"
+                  sx={{ fontWeight: 'bold', marginLeft: 1 }}
+                >
                   IT Express {itexp.year}
                 </Typography>
-              </Box>
-            </Link>
+              </Link>
+            </Box>
           ))}
         </Stack>
         <Typography variant="caption" color="text.secondary">
