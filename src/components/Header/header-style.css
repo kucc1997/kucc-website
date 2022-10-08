@@ -28,6 +28,7 @@
 
 .hidden-list {
   display: none;
+  position: absolute;
   padding: 10px;
   list-style: none;
   background-color: rgb(44, 43, 43);
