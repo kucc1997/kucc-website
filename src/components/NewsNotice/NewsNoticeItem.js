@@ -13,14 +13,15 @@ import { color } from '@mui/system'
 
 export default function NewsNoticeItem() {
   return (
-    <Card
-      sx={{ display: 'flex', width: { md: 900, xs: 600 }, height: { md: 136, xs: 300 }, mb: 4 }}
+    <Box
+      sx={{ display: 'flex', width: { md: 1100, xs: 600 }, height: { md: 136, xs: 300 }, mb: 4, px: 8 }}
+      style={{width: 1100}}
     >
-      <Grid container spacing={2}>
+      <Grid container spacing={0.5}>
         <Grid item xs={2}>
         <Box alignItems="center" jusifyContent="center">
         <Typography component="div">
-          <span style={{ fontSize: 72, color: COLORS.medium, fontWeight: 'bold' }}>02</span>
+          <span style={{ fontSize: 72, color: COLORS.lightGrey, fontWeight: 'bold' }}>02</span>
         </Typography>
         <Typography component="div">
           <span style={{ fontSize: 14, color: COLORS.medium }}>Nov, 2020</span>
@@ -30,8 +31,8 @@ export default function NewsNoticeItem() {
         <Grid item xs={8}>
         <Box sx={{ display: 'center', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography component="div" fontSize="22" fontWeight="bold" textAlign="left">
-            KUCC Demonstrated LTSP At Seventh National Science Day
+          <Typography component="div" fontSize="22" fontWeight="bold" textAlign="left" >
+            <span style={{ fontSize: 18,color: COLORS.darkBlue}}>KUCC Demonstrated LTSP At Seventh National Science Day</span>
           </Typography>
           <Typography
             color="text.secondary"
@@ -70,6 +71,6 @@ export default function NewsNoticeItem() {
       
 
       
-    </Card>
+    </Box>
   )
 }
