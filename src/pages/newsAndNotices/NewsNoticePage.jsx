@@ -6,6 +6,10 @@ import NewsNoticeList from '../../components/NewsNotice/NewsNoticeList'
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css'
 
+import Card from '@mui/material/Card'
+import CardContent from '@mui/material/CardContent'
+import CardMedia from '@mui/material/CardMedia'
+
 const NewsNoticePage = () => {
   const [value, onChange] = useState(new Date());
   return (
@@ -13,7 +17,26 @@ const NewsNoticePage = () => {
       <Helmet>
         <title> News and Notices - KUCC</title>
       </Helmet>
+      <Box style = {{height: 8}}>
 
+      </Box>
+      <Box
+        sx={{ display: 'flex', backgroundColor: COLORS.light, height: { md: 44, xs: 300 }, mb: 4 }}
+        style = {{height: 120}}
+      >
+        <Container sx = {{py: 2}}>
+          <Box textAlign= "left" >
+          <Typography>
+                <span style={{ fontWeight: 'bold', color: COLORS.dark, fontSize: 32 }}>News and Notices</span>
+              </Typography>
+              <Typography>
+                <span style={{  color: COLORS.dark, fontSize: 14 }}> Home &nbsp; News and Notices</span>
+              </Typography>
+          </Box>
+        
+        </Container>
+        
+      </Box>
       <Grid
         sx={{ background: 'text.light' }}
         container
@@ -30,7 +53,7 @@ const NewsNoticePage = () => {
                 <h4 style={{ color: COLORS.primary }}>Kathmandu Univesity Computer Club</h4>
               </Typography>
               <Typography variant="h4">
-                <span style={{ fontWeight: 'bold' }}>News and Notices</span>
+                <span style={{ fontWeight: 'bold', color: COLORS.darkBlue }}>News and Notices</span>
               </Typography>
               <Box sx={{ my: 5, display: 'flex', justifyContent: 'center' }}>
                 <NewsNoticeList />

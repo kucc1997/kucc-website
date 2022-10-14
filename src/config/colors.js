@@ -7,6 +7,8 @@ const COLORS = {
   light: '#f8f4f4',
   danger: '#ff5252',
   dark: '#0c0c0c',
+  lightGrey: '#85a0a7',
+  darkBlue: '#013a4b'
 }
 
 export default COLORS
