@@ -1,13 +1,13 @@
 # KUCC WEBSITE
 
-[Website Link](https://kucc.ku.edu.np/)
+[Website Link](https://kucc.netlify.app/)
 
 ## Hacktoberfest month is on!!
  Let's celebrate the _HACKTOBERFEST MONTH_ by contributing to our very own KUCC Website.
  
 __Steps:__
 
-**1.** Any contributions are highly appreciated.
+**1.** Any contribution is highly appreciated.
 
 **2.** Want to contribute/request change? Create an issue and ask for the mod to assign it to you and upon approval, work on it and create a PR.
 
