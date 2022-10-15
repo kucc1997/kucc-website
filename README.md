@@ -1,5 +1,80 @@
 # KUCC WEBSITE
 
+[Website Link](https://kucc.netlify.app/)
+
+## Hacktoberfest month is on!!
+ Let's celebrate the _HACKTOBERFEST MONTH_ by contributing to our very own KUCC Website.
+ 
+__Steps:__
+
+**1.** Any contribution is highly appreciated.
+
+**2.** Want to contribute/request change? Create an issue and ask for the mod to assign it to you and upon approval, work on it and create a PR.
+
+**3.** Don't forget to star the repo.
+
+> Image showing successful acceptance of the PR in the Hacktoberfest.
+![image](https://user-images.githubusercontent.com/51270026/195880981-8dd6a239-eaff-4331-b384-29bbcb374ddf.png)
+
+
+## 🛠️ Installation Steps
+
+**1**. [Fork](https://github.com/kucc1997/kucc-website/fork) the project. Click on the <a href="https://github.com/kucc1997/kucc-website/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="15" width="15"></a> icon in the top right to get started
+
+
+**2**. Clone the project, you can use the following command:
+
+```bash
+Using HTTPS
+git clone https://github.com/<your-github-username>/kucc-website
+or using SSH
+git clone git@github.com:<your-github-username>/kucc-website.git
+```
+**3**. Navigate to the project directory
+
+```bash
+cd kucc-website
+```
+## 🥂 After making a change
+
+**1**. Create a new branch
+
+```bash
+git checkout -b YourBranchName
+```
+
+**2**. Add it to staging area
+
+
+```bash
+git add <path to the file you worked on>
+```
+
+**3**. Commit your changes with
+
+```bash
+git commit -m '<your-commit-message'
+```
+
+**4**. Push your changes
+
+```bash
+git push -u <remote-name> <branch-name>
+```
+
+## 👩🏽‍💻 Contributing
+
+- Contributions make the open source community such an amazing place to learn, inspire, and create.
+- Any contributions you make are greatly appreciated.
+
+
+## 🙏🏽 Support
+
+This project needs a star️ from you. Don't forget to leave a star✨
+
+
+
+
 KUCC Website is an open-source web application project for Kathmandu University Computer Club being built with [ReactJS](https://reactjs.org/).
 ## PHASE 1
 - Homepage
