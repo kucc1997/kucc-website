@@ -15,7 +15,9 @@ import './App.css'
 import NewsNoticePage from './pages/newsAndNotices/NewsNoticePage'
 import EventsPage from './pages/events/EventsPage'
 import ItExpressPage from './pages/publications/ItExpressPage'
-import BlogsPage from './pages/publications/ItExpressPage'
+// import BlogsPage from './pages/publications/ItExpressPage'
+import StudentBlog from './components/StudentBlog'
+import BlogPage from './components/BlogPage'
 
 const App = () => {
   return (
@@ -33,8 +35,10 @@ const App = () => {
             <Route path="register" element={<RegisterPage />} />
             <Route path="events" element={<EventsPage />} />
             <Route path="it-express" element={<ItExpressPage />} />
-            <Route path="blogs" element={<BlogsPage />} />
+
             <Route path="news-and-notices" element={<NewsNoticePage />} />
+            <Route path="blogs" element={<StudentBlog />} />
+            <Route path="blog/:id" element={<BlogPage />} />
           </Route>
         </Routes>
       </Router>
