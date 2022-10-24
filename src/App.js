@@ -15,9 +15,12 @@ import './App.css'
 import NewsNoticePage from './pages/newsAndNotices/NewsNoticePage'
 import EventsPage from './pages/events/EventsPage'
 import ItExpressPage from './pages/publications/ItExpressPage'
-// import BlogsPage from './pages/publications/ItExpressPage'
+
+import BlogsPage from './pages/publications/ItExpressPage'
 import StudentBlog from './components/StudentBlog'
 import BlogPage from './components/BlogPage'
+
+import HomePage from './pages/homePage/homePage'
 
 const App = () => {
   return (
@@ -25,7 +28,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="" element={<Home />} />
+            <Route path="" element={<HomePage />} />
             <Route path="advisory-board" element={<AdvBoardPage />} />
             <Route path="executive-committee" element={<ExCommunityPage />} />
             <Route path="community-coordinators" element={<CommunityCoPage />} />
