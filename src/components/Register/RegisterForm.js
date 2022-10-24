@@ -66,9 +66,9 @@ const fieldKeys = {
 
 const RegisterForm = () => {
   const [academicDetails, setAcademicDetails] = React.useState({
-    year: 'First',
-    semester: 'Second',
-    program: 'Computer Engineering',
+    year: '',
+    semester: '',
+    program: '',
   })
 
   const [contactDetails, setContactDetails] = React.useState({
@@ -79,6 +79,21 @@ const RegisterForm = () => {
     confirmPassword: '',
     contactNumber: '',
   })
+
+  let initialState = {
+    firstName: false,
+    lastName: false,
+    email: false,
+    password: false,
+    confirmPassword: false,
+    contactNumber: false,
+    voucherDetail: false,
+    year: false,
+    semester: false,
+    program: false,
+    file: false,
+  }
+  const [errorSt, setError] = React.useState(initialState)
 
   const [voucherDetail, setVoucherDetail] = React.useState('')
 
@@ -92,14 +107,35 @@ const RegisterForm = () => {
     }
   }
 
-  // const [nameError, setNameError] = useState(false)
-  // const [emailError, setEmailError] = useState(false)
-
   const handleSubmit = (e) => {
     e.preventDefault()
+    let isError = false
+    let temp = { ...errorSt }
+    for (let key in contactDetails) {
+      if (contactDetails[key] === '') {
+        isError = true
+        temp[key] = true
+      }
+    }
+    for (let key in academicDetails) {
+      if (academicDetails[key] === '') {
+        isError = true
+        temp[key] = true
+      }
+    }
+    if (voucherDetail === '') {
+      isError = true
+      temp['voucherDetail'] = true
+    }
+    setError(temp)
+    if (isError) {
+      console.log(errorSt)
+      return alert('Please fill the form Properly')
+    }
     console.log('Form submitted!')
-    console.log({ ...academicDetails, ...contactDetails, voucher: voucherDetail })
+    // console.log({ ...academicDetails, ...contactDetails, voucher: voucherDetail })
   }
+
   return (
     <Box
       component="form"
@@ -127,16 +163,17 @@ const RegisterForm = () => {
           label="First Name"
           fullWidth
           required
-          // error={nameError}
           size="small"
+          error={errorSt.firstName}
         />
+
         <TextField
           onChange={(e) => handleChange(e, forWhichKey.CONTACT, fieldKeys.LAST_NAME)}
           label="Last Name"
           value={contactDetails.lastName}
           fullWidth
           required
-          // error={nameError}
+          error={errorSt.lastName}
           size="small"
         />
       </Stack>
@@ -149,6 +186,7 @@ const RegisterForm = () => {
           onChange={(e) => handleChange(e, forWhichKey.ACADEMIC, fieldKeys.YEAR)}
           helperText="Please choose year"
           size="small"
+          error={errorSt.year}
         >
           {years.map((option) => (
             <MenuItem key={option.value} value={option.value}>
@@ -164,6 +202,7 @@ const RegisterForm = () => {
           onChange={(e) => handleChange(e, forWhichKey.ACADEMIC, fieldKeys.SEMESTER)}
           helperText="Please choose semester"
           size="small"
+          error={errorSt.semester}
         >
           {semesters.map((option) => (
             <MenuItem key={option.value} value={option.value}>
@@ -181,6 +220,7 @@ const RegisterForm = () => {
           onChange={(e) => handleChange(e, forWhichKey.ACADEMIC, fieldKeys.PROGRAM)}
           helperText="Please select enrolled program"
           size="small"
+          error={errorSt.program}
         >
           {programs.map((option) => (
             <MenuItem key={option.value} value={option.value}>
@@ -199,6 +239,7 @@ const RegisterForm = () => {
           required
           type="number"
           size="small"
+          error={errorSt.contactNumber}
         />
       </Stack>
       <Stack spacing={3} direction="row">
@@ -208,7 +249,7 @@ const RegisterForm = () => {
           label="User Email"
           fullWidth
           required
-          // error={emailError}
+          error={errorSt.email}
           size="small"
         />
         <TextField
@@ -216,8 +257,8 @@ const RegisterForm = () => {
           label="Email"
           fullWidth
           required
-          // error={emailError}
           size="small"
+          error={errorSt.email}
         />
       </Stack>
       <Stack spacing={3} direction="row">
@@ -228,8 +269,8 @@ const RegisterForm = () => {
           type="password"
           fullWidth
           required
-          // error={emailError}
           size="small"
+          error={errorSt.password}
         />
         <TextField
           onChange={(e) => handleChange(e, forWhichKey.CONTACT, fieldKeys.CONFIRM_PASSWORD)}
@@ -238,8 +279,8 @@ const RegisterForm = () => {
           type="password"
           fullWidth
           required
-          // error={emailError}
           size="small"
+          error={errorSt.confirmPassword}
         />
       </Stack>
       <Stack spacing={3} direction="row">
@@ -249,16 +290,15 @@ const RegisterForm = () => {
           label="Voucher Number"
           fullWidth
           required
-          // error={nameError}
           size="small"
+          error={errorSt.voucherDetail}
         />
 
         <TextField
           type="file"
           fullWidth
-          // required
-          // error={nameError}
           size="small"
+          error={errorSt.file}
           helperText="Upload pdf or image. Max allowed size - 1 Mb"
         />
       </Stack>
