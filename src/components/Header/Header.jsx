@@ -169,12 +169,12 @@ const NavBar = () => {
 
       {/* desktop view */}
       <div className="hidden lg:flex items-center text-sm xl:text-lg space-x-3 xl:space-x-4 list-none">
-        <li className="text-teal-600 font-semibold transition cursor-pointer hover:text-gray-500">
+        <li className="text-teal-600 font-semibold transition cursor-pointer hover:text-slate-400">
           <Link to="/">HOME</Link>
         </li>
 
         {/* our team dropdown */}
-        <li className="text-teal-600 font-semibold transition-all cursor-pointer relative group hover:text-gray-500">
+        <li className="text-teal-600 font-semibold transition-all cursor-pointer relative group hover:text-slate-400">
           <div className="flex items-center gap-2">
             OUR TEAM <ChevronDown className="bg-teal-100 rounded-md" />
           </div>
@@ -195,7 +195,7 @@ const NavBar = () => {
         </li>
 
         {/* publications dropdown */}
-        <li className="text-teal-600 font-semibold transition cursor-pointer relative group hover:text-gray-500">
+        <li className="text-teal-600 font-semibold transition cursor-pointer relative group hover:text-slate-400">
           <div className="flex items-center gap-2">
             PUBLICATIONS <ChevronDown className="bg-teal-100 rounded-md" />
           </div>
@@ -208,19 +208,19 @@ const NavBar = () => {
             </li>
           </ul>
         </li>
-        <li className="text-teal-600 font-semibold hover:text-gray-500">
+        <li className="text-teal-600 font-semibold hover:text-slate-400">
           <Link to="news-and-notices">NEWS AND NOTICES</Link>
         </li>
-        <li className="text-teal-600 font-semibold hover:text-gray-500">
+        <li className="text-teal-600 font-semibold hover:text-slate-400">
           <Link to="events">EVENTS</Link>
         </li>
-        <li className="text-teal-600 font-semibold hover:text-gray-500">
+        <li className="text-teal-600 font-semibold hover:text-slate-400">
           <Link to="code-of-conduct">CODE OF CONDUCT</Link>
         </li>
-        <li className="text-teal-600 font-semibold hover:text-gray-500">
+        <li className="text-teal-600 font-semibold hover:text-slate-400">
           <Link to="contact">CONTACT</Link>
         </li>
-        <li className="text-teal-600 font-semibold hover:text-gray-500">
+        <li className="text-teal-600 font-semibold hover:text-slate-400">
           <Link to="register">APPLY TO BE A MEMBER</Link>
         </li>
       </div>
