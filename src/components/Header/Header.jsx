@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Home } from 'lucide-react'
 import { Users } from 'lucide-react'
@@ -15,6 +15,22 @@ const NavBar = () => {
   const [open, setOpen] = useState('')
   const [ourTeam, setOurTeam] = useState('')
   const [ourPub, setOurPub] = useState('')
+
+  const sidebarRef = useRef(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [open])
+
   return (
     <div className="flex w-full p-4 h-16 md:p-10 justify-between items-center bg-slate-200">
       {/* logo */}
@@ -29,9 +45,9 @@ const NavBar = () => {
       </div>
 
       {/* hambuger menu */}
-      <div className="flex items-center lg:hidden">
+      <div className="flex items-center lg:hidden" ref={sidebarRef}>
         <button
-          className="flex z-50 justify-center relative cursor-pointer items-center flex-col space-y-1"
+          className="flex z-50 justify-center relative cursor-pointer items-center flex-col space-y-1 aspect-square"
           onClick={() => setOpen(!open)}
         >
           <div
