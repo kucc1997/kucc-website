@@ -7,9 +7,8 @@ import PresidentSection from './PresidentSection'
 import Articles from './Articles'
 import CounterUp from './CounterUp'
 function HomePage() {
-  
   return (
-    <>
+    <div className="w-100vw overflow-hidden">
       <Slider />
       <KuccDescription />
       <CommunitiesActive />
@@ -17,7 +16,7 @@ function HomePage() {
       <CounterUp />
       <PresidentSection />
       <Articles />
-    </>
+    </div>
   )
 }
 export default HomePage

@@ -17,11 +17,18 @@ const NavBar = () => {
   const [ourPub, setOurPub] = useState('')
   return (
     <div className="flex w-full p-4 h-16 md:p-10 justify-between items-center bg-slate-200">
+      {/* logo */}
       <div>
         <Link to="/" className="cursor-pointer">
-          <img src={'kucc-logo.png'} className="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 object-cover" alt="logo" />
+          <img
+            src={'kucc-logo.png'}
+            className="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 object-cover"
+            alt="logo"
+          />
         </Link>
       </div>
+
+      {/* hambuger menu */}
       <div className="flex items-center lg:hidden">
         <button
           className="flex z-50 justify-center relative cursor-pointer items-center flex-col space-y-1"
@@ -43,8 +50,10 @@ const NavBar = () => {
             }`}
           ></div>
         </button>
+
+        {/* mobile view */}
         {open && (
-          <div className="flex space-y-8 z-40 h-screen bg-white absolute top-0 right-0 w-2/3 sm:w-1/3 md:w-2/4 shadow-xl">
+          <div className="flex space-y-8 z-40 h-screen bg-white fixed top-0 right-0 w-2/3 sm:w-1/3 md:w-2/4 shadow-xl">
             <div className="flex-col mt-28 px-8 space-y-8 font-sans list-none">
               <li className="text-teal-600 font-semibold transition cursor-pointer border-b-2 items-center">
                 <Link to="/" className="flex gap-4">
@@ -52,53 +61,60 @@ const NavBar = () => {
                   HOME
                 </Link>
               </li>
-              <li className="text-teal-600 font-semibold transition-all cursor-pointer relative md:group border-b-2 flex gap-4">
-                <Users />
-                OUR TEAM{' '}
-                <button className="flex rounded-full" onClick={() => setOurTeam(!ourTeam)}>
-                  {!ourTeam ? (
-                    <ChevronDown className="bg-teal-100 rounded-md" />
-                  ) : (
-                    <ChevronUp className="bg-teal-100 rounded-md" />
-                  )}
-                </button>
+              {/* our team dropdown */}
+              <li>
+                <div className="text-teal-600 font-semibold transition-all cursor-pointer relative md:group border-b-2 flex gap-4">
+                  <Users />
+                  OUR TEAM{' '}
+                  <button className="flex rounded-full" onClick={() => setOurTeam(!ourTeam)}>
+                    {!ourTeam ? (
+                      <ChevronDown className="bg-teal-100 rounded-md" />
+                    ) : (
+                      <ChevronUp className="bg-teal-100 rounded-md" />
+                    )}
+                  </button>
+                </div>
                 {ourTeam && (
-                  <ul className="mt-8 w-full space-y-2 absolute z-10 p-[20px] list-none bg-[rgb(44,43,43)] text-[#fff]">
-                    <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-200">
+                  <ul className="w-full space-y-2 z-10 p-[20px] list-none">
+                    <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
                       <Link to="executive-committee">EXECUTIVE COMMITTEE</Link>
                     </li>
-                    <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-200">
+                    <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
                       <Link to="advisory-board">ADVISORY BOARD</Link>
                     </li>
-                    <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-200">
+                    <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
                       <Link to="community-coordinators">COMMUNITY COORDINATORS</Link>
                     </li>
-                    <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-200">
+                    <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
                       <Link to="documentation-teams">DOCUMENTATION TEAM</Link>
                     </li>
                   </ul>
                 )}
               </li>
-              <li className="text-teal-600 font-semibold transition cursor-pointer relative md:group border-b-2 flex gap-4">
-                <NotebookPen />
-                PUBLICATIONS{' '}
-                <button className="flex rounded-full" onClick={() => setOurPub(!ourPub)}>
-                  {!ourPub ? (
-                    <ChevronDown className="bg-teal-100 rounded-md" />
-                  ) : (
-                    <ChevronUp className="bg-teal-100 rounded-md" />
-                  )}
-                </button>
-                {ourPub &&(
-                           <ul className="space-y-2 w-full mt-8 absolute z-10 p-[20px] list-none bg-[rgb(44,43,43)] text-[#fff]">
-                           <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-200">
-                             <Link to="it-express">IT EXPRESS</Link>
-                           </li>
-                           <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-200">
-                             <Link to="blogs">STUDENT BLOGS</Link>
-                           </li>
-                         </ul>
-                )}
+
+              {/* publications dropdown */}
+              <li>
+                <div className="text-teal-600 font-semibold transition cursor-pointer relative md:group border-b-2 flex gap-4">
+                  <NotebookPen />
+                  PUBLICATIONS{' '}
+                  <button className="flex rounded-full" onClick={() => setOurPub(!ourPub)}>
+                    {!ourPub ? (
+                      <ChevronDown className="bg-teal-100 rounded-md" />
+                    ) : (
+                      <ChevronUp className="bg-teal-100 rounded-md" />
+                    )}
+                  </button>
+                </div>
+                <ul
+                  className={`space-y-2 z-10 p-[20px] origin-top list-none ${ourPub ? 'scale-y-100 static' : 'scale-y-0 absolute'}`}
+                >
+                  <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
+                    <Link to="it-express">IT EXPRESS</Link>
+                  </li>
+                  <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
+                    <Link to="blogs">STUDENT BLOGS</Link>
+                  </li>
+                </ul>
               </li>
               <li className="text-teal-600 font-semibold border-b-2">
                 <Link to="news-and-notices" className="flex gap-4">
@@ -134,13 +150,19 @@ const NavBar = () => {
           </div>
         )}
       </div>
+
+      {/* desktop view */}
       <div className="hidden lg:flex items-center text-sm xl:text-lg space-x-3 xl:space-x-4 list-none">
         <li className="text-teal-600 font-semibold transition cursor-pointer hover:text-gray-500">
           <Link to="/">HOME</Link>
         </li>
+
+        {/* our team dropdown */}
         <li className="text-teal-600 font-semibold transition-all cursor-pointer relative group hover:text-gray-500">
-          <div className='flex items-center gap-2'>OUR TEAM <ChevronDown className="bg-teal-100 rounded-md"/></div>
-          <ul className="hidden mt-1 space-y-3 w-56 absolute z-10 p-[20px] list-none bg-[rgb(44,43,43)] text-[#fff] group-hover:block transform duration-700">
+          <div className="flex items-center gap-2">
+            OUR TEAM <ChevronDown className="bg-teal-100 rounded-md" />
+          </div>
+          <ul className="hidden space-y-3 w-56 absolute z-10 p-[20px] list-none bg-[rgb(44,43,43)] text-[#fff] group-hover:block transform duration-700">
             <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-200">
               <Link to="executive-committee">EXECUTIVE COMMITTEE</Link>
             </li>
@@ -155,8 +177,12 @@ const NavBar = () => {
             </li>
           </ul>
         </li>
+
+        {/* publications dropdown */}
         <li className="text-teal-600 font-semibold transition cursor-pointer relative group hover:text-gray-500">
-        <div className='flex items-center gap-2'>PUBLICATIONS <ChevronDown className="bg-teal-100 rounded-md"/></div>
+          <div className="flex items-center gap-2">
+            PUBLICATIONS <ChevronDown className="bg-teal-100 rounded-md" />
+          </div>
           <ul className="hidden space-y-3 w-56 absolute z-10 p-[20px] list-none bg-[rgb(44,43,43)] text-[#fff] group-hover:block">
             <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-200">
               <Link to="it-express">IT EXPRESS</Link>
