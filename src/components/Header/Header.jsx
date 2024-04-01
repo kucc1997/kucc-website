@@ -51,14 +51,14 @@ const NavBar = () => {
           name: 'Advisory Board',
           link: '/advisory-board',
         },
-        {
-          name: 'Community Coordinators',
-          link: '/community-coordinators',
-        },
-        {
-          name: 'Documentation Team',
-          link: '/documentation-teams',
-        },
+        // {
+        //   name: 'Community Coordinators',
+        //   link: '/community-coordinators',
+        // },
+        // {
+        //   name: 'Documentation Team',
+        //   link: '/documentation-teams',
+        // },
       ],
     },
     {
@@ -71,22 +71,22 @@ const NavBar = () => {
           name: 'IT Express',
           link: '/it-express',
         },
-        {
-          name: 'Student Blogs',
-          link: '/blogs',
-        },
+        // {
+        //   name: 'Student Blogs',
+        //   link: '/blogs',
+        // },
       ],
     },
-    {
-      name: 'News and Notices',
-      icon: <Newspaper />,
-      link: '/news-and-notices',
-    },
-    {
-      name: 'Events',
-      icon: <CalendarSearch />,
-      link: '/events',
-    },
+    // {
+    //   name: 'News and Notices',
+    //   icon: <Newspaper />,
+    //   link: '/news-and-notices',
+    // },
+    // {
+    //   name: 'Events',
+    //   icon: <CalendarSearch />,
+    //   link: '/events',
+    // },
     {
       name: 'Code of Conduct',
       icon: <BookKey />,
