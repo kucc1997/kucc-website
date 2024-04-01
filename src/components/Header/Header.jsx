@@ -151,7 +151,7 @@ const NavBar = () => {
                   {item.subItems ? (
                     // if item has subItems
                     <li>
-                      <div className="text-teal-600 font-semibold transition-all cursor-pointer relative md:group border-b-2 flex gap-4">
+                      <div className="text-teal-600 font-semibold transition-all cursor-pointer relative md:group border-b-2 flex gap-4 hover:text-slate-400">
                         {item.icon}
                         {item.name}
                         <button
@@ -183,7 +183,7 @@ const NavBar = () => {
                       </ul>
                     </li>
                   ) : (
-                    <li className="text-teal-600 font-semibold transition cursor-pointer border-b-2 items-center">
+                    <li className="text-teal-600 font-semibold transition cursor-pointer border-b-2 items-center hover:text-slate-400">
                       {/* if item has no subItems */}
                       <Link to={item.link} className="flex gap-4" onClick={() => setOpen(false)}>
                         <Home />
