@@ -31,6 +31,79 @@ const NavBar = () => {
     }
   }, [open])
 
+  const navItems = [
+    {
+      name: 'Home',
+      link: '/',
+      icon: <Home />,
+    },
+    {
+      name: 'Our Team',
+      icon: <Users />,
+      open: ourTeam,
+      setOpen: setOurTeam,
+      subItems: [
+        {
+          name: 'Executive Committee',
+          link: '/executive-committee',
+        },
+        {
+          name: 'Advisory Board',
+          link: '/advisory-board',
+        },
+        {
+          name: 'Community Coordinators',
+          link: '/community-coordinators',
+        },
+        {
+          name: 'Documentation Team',
+          link: '/documentation-teams',
+        },
+      ],
+    },
+    {
+      name: 'Publications',
+      open: ourPub,
+      setOpen: setOurPub,
+      icon: <NotebookPen />,
+      subItems: [
+        {
+          name: 'IT Express',
+          link: '/it-express',
+        },
+        {
+          name: 'Student Blogs',
+          link: '/blogs',
+        },
+      ],
+    },
+    {
+      name: 'News and Notices',
+      icon: <Newspaper />,
+      link: '/news-and-notices',
+    },
+    {
+      name: 'Events',
+      icon: <CalendarSearch />,
+      link: '/events',
+    },
+    {
+      name: 'Code of Conduct',
+      icon: <BookKey />,
+      link: '/code-of-conduct',
+    },
+    {
+      name: 'Contact',
+      icon: <Contact />,
+      link: '/contact',
+    },
+    {
+      name: 'Apply to be a Member',
+      icon: <BadgeCheck />,
+      link: '/register',
+    },
+  ]
+
   return (
     <div className="flex w-full p-4 h-16 md:p-10 justify-between items-center bg-slate-200">
       {/* logo */}
@@ -72,157 +145,97 @@ const NavBar = () => {
           className={`flex space-y-8 transition origin-right z-40 h-screen bg-white fixed top-0 right-0 w-2/3 sm:w-1/3 md:w-2/4 shadow-xl ${open ? 'scale-x-100' : 'scale-x-0'}`}
         >
           <div className="flex-col mt-28 px-8 space-y-8 font-sans list-none">
-            <li className="text-teal-600 font-semibold transition cursor-pointer border-b-2 items-center">
-              <Link to="/" className="flex gap-4">
-                <Home />
-                HOME
-              </Link>
-            </li>
-            {/* our team dropdown */}
-            <li>
-              <div className="text-teal-600 font-semibold transition-all cursor-pointer relative md:group border-b-2 flex gap-4">
-                <Users />
-                OUR TEAM{' '}
-                <button className="flex rounded-full" onClick={() => setOurTeam(!ourTeam)}>
-                  {!ourTeam ? (
-                    <ChevronDown className="bg-teal-100 rounded-md" />
+            {navItems.map((item, index) => {
+              return (
+                <div key={index}>
+                  {item.subItems ? (
+                    // if item has subItems
+                    <li>
+                      <div className="text-teal-600 font-semibold transition-all cursor-pointer relative md:group border-b-2 flex gap-4">
+                        {item.icon}
+                        {item.name}
+                        <button
+                          className="flex rounded-full"
+                          onClick={() => item.setOpen(!item.open)}
+                        >
+                          {!item.open ? (
+                            <ChevronDown className="bg-teal-100 rounded-md" />
+                          ) : (
+                            <ChevronUp className="bg-teal-100 rounded-md" />
+                          )}
+                        </button>
+                      </div>
+                      <ul
+                        className={`space-y-2 z-10 origin-top list-none transition ${item.open ? 'scale-y-100 p-[20px]' : 'scale-y-0 h-0 p-0 duration-0'}`}
+                      >
+                        {item.subItems.map((subItem, index) => {
+                          return (
+                            <li
+                              key={index}
+                              className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800"
+                            >
+                              <Link to={subItem.link}>{subItem.name}</Link>
+                            </li>
+                          )
+                        })}
+                      </ul>
+                    </li>
                   ) : (
-                    <ChevronUp className="bg-teal-100 rounded-md" />
+                    <li className="text-teal-600 font-semibold transition cursor-pointer border-b-2 items-center">
+                      {/* if item has no subItems */}
+                      <Link to={item.link} className="flex gap-4">
+                        <Home />
+                        {item.name}
+                      </Link>
+                    </li>
                   )}
-                </button>
-              </div>
-              <ul
-                className={`space-y-2 z-10 origin-top list-none transition ${ourTeam ? 'scale-y-100 p-[20px]' : 'scale-y-0 h-0 p-0 duration-0'}`}
-              >
-                <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
-                  <Link to="executive-committee">EXECUTIVE COMMITTEE</Link>
-                </li>
-                <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
-                  <Link to="advisory-board">ADVISORY BOARD</Link>
-                </li>
-                <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
-                  <Link to="community-coordinators">COMMUNITY COORDINATORS</Link>
-                </li>
-                <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
-                  <Link to="documentation-teams">DOCUMENTATION TEAM</Link>
-                </li>
-              </ul>
-            </li>
-
-            {/* publications dropdown */}
-            <li>
-              <div className="text-teal-600 font-semibold transition cursor-pointer relative md:group border-b-2 flex gap-4">
-                <NotebookPen />
-                PUBLICATIONS{' '}
-                <button className="flex rounded-full" onClick={() => setOurPub(!ourPub)}>
-                  {!ourPub ? (
-                    <ChevronDown className="bg-teal-100 rounded-md" />
-                  ) : (
-                    <ChevronUp className="bg-teal-100 rounded-md" />
-                  )}
-                </button>
-              </div>
-              <ul
-                className={`space-y-2 z-10 origin-top list-none transition ${ourPub ? 'scale-y-100 p-[20px]' : 'scale-y-0 h-0 p-0 duration-0'}`}
-              >
-                <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
-                  <Link to="it-express">IT EXPRESS</Link>
-                </li>
-                <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
-                  <Link to="blogs">STUDENT BLOGS</Link>
-                </li>
-              </ul>
-            </li>
-            <li className="text-teal-600 font-semibold border-b-2">
-              <Link to="news-and-notices" className="flex gap-4">
-                <Newspaper />
-                NEWS AND NOTICES
-              </Link>
-            </li>
-            <li className="text-teal-600 font-semibold border-b-2">
-              <Link to="events" className="flex gap-4">
-                <CalendarSearch />
-                EVENTS
-              </Link>
-            </li>
-            <li className="text-teal-600 font-semibold border-b-2">
-              <Link to="code-of-conduct" className="flex gap-4">
-                <BookKey />
-                CODE OF CONDUCT
-              </Link>
-            </li>
-            <li className="text-teal-600 font-semibold border-b-2">
-              <Link to="contact" className="flex gap-4">
-                <Contact />
-                CONTACT
-              </Link>
-            </li>
-            <li className="text-teal-600 font-semibold border-b-2">
-              <Link to="register" className="flex gap-4">
-                <BadgeCheck />
-                APPLY TO BE A MEMBER
-              </Link>
-            </li>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>
 
       {/* desktop view */}
       <div className="hidden lg:flex items-center text-sm xl:text-lg space-x-3 xl:space-x-4 list-none">
-        <li className="text-teal-600 font-semibold transition cursor-pointer hover:text-slate-400">
-          <Link to="/">HOME</Link>
-        </li>
-
-        {/* our team dropdown */}
-        <li className="text-teal-600 font-semibold transition-all cursor-pointer relative group hover:text-slate-400">
-          <div className="flex items-center gap-2">
-            OUR TEAM <ChevronDown className="bg-teal-100 rounded-md" />
-          </div>
-          <ul className="hidden space-y-3 w-56 absolute z-10 p-[20px] list-none bg-[rgb(44,43,43)] text-[#fff] group-hover:block transform duration-700">
-            <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-200">
-              <Link to="executive-committee">EXECUTIVE COMMITTEE</Link>
-            </li>
-            <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-200">
-              <Link to="advisory-board">ADVISORY BOARD</Link>
-            </li>
-            <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-200">
-              <Link to="community-coordinators">COMMUNITY COORDINATORS</Link>
-            </li>
-            <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-200">
-              <Link to="documentation-teams">DOCUMENTATION TEAM</Link>
-            </li>
-          </ul>
-        </li>
-
-        {/* publications dropdown */}
-        <li className="text-teal-600 font-semibold transition cursor-pointer relative group hover:text-slate-400">
-          <div className="flex items-center gap-2">
-            PUBLICATIONS <ChevronDown className="bg-teal-100 rounded-md" />
-          </div>
-          <ul className="hidden space-y-3 w-56 absolute z-10 p-[20px] list-none bg-[rgb(44,43,43)] text-[#fff] group-hover:block">
-            <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-200">
-              <Link to="it-express">IT EXPRESS</Link>
-            </li>
-            <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-200">
-              <Link to="blogs">STUDENT BLOGS</Link>
-            </li>
-          </ul>
-        </li>
-        <li className="text-teal-600 font-semibold hover:text-slate-400">
-          <Link to="news-and-notices">NEWS AND NOTICES</Link>
-        </li>
-        <li className="text-teal-600 font-semibold hover:text-slate-400">
-          <Link to="events">EVENTS</Link>
-        </li>
-        <li className="text-teal-600 font-semibold hover:text-slate-400">
-          <Link to="code-of-conduct">CODE OF CONDUCT</Link>
-        </li>
-        <li className="text-teal-600 font-semibold hover:text-slate-400">
-          <Link to="contact">CONTACT</Link>
-        </li>
-        <li className="text-teal-600 font-semibold hover:text-slate-400">
-          <Link to="register">APPLY TO BE A MEMBER</Link>
-        </li>
+        {navItems.map((item, index) => {
+          return (
+            <>
+              {item.subItems ? (
+                <li
+                  className="text-teal-600 font-semibold transition-all cursor-pointer relative group hover:text-slate-400"
+                  key={index}
+                >
+                  <div className="flex items-center gap-2">
+                    {item.name} <ChevronDown className="bg-teal-100 rounded-md" />
+                  </div>
+                  <ul className="hidden space-y-3 w-56 absolute z-10 p-[20px] list-none bg-[rgb(44,43,43)] text-[#fff] group-hover:block transform duration-700">
+                    {item.subItems.map((subItem, index) => {
+                      return (
+                        <li
+                          className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-200"
+                          key={index}
+                        >
+                          <Link to={subItem.link}>{subItem.name}</Link>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </li>
+              ) : (
+                <li
+                  key={index}
+                  className="text-teal-600 font-semibold transition cursor-pointer hover:text-slate-400"
+                >
+                  <Link to={item.link} className="flex gap-2">
+                    {item.icon}
+                    {item.name}
+                  </Link>
+                </li>
+              )}
+            </>
+          )
+        })}
       </div>
     </div>
   )
