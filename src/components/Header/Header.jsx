@@ -91,22 +91,22 @@ const NavBar = () => {
                   )}
                 </button>
               </div>
-              {ourTeam && (
-                <ul className="w-full space-y-2 z-10 p-[20px] list-none">
-                  <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
-                    <Link to="executive-committee">EXECUTIVE COMMITTEE</Link>
-                  </li>
-                  <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
-                    <Link to="advisory-board">ADVISORY BOARD</Link>
-                  </li>
-                  <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
-                    <Link to="community-coordinators">COMMUNITY COORDINATORS</Link>
-                  </li>
-                  <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
-                    <Link to="documentation-teams">DOCUMENTATION TEAM</Link>
-                  </li>
-                </ul>
-              )}
+              <ul
+                className={`space-y-2 z-10 origin-top list-none transition ${ourTeam ? 'scale-y-100 p-[20px]' : 'scale-y-0 h-0 p-0 duration-0'}`}
+              >
+                <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
+                  <Link to="executive-committee">EXECUTIVE COMMITTEE</Link>
+                </li>
+                <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
+                  <Link to="advisory-board">ADVISORY BOARD</Link>
+                </li>
+                <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
+                  <Link to="community-coordinators">COMMUNITY COORDINATORS</Link>
+                </li>
+                <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
+                  <Link to="documentation-teams">DOCUMENTATION TEAM</Link>
+                </li>
+              </ul>
             </li>
 
             {/* publications dropdown */}
@@ -123,7 +123,7 @@ const NavBar = () => {
                 </button>
               </div>
               <ul
-                className={`space-y-2 z-10 p-[20px] origin-top list-none ${ourPub ? 'scale-y-100 static' : 'scale-y-0 absolute'}`}
+                className={`space-y-2 z-10 origin-top list-none transition ${ourPub ? 'scale-y-100 p-[20px]' : 'scale-y-0 h-0 p-0 duration-0'}`}
               >
                 <li className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800">
                   <Link to="it-express">IT EXPRESS</Link>
