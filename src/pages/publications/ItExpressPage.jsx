@@ -5,6 +5,29 @@ import { Helmet } from 'react-helmet'
 import db from '../../config/firebase'
 import { collection, onSnapshot } from 'firebase/firestore'
 
+const ItExpressList = [
+  // {
+  //   name: 'IT Express 2023',
+  //   link: '/docs/IT-EXPRESS-2023.pdf',
+  // },
+  {
+    name: 'IT Express 2022',
+    link: '/docs/IT-EXPRESS-2022.pdf',
+  },
+  {
+    name: 'IT Express 2021',
+    link: '/docs/IT-EXPRESS-2021.pdf',
+  },
+  {
+    name: 'IT Express 2019',
+    link: '/docs/IT-EXPRESS-2019.pdf',
+  },
+  {
+    name: 'IT Express 2018',
+    link: '/docs/IT-EXPRESS-2018.pdf',
+  },
+]
+
 const ItExpressPage = () => {
   const [data, setData] = useState(null)
 
@@ -38,25 +61,44 @@ const ItExpressPage = () => {
           </Typography>
         </Box>
         <Stack spacing={4} sx={{ marginBottom: 1 }}>
-          {data && data.map((itexp) => (
-            <Box key={itexp.year} sx={{ display: 'flex', alignItems: 'center', borderBottom: '1px solid #d4d4d4' }}>
-              <Link href={itexp.url}  target="_blank">
-                <FileOpen fontSize="small" sx={{ color: '#25bcea' }} />
-                <Typography
-                  variant="subtitle"
-                  color="#25bcea"
-                  sx={{ fontWeight: 'bold', marginLeft: 1 }}
-                >
-                  IT Express {itexp.year}
-                </Typography>
-              </Link>
-            </Box>
-          ))}
+          {data &&
+            data.map((itexp) => (
+              <Box
+                key={itexp.year}
+                sx={{ display: 'flex', alignItems: 'center', borderBottom: '1px solid #d4d4d4' }}
+              >
+                <Link href={itexp.url} target="_blank">
+                  <FileOpen fontSize="small" sx={{ color: '#25bcea' }} />
+                  <Typography
+                    variant="subtitle"
+                    color="#25bcea"
+                    sx={{ fontWeight: 'bold', marginLeft: 1 }}
+                  >
+                    IT Express {itexp.year}
+                  </Typography>
+                </Link>
+              </Box>
+            ))}
         </Stack>
         <Typography variant="caption" color="text.secondary">
           {' '}
           Note: Click on the pdf to download.
         </Typography>
+
+        <Stack spacing={3} className="py-4">
+          {ItExpressList.map((itexp) => (
+            <div key={itexp.name}>
+              <Link
+                href={itexp.link}
+                target="_blank"
+                className="text-slate-800 flex items-center gap-2 text-xl"
+              >
+                <FileOpen fontSize="medium" />
+                <p className="text-slate-800">{itexp.name}</p>
+              </Link>
+            </div>
+          ))}
+        </Stack>
       </Container>
     </>
   )
