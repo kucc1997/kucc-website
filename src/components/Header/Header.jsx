@@ -186,7 +186,7 @@ const NavBar = () => {
                     <li className="text-teal-600 font-semibold transition cursor-pointer border-b-2 items-center hover:text-slate-400">
                       {/* if item has no subItems */}
                       <Link to={item.link} className="flex gap-4" onClick={() => setOpen(false)}>
-                        <Home />
+                        {item.icon}
                         {item.name}
                       </Link>
                     </li>
