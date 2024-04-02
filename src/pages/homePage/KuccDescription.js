@@ -69,7 +69,7 @@ function KuccDescription() {
     }
   `
   return (
-    <Container>
+    <Container id="about-us">
       <ImageContainer>
         <Image src="/kucc-logo.png" />
       </ImageContainer>
