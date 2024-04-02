@@ -9,14 +9,14 @@ import PresidentSection from './components/PresidentSection'
 import Articles from './components/Articles'
 export default function HomePage() {
   return (
-    <div className="flex-col mt-5 space-y-10 w-100vw overflow-hidden">
+    <div className="flex-col space-y-10 w-100vw overflow-hidden">
       {/* <Slider /> */}
       <KuccDescription />
       <CommunitiesActive />
       <Activities />
       <CounterUp />
       <PresidentSection />
-      <Articles />
+      {/* <Articles /> */}
     </div>
   )
 }

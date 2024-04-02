@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function KuccDescription() {
   return (
-    <div className="flex-col p-5 items-center">
+    <div className="flex-col p-5 mt-20 items-center">
       <div className="lg:flex space-y-4">
         <div className="flex justify-center">
           <img src="/kucc-logo.png" className="object-contain" />
