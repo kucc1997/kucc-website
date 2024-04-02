@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import ActivityCard from './ActivityCard'
+import ActivityCard from "../components/ActivityCard"
 
 function Activities() {
   const Container = styled.div`
