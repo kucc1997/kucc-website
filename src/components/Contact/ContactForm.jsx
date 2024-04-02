@@ -17,13 +17,13 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('Form submitted!')
-      fullName === '' && setNameError(true)
+    fullName === '' && setNameError(true)
 
-      email === '' && setEmailError(true)
+    email === '' && setEmailError(true)
 
-      phone === '' && setPhoneError(true)
+    phone === '' && setPhoneError(true)
 
-      message === '' && setMessageError(true)
+    message === '' && setMessageError(true)
   }
   return (
     <Container sx={{ py: 6 }}>
