@@ -199,7 +199,7 @@ const NavBar = () => {
       </div>
 
       {/* desktop view */}
-      <div className="hidden lg:flex items-center text-sm xl:text-lg space-x-3 xl:space-x-4 list-none">
+      <div className="hidden lg:flex items-center text-sm xl:text-lg space-x-3 lg:space-x-10 list-none">
         {navItems.map((item, index) => {
           return (
             <>
@@ -230,7 +230,6 @@ const NavBar = () => {
                   className="text-teal-600 font-semibold transition cursor-pointer hover:text-slate-400"
                 >
                   <Link to={item.link} className="flex gap-2">
-                    {item.icon}
                     {item.name}
                   </Link>
                 </li>
