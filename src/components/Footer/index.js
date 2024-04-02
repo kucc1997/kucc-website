@@ -2,7 +2,7 @@ import React from 'react'
 import './Footer.sass'
 import { FaInstagram, FaTwitter, FaFacebook, FaLinkedin, FaYoutube } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-export default function Footer(props) {
+export default function Footer() {
   // to add more social media handles of kucc, add them to the array below
   const socialHandles = [
     {
@@ -31,44 +31,34 @@ export default function Footer(props) {
     {
       title: 'KUCC',
       links: [
-        { title: 'About Us', link: '/' },
-        { title: 'Our Services', link: '/' },
-        { title: 'Portfolio', link: '/' },
+        { title: 'Apply To Be a Member', link: '/register' },
+        { title: 'Code of Conduct', link: '/code-of-conduct' },
+        { title: 'KUCC Bidhan', link: '/docs/KUCC_bidhan.pdf', target: '_blank' },
       ],
     },
     {
       title: 'Contacts',
       links: [
-        { title: '8966546546', link: '/' },
-        { title: 'kucc@ku.edu.np', link: '/' },
-        { title: 'Dhulihel KU', link: '/' },
+        { title: '+977 9865599415' },
+        { title: 'kucc@ku.edu.np', link: 'mailto:kucc@ku.edu.np' },
+        { title: 'Dhulihel KU' },
       ],
     },
   ]
-  const joinUs = [
-    { title: 'Careers', link: '/' },
-    { title: 'Internship', link: '/' },
-  ]
+  // const joinUs = [
+  //   { title: 'Careers', link: '/' },
+  //   { title: 'Internship', link: '/' },
+  // ]
 
   return (
     <div className="Footer">
-      {props.top ? (
-        <div className="subscribeBar">
-          <h3>Subscribe to our newsletter</h3>
-          <div className="inputForm">
-            <input type={'text'} placeholder="First name" />
-            <input type={'email'} placeholder="Email address" />
-            <button style={{ backgroundColor: '#090914' }}>Subscribe Now</button>
-          </div>
-        </div>
-      ) : null}
       <div className="redirect">
         <div className="socialMedia">
           <img src={'kucc-logo.png'} alt="Logo" width={100} />
           <div className="socialHandles">
-            {socialHandles.map((iteam) => {
+            {socialHandles.map((iteam, index) => {
               return (
-                <div className="border" onClick={() => (window.location = iteam.link)}>
+                <div className="border" onClick={() => (window.location = iteam.link)} key={index}>
                   {iteam.icon}
                 </div>
               )
@@ -76,13 +66,17 @@ export default function Footer(props) {
           </div>
         </div>
         <div className="links">
-          {titles.map((iteam) => {
+          {titles.map((iteam, index) => {
             return (
-              <div className="title">
-                <h5>{iteam.title}</h5>
-                {iteam.links.map((link) => {
+              <div className="title" key={index}>
+                <h3>{iteam.title}</h3>
+                {iteam.links.map((link, index) => {
+                  if (!link.link) {
+                    return <p key={index}>{link.title}</p>
+                  }
+
                   return (
-                    <Link to={link.link}>
+                    <Link to={link.link} target={link.target ? link.target : '_self'} key={index}>
                       <p>{link.title}</p>
                     </Link>
                   )
@@ -94,7 +88,7 @@ export default function Footer(props) {
       </div>
       <div className="copyright">
         <p style={{ color: '#71717A' }}>
-          © Copyright 2022, Kathmandu University Computer Club. All rights reserved.
+          © Copyright 2024, Kathmandu University Computer Club. All rights reserved.
         </p>
       </div>
     </div>
