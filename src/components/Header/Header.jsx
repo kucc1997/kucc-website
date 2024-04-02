@@ -88,11 +88,6 @@ const NavBar = () => {
     //   link: '/events',
     // },
     {
-      name: 'Code of Conduct',
-      icon: <BookKey />,
-      link: '/code-of-conduct',
-    },
-    {
       name: 'Contact',
       icon: <Contact />,
       link: '/contact',
