@@ -4,14 +4,15 @@ import Box from '@mui/material/Box'
 import CardMedia from '@mui/material/CardMedia'
 import CardContent from '@mui/material/CardContent'
 import CardActions from '@mui/material/CardActions'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import TwitterIcon from '@mui/icons-material/Twitter'
+// import GitHubIcon from '@mui/icons-material/GitHub'
+// import TwitterIcon from '@mui/icons-material/Twitter'
 import EmailIcon from '@mui/icons-material/Email'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
+import { Link } from 'react-router-dom'
 
-const TeamCard = () => {
+const TeamCard = ({ name, position, linkedin, image, mail }) => {
   return (
     <Card
       sx={{
@@ -38,30 +39,34 @@ const TeamCard = () => {
             mb: '-64px',
           }}
           height="176"
-          image="/assets/images/board_21-21/Sajan_Mahat.jpg"
-          alt="Paella dish"
+          image={image}
+          alt={name}
         />
       </Box>
       <CardContent sx={{ pt: '80px' }}>
         <Typography sx={{ fontSize: '18px' }} color="text.primary" align="center">
-          Sajan Mahat
+          {name}
         </Typography>
         <Typography variant="subtitle2" color="text.secondary" align="center" fontWeight="600">
-          {'KUOSC Coordinator'.toUpperCase()}
+          {position.toUpperCase()}
         </Typography>
       </CardContent>
       <CardActions sx={{ justifyContent: 'center' }} disableSpacing>
         <IconButton aria-label="add to favorites">
-          <LinkedInIcon />
+          <Link to={linkedin} target="_blank">
+            <LinkedInIcon />
+          </Link>
         </IconButton>
-        <IconButton aria-label="share">
+        {/* <IconButton aria-label="share">
           <GitHubIcon />
         </IconButton>
         <IconButton aria-label="share">
           <TwitterIcon />
-        </IconButton>
+        </IconButton> */}
         <IconButton aria-label="share">
-          <EmailIcon />
+          <Link to={`mailto:${mail}`} target="_blank">
+            <EmailIcon />
+          </Link>
         </IconButton>
       </CardActions>
     </Card>
