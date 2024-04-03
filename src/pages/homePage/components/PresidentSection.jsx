@@ -3,12 +3,12 @@ import React from 'react'
 export default function PresidentSection() {
   return (
     <div className="flex flex-col p-6 py-14 bg-[#00baa321]">
-      <div className="space-y-6 md:space-y-0 md:space-x-6 lg:space-x-10 xl:space-x-14 md:flex md:items-center">
+      <div className="space-y-6 md:space-y-0 md:space-x-6 lg:space-x-10 xl:space-x-14 md:flex md:items-center mx-auto max-w-screen-xl">
         <div className="flex justify-center md:hidden">
           <img
             src="./nirjal_president.jpg"
             className="rounded-2xl object-contain"
-            alt="president photo"
+            alt="Nirjal Bhurtel, KUCC President"
           />
         </div>
         <div className="flex-col space-y-3 md:hidden">
@@ -32,7 +32,9 @@ export default function PresidentSection() {
           </p>
         </div>
         <div className="hidden md:flex md:flex-col md:space-y-6 md:items-center">
-          <h1 className=' text-[#00baa3] text-3xl lg:text-4xl font-bold tracking-wider'>OUR PRESIDENT</h1>
+          <h1 className=" text-[#00baa3] text-3xl lg:text-4xl font-bold tracking-wider">
+            OUR PRESIDENT
+          </h1>
           <p className="text-justify md:text-xl lg:text-2xl">
             Welcome to Kathmandu University Computer Club. Our heartfelt goal is to provide a
             platform for students to advance their technical and soft skills, grow their confidence,
@@ -45,11 +47,11 @@ export default function PresidentSection() {
           </p>
         </div>
         <div className="hidden md:flex md:flex-col md:space-y-4">
-          <div className='md:w-[350px] lg:w-[450px] xl:w-[500px]'>
+          <div className="md:w-[350px] lg:w-[450px] xl:w-[500px]">
             <img
               src="./nirjal_president.jpg"
               className="rounded-2xl object-contain"
-              alt="president photo"
+              alt="Nirjal Bhurtel, KUCC President"
             />
           </div>
           <div>
