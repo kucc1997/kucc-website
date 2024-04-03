@@ -1,64 +1,115 @@
-import React, {useState} from 'react'
-import Card from "./CommunityCard"
-import { FaCircleArrowLeft } from "react-icons/fa6";
-import { FaCircleArrowRight } from "react-icons/fa6";
+import React, { useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { SiJavascript, SiRust, SiGnubash, SiPython, SiDart } from 'react-icons/si'
+import { MdOutlineHealthAndSafety } from 'react-icons/md'
+import { HiPaintBrush } from 'react-icons/hi2'
+import { PiLineSegments } from 'react-icons/pi'
+import { LuBrainCircuit } from 'react-icons/lu'
+import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/scrollbar'
 
+const Slide = ({ icon, title }) => {
+  return (
+    <div className="grid place-content-center place-items-center space-y-2 rounded w-full shadow-md p-8 h-[200px]">
+      {icon}
+      <h1 className="text-lg font-semibold text-center p-4">{title}</h1>
+    </div>
+  )
+}
 
 function CommunitiesActive() {
-  const Slides = [
+  const [slidesPerView, setSlidesPerView] = useState(() => {
+    let numOfSlides
+
+    if (window.innerWidth < 600) numOfSlides = 1
+    if (window.innerWidth < 1000 && window.innerWidth > 600) numOfSlides = 2
+    else if (window.innerWidth >= 1000 && window.innerWidth <= 1400) numOfSlides = 3
+    else if (window.innerWidth > 1400) numOfSlides = 4
+
+    return numOfSlides
+  })
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < 600) setSlidesPerView(1)
+    if (window.innerWidth < 1000 && window.innerWidth > 600) setSlidesPerView(2)
+    else if (window.innerWidth >= 1000 && window.innerWidth <= 1400) setSlidesPerView(3)
+    else if (window.innerWidth > 1400) setSlidesPerView(4)
+  })
+
+  const slides = [
     {
       id: 1,
-      img: './javsc.png',
       title: 'JavaScript Community',
+      icon: <SiJavascript size={80} color="#666" />,
     },
     {
       id: 2,
-      img: './docm.png',
-      title: 'Documentation Community',
+      title: 'Design Community',
+      icon: <HiPaintBrush size={80} color="#666" />,
     },
     {
       id: 3,
-      img: './gaming.png',
-      title: 'Game Community',
+      title: 'Python Community',
+      icon: <SiPython size={80} color="#666" />,
     },
     {
       id: 4,
-      img: './cybersec.png',
-      title: 'Cyber Community',
+      title: 'Cybersecurity Community',
+      icon: <SiGnubash size={80} color="#666" />,
+    },
+    {
+      id: 5,
+      title: 'Entreprenuership and Outreach Community',
+      icon: <PiLineSegments size={80} color="#666" />,
+    },
+    {
+      id: 6,
+      title: 'Health Informatics Community',
+      icon: <MdOutlineHealthAndSafety size={80} color="#666" />,
+    },
+    {
+      id: 7,
+      title: 'Dart Community',
+      icon: <SiDart size={80} color="#666" />,
+    },
+    {
+      id: 8,
+      title: 'Rust Community',
+      icon: <SiRust size={80} color="#666" />,
+    },
+    {
+      id: 9,
+      title: 'Machine Learning and Data Science Community',
+      icon: <LuBrainCircuit size={80} color="#666" />,
     },
   ]
-  const [slideIndex, setSlideIndex] = useState(0)
 
-  const onSlideClick = (direction) => {
-    if (direction === 'left') {
-      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : Slides.length - 1)
-    } else {
-      setSlideIndex(slideIndex < Slides.length - 1 ? slideIndex + 1 : 0)
-    }
-  }
   return (
-    <div className='flex-col space-y-8 p-6 h-full bg-[#00baa321]'>
-      <div className='flex-col space-y-2 md:space-y-3'>
-      <h1 className='font-bold flex justify-center text-base md:text-xl text-[#00baa3]'> Kathmandu University Open Source Community</h1>
-      <h2 className='flex justify-center font-semibold text-sm md:text-lg'> Communities Active At KUCC</h2>
-      </div>
-      <div className='flex justify-center items-center p-2 sm:p-4 space-x-8'>
-        <div onClick={()=>onSlideClick('left')} className='cursor-pointer'>
-          <FaCircleArrowLeft className='w-8 h-8 text-[#00baa3]'/>
-        </div>
-        <div className='overflow-hidden'>
-        <div className='flex transition-transform duration-500 ease-in-out space-x-12 sm:space-x-16 md:space-x-12 lg:space-x-20' style={{ transform: `translateX(-${slideIndex * (200 / Slides.length)}%)` }}>
-            {Slides.map((itemSlide) => {
-              return (
-                <>
-                  <Card key={itemSlide.id} img={itemSlide.img} title={itemSlide.title} />
-                </>
-              )
-            })}
-          </div>
-        </div>
-        <div onClick={()=>onSlideClick('right')} className='cursor-pointer'>
-          <FaCircleArrowRight className='w-8 h-8 text-[#00baa3]'/>
+    <div className="flex-col space-y-8 p-6 h-full">
+      <div className="flex-col">
+        <h1 className="text-[#00baa3] text-lg sm:text-2xl md:text-3xl font-bold text-center">
+          Communities Active at KUCC
+        </h1>
+        <div className="py-8">
+          <Swiper
+            modules={[Navigation, Pagination, A11y, Autoplay]}
+            spaceBetween={12}
+            slidesPerView={slidesPerView}
+            navigation={false}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
+            speed={1000}
+            loop={true}
+            pagination={{ clickable: true }}
+          >
+            {slides.map((slide) => (
+              <SwiperSlide key={slide.id} className="mb-16 bg-[#00baa321]">
+                <Slide icon={slide.icon} title={slide.title} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </div>

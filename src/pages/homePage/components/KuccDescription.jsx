@@ -8,7 +8,7 @@ export default function KuccDescription() {
         <div className="flex justify-center">
           <img
             src="/kucc-logo.png"
-            className="object-contain max-w-[200px] md:max-w-[300px] lg:max-w-[400px] xl:max-w-[500px]"
+            className="object-contain max-w-[200px] md:max-w-[300px] lg:max-w-[400px]"
             alt="Kathmandu University Computer Club"
           />
         </div>

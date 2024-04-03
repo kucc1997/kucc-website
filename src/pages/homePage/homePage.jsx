@@ -2,6 +2,7 @@ import React from 'react'
 // import Slider from '../../components/Slider/Slider'
 
 import KuccDescription from './components/KuccDescription'
+import KUOSC from './components/KUOSC'
 import CommunitiesActive from './components/CommunitiesActive'
 import Activities from './components/Activities'
 import CounterUp from './components/CounterUp'
@@ -12,6 +13,7 @@ export default function HomePage() {
     <div className="flex-col space-y-10 w-100vw">
       {/* <Slider /> */}
       <KuccDescription />
+      <KUOSC />
       <CommunitiesActive />
       <Activities />
       <CounterUp />
