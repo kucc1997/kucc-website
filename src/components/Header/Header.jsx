@@ -101,7 +101,7 @@ const NavBar = () => {
   ]
 
   return (
-    <div className="flex w-full p-4 h-16 md:p-10 justify-between items-center bg-slate-200">
+    <div className="flex fixed w-full p-4 h-16 md:p-10 justify-between items-center bg-slate-100 z-50">
       {/* logo */}
       <div>
         <Link to="/" className="cursor-pointer">
