@@ -95,7 +95,7 @@ const NavBar = () => {
     {
       name: 'Apply to be a Member',
       icon: <BadgeCheck />,
-      link: '/register',
+      link: 'https://forms.gle/Y5vHobrCDVx2fPMaA',
     },
   ]
 

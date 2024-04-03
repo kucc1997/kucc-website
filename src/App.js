@@ -10,7 +10,7 @@ import DocTeamPage from './pages/teams/DocTeam'
 import CommunityCoPage from './pages/teams/CommunityCo'
 import CodeOfConductPage from './pages/CodeOfConductPage'
 import ContactPage from './pages/ContactPage'
-import RegisterPage from './pages/member/RegisterPage'
+// import RegisterPage from './pages/member/RegisterPage'
 import './input.css'
 import NewsNoticePage from './pages/newsAndNotices/NewsNoticePage'
 import EventsPage from './pages/events/EventsPage'
@@ -35,7 +35,7 @@ const App = () => {
             <Route path="documentation-teams" element={<DocTeamPage />} />
             <Route path="code-of-conduct" element={<CodeOfConductPage />} />
             <Route path="contact" element={<ContactPage />} />
-            <Route path="register" element={<RegisterPage />} />
+            {/* <Route path="register" element={<RegisterPage />} /> */}
             <Route path="events" element={<EventsPage />} />
             <Route path="it-express" element={<ItExpressPage />} />
 
