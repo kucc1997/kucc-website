@@ -96,6 +96,7 @@ const NavBar = () => {
       name: 'Apply to be a Member',
       icon: <BadgeCheck />,
       link: 'https://forms.gle/Y5vHobrCDVx2fPMaA',
+      useExternal: true,
     },
   ]
 
@@ -180,10 +181,17 @@ const NavBar = () => {
                   ) : (
                     <li className="text-teal-600 font-semibold transition cursor-pointer border-b-2 items-center hover:text-slate-400">
                       {/* if item has no subItems */}
-                      <Link to={item.link} className="flex gap-4" onClick={() => setOpen(false)}>
-                        {item.icon}
-                        {item.name}
-                      </Link>
+                      {item.useExternal ? (
+                        <a href={item.link} target="_blank" rel="noreferrer" className="flex gap-4">
+                          {item.icon}
+                          {item.name}
+                        </a>
+                      ) : (
+                        <Link to={item.link} className="flex gap-4" onClick={() => setOpen(false)}>
+                          {item.icon}
+                          {item.name}
+                        </Link>
+                      )}
                     </li>
                   )}
                 </div>
@@ -224,9 +232,15 @@ const NavBar = () => {
                   key={index}
                   className="text-teal-600 font-semibold transition cursor-pointer hover:text-slate-400"
                 >
-                  <Link to={item.link} className="flex gap-2">
-                    {item.name}
-                  </Link>
+                  {item.useExternal ? (
+                    <a href={item.link} target="_blank" rel="noreferrer" className="flex gap-2">
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link to={item.link} className="flex gap-2" onClick={() => setOpen(false)}>
+                      {item.name}
+                    </Link>
+                  )}
                 </li>
               )}
             </>
