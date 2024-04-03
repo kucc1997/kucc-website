@@ -116,7 +116,7 @@ const ExCommunity = () => {
       <Container sx={{ py: 8 }}>
         <Box textAlign="center" mb={3}>
           <Typography variant="subtitle1" color="text.secondary">
-            KUCC Board 2020-21
+            KUCC Board 2024-25
           </Typography>
           <Typography variant="h4">Executive Committee</Typography>
         </Box>
