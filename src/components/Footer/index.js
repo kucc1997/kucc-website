@@ -31,7 +31,7 @@ export default function Footer() {
     {
       title: 'KUCC',
       links: [
-        { title: 'Apply To Be a Member', link: '/register' },
+        { title: 'Apply To Be a Member', link: 'https://forms.gle/Y5vHobrCDVx2fPMaA' },
         { title: 'Code of Conduct', link: '/code-of-conduct' },
         { title: 'KUCC Bidhan', link: '/docs/KUCC_bidhan.pdf', target: '_blank' },
       ],
