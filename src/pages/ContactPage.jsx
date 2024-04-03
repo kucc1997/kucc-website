@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Box, Grid, Typography } from '@mui/material'
-import ContactForm from '../components/Contact/ContactForm'
-import ContactInfo from '../components/Contact/ContactInfo'
+// import ContactForm from '../components/Contact/ContactForm'
+// import ContactInfo from '../components/Contact/ContactInfo'
 import GetInTouch from '../components/Contact/GetInTouch'
 import { Helmet } from 'react-helmet'
 
@@ -16,16 +16,15 @@ const ContactPage = () => {
           <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
             Contact Us
           </Typography>
-          <Typography variant="subtitle1" color="text.secondary">
+          {/* <Typography variant="subtitle1" color="text.secondary">
             Any question or remarks? Write to us.
-          </Typography>
+          </Typography> */}
         </Box>
         <Grid sx={{ background: 'text.light' }} container rowSpacing={4} columnSpacing={{ xs: 1 }}>
-          <Grid item xs={12} sm={6} md={4}>
-            <ContactInfo />
-          </Grid>
+          <Grid item xs={12} sm={6} md={4}></Grid>
           <Grid item xs={12} sm={6} lg={8}>
-            <ContactForm />
+            {/* <ContactForm /> */}
+            {/* <ContactInfo /> */}
           </Grid>
           <Grid item xs={12}>
             <GetInTouch />
