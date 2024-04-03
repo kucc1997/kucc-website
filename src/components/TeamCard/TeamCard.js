@@ -38,6 +38,7 @@ const TeamCard = ({ name, position, linkedin, image, mail }) => {
             width: '176px',
             mb: '-64px',
           }}
+          className="rounded-full aspect-square object-cover"
           height="176"
           image={image}
           alt={name}
