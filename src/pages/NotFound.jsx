@@ -6,6 +6,11 @@ export default function NotFound() {
 		<>
 			<Helmet>
 				<title>404 - KUCC</title>
+				<meta
+					name="description"
+					content="
+						Error 404: Page Not Found"
+				/>
 			</Helmet>
 			<div className="flex-col space-y-8 p-6 h-full">
 				<div className="flex-col">
