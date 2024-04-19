@@ -78,7 +78,7 @@ export default function Footer() {
                   return (
                     <a href={link.link} target={link.target ? link.target : '_self'} key={index}>
                       <p>{link.title}</p>
-                    </Link>
+                    </a>
                   )
                 })}
               </div>
