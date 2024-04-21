@@ -10,6 +10,7 @@ import DocTeamPage from './pages/teams/DocTeam'
 import CommunityCoPage from './pages/teams/CommunityCo'
 import CodeOfConductPage from './pages/CodeOfConductPage'
 import ContactPage from './pages/ContactPage'
+import PageNotFound from "./pages/PageNotFound";
 // import RegisterPage from './pages/member/RegisterPage'
 import './input.css'
 import NewsNoticePage from './pages/newsAndNotices/NewsNoticePage'
@@ -38,7 +39,7 @@ const App = () => {
             {/* <Route path="register" element={<RegisterPage />} /> */}
             <Route path="events" element={<EventsPage />} />
             <Route path="it-express" element={<ItExpressPage />} />
-
+            <Route path="*" element={<PageNotFound />} />
             <Route path="news-and-notices" element={<NewsNoticePage />} />
             <Route path="blogs" element={<StudentBlog />} />
             <Route path="blog/:id" element={<BlogPage />} />
