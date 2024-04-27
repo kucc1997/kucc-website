@@ -19,7 +19,7 @@ export default function KuccDescription() {
               {' '}
               Since 1997, The oldest student club
             </h2>
-            <h1 className="text-[#00baa3] text-lg sm:text-2xl md:text-3xl  font-bold text-center md:text-start">
+            <h1 className="text-blue-900 text-lg sm:text-2xl md:text-3xl  font-bold text-center md:text-start">
               {' '}
               Kathmandu University Computer Club
             </h1>
@@ -39,7 +39,7 @@ export default function KuccDescription() {
               develop and encourage emerging technological advancement.
             </p>
             <Link to={'contact'} className="flex justify-center md:justify-normal">
-              <button className="p-4 bg-[#00baa3] text-white rounded-xl hover:bg-transparent hover:text-black hover:border hover:border-violet-950 hover:delay-100">
+              <button className="p-4 bg-blue-900 text-white rounded-xl hover:bg-transparent hover:text-black hover:border hover:border-violet-950 hover:delay-100">
                 CONTACT US
               </button>
             </Link>

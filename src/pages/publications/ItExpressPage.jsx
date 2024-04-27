@@ -4,6 +4,8 @@ import { FileOpen } from '@mui/icons-material'
 import { Helmet } from 'react-helmet'
 import db from '../../config/firebase'
 import { collection, onSnapshot } from 'firebase/firestore'
+import { Underline } from 'lucide-react'
+import { blue } from '@mui/material/colors'
 
 const ItExpressList = [
   // {
@@ -65,13 +67,13 @@ const ItExpressPage = () => {
             data.map((itexp) => (
               <Box
                 key={itexp.year}
-                sx={{ display: 'flex', alignItems: 'center', borderBottom: '1px solid #d4d4d4' }}
+                sx={{ display: 'flex', alignItems: 'center', borderBottom: '5px solid #dbeafe' }}
               >
                 <Link href={itexp.url} target="_blank">
-                  <FileOpen fontSize="small" sx={{ color: '#25bcea' }} />
+                  <FileOpen fontSize="small" sx={{ color: '#dbeafe' }} />
                   <Typography
                     variant="subtitle"
-                    color="#25bcea"
+                    color="#dbeafe"
                     sx={{ fontWeight: 'bold', marginLeft: 1 }}
                   >
                     IT Express {itexp.year}
@@ -85,7 +87,7 @@ const ItExpressPage = () => {
           Note: Click on the pdf to download.
         </Typography>
 
-        <Stack spacing={3} className="py-4">
+        <Stack spacing={3}  className="py-4">
           {ItExpressList.map((itexp) => (
             <div key={itexp.name}>
               <Link
@@ -93,8 +95,8 @@ const ItExpressPage = () => {
                 target="_blank"
                 className="text-slate-800 flex items-center gap-2 text-xl"
               >
-                <FileOpen fontSize="medium" />
-                <p className="text-slate-800">{itexp.name}</p>
+                <FileOpen fontSize="medium" sx={{ color: '#93c5fd' }} />
+                <p className="text-slate-800 underline decoration-blue-200 ">{itexp.name}</p>
               </Link>
             </div>
           ))}

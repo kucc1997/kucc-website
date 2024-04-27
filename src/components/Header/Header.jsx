@@ -121,24 +121,26 @@ const NavBar = () => {
           onClick={() => setOpen(!open)}
         >
           <div
-            className={`w-6 h-[2px] bg-teal-600 rounded block transition-all ease-out duration-300 ${
+            className={`w-6 h-[2px] text-blue-900 rounded block transition-all ease-out duration-300 ${
               open ? 'rotate-45 translate-y-0.5' : '-translate-y-0.5'
             }`}
           ></div>
           <div
-            className={`w-6 h-[2px] bg-teal-600 rounded block transition-all ease-out duration-300 ${
+            className={`w-6 h-[2px] text-blue-900 rounded block transition-all ease-out duration-300 ${
               open ? 'hidden' : 'flex'
             }`}
           ></div>
           <div
-            className={`w-6 h-[2px] bg-teal-600 rounded block transition-all ease-out duration-300 ${
+            className={`w-6 h-[2px] text-blue-900 rounded block transition-all ease-out duration-300 ${
               open ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'
             }`}
           ></div>
         </button>
 
         <div
-          className={`flex space-y-8 transition origin-right z-40 h-screen bg-white fixed top-0 right-0 w-2/3 sm:w-1/3 md:w-2/4 shadow-xl ${open ? 'scale-x-100' : 'scale-x-0'}`}
+          className={`flex space-y-8 transition origin-right z-40 h-screen bg-white fixed top-0 right-0 w-2/3 sm:w-1/3 md:w-2/4 shadow-xl ${
+            open ? 'scale-x-100' : 'scale-x-0'
+          }`}
         >
           <div className="flex-col mt-28 px-8 space-y-8 font-sans list-none">
             {navItems.map((item, index) => {
@@ -147,7 +149,7 @@ const NavBar = () => {
                   {item.subItems ? (
                     // if item has subItems
                     <li>
-                      <div className="text-teal-600 font-semibold transition-all cursor-pointer relative md:group border-b-2 flex gap-4 hover:text-slate-400">
+                      <div className="text-blue-900 font-semibold transition-all cursor-pointer relative md:group border-b-2 flex gap-4 hover:text-slate-400">
                         {item.icon}
                         {item.name}
                         <button
@@ -162,13 +164,15 @@ const NavBar = () => {
                         </button>
                       </div>
                       <ul
-                        className={`space-y-2 z-10 origin-top list-none transition ${item.open ? 'scale-y-100 p-[20px]' : 'scale-y-0 h-0 p-0 duration-0'}`}
+                        className={`space-y-2 z-10 origin-top list-none transition ${
+                          item.open ? 'scale-y-100 p-[20px]' : 'scale-y-0 h-0 p-0 duration-0'
+                        }`}
                       >
                         {item.subItems.map((subItem, index) => {
                           return (
                             <li
                               key={index}
-                              className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-800"
+                              className="cursor-pointer border-b border-gray-500 text-base hover:text-blue-900"
                             >
                               <Link to={subItem.link} onClick={() => setOpen(false)}>
                                 {subItem.name}
@@ -179,7 +183,7 @@ const NavBar = () => {
                       </ul>
                     </li>
                   ) : (
-                    <li className="text-teal-600 font-semibold transition cursor-pointer border-b-2 items-center hover:text-slate-400">
+                    <li className="text-blue-900 font-semibold transition cursor-pointer border-b-2 items-center hover:text-slate-400">
                       {/* if item has no subItems */}
                       {item.useExternal ? (
                         <a href={item.link} target="_blank" rel="noreferrer" className="flex gap-4">
@@ -208,17 +212,17 @@ const NavBar = () => {
             <>
               {item.subItems ? (
                 <li
-                  className="text-teal-600 font-semibold transition-all cursor-pointer relative group hover:text-slate-400"
+                  className="text-blue-900 font-semibold transition-all cursor-pointer relative group hover:text-slate-400"
                   key={index}
                 >
                   <div className="flex items-center gap-2">
-                    {item.name} <ChevronDown className="bg-teal-100 rounded-md" />
+                    {item.name} <ChevronDown className="bg-blue-100 rounded-md" />
                   </div>
                   <ul className="hidden space-y-3 w-56 absolute z-10 p-[20px] list-none bg-[rgb(44,43,43)] text-[#fff] group-hover:block transform duration-700">
                     {item.subItems.map((subItem, index) => {
                       return (
                         <li
-                          className="cursor-pointer border-b border-gray-500 text-base hover:text-teal-200"
+                          className="cursor-pointer border-b border-gray-500 text-base hover:text-blue-900"
                           key={index}
                         >
                           <Link to={subItem.link}>{subItem.name}</Link>
@@ -230,7 +234,7 @@ const NavBar = () => {
               ) : (
                 <li
                   key={index}
-                  className="text-teal-600 font-semibold transition cursor-pointer hover:text-slate-400"
+                  className="text-blue-900 font-semibold transition cursor-pointer hover:text-slate-400"
                 >
                   {item.useExternal ? (
                     <a href={item.link} target="_blank" rel="noreferrer" className="flex gap-2">
