@@ -101,7 +101,7 @@ const NavBar = () => {
   ]
 
   return (
-    <div className="flex w-full p-4 h-16 md:p-10 justify-between items-center bg-slate-100 z-50">
+    <div className="flex w-full p-4 h-16 md:p-10 justify-between items-center bg-blue-50 z-50">
       {/* logo */}
       <div>
         <Link to="/" className="cursor-pointer">
@@ -172,7 +172,7 @@ const NavBar = () => {
                           return (
                             <li
                               key={index}
-                              className="cursor-pointer border-b border-gray-500 text-base hover:text-blue-900"
+                              className="cursor-pointer border-b border-gray-500 text-base hover:text-sky-800"
                             >
                               <Link to={subItem.link} onClick={() => setOpen(false)}>
                                 {subItem.name}
@@ -222,7 +222,7 @@ const NavBar = () => {
                     {item.subItems.map((subItem, index) => {
                       return (
                         <li
-                          className="cursor-pointer border-b border-gray-500 text-base hover:text-blue-900"
+                          className="cursor-pointer border-b border-gray-500 text-base hover:text-sky-800"
                           key={index}
                         >
                           <Link to={subItem.link}>{subItem.name}</Link>

@@ -3,7 +3,7 @@ import ActivityCard from './ActivityCard'
 
 export default function Activities() {
   return (
-    <div className="flex flex-col space-y-2 p-5 justify-center items-center bg-blue-100">
+    <div className="flex flex-col space-y-2 p-5 justify-center items-center bg-blue-50">
       <h2 className="text-[#033b4a] font-semibold text-base sm:text-lg md:text-xl">What we do</h2>
       <h1 className="text-blue-900 text-lg sm:text-2xl md:text-3xl  font-bold">
         {' '}

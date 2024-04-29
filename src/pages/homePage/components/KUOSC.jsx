@@ -1,6 +1,6 @@
 export default function KUOSC() {
   return (
-    <section className="flex-col py-8 p-6 h-full bg-blue-100">
+    <section className="flex-col py-8 p-6 h-full bg-blue-50">
       <h1 className="text-blue-900 text-lg sm:text-2xl md:text-3xl font-bold text-center">
         Kathmandu University Open Source Community
       </h1>

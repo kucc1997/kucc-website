@@ -15,7 +15,7 @@ export default function ActivityCard(props) {
     }
   }
   return (
-    <div className="flex bg-blue-200 space-y-4 rounded-lg flex-col hover:cursor-pointer hover:transition hover:translate-y-1 hover:ease-in-out p-6 justify-center items-center shadow-lg">
+    <div className="flex bg-blue-100 space-y-4 rounded-lg flex-col hover:cursor-pointer hover:transition hover:translate-y-1 hover:ease-in-out p-6 justify-center items-center shadow-lg">
       <div>
         <Icon />
       </div>

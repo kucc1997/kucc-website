@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function PresidentSection() {
   return (
-    <div className="flex flex-col p-6 py-14 bg-blue-100">
+    <div className="flex flex-col p-6 py-14 bg-blue-50">
       <div className="space-y-6 md:space-y-0 md:space-x-6 lg:space-x-10 xl:space-x-14 md:flex md:items-center mx-auto max-w-screen-xl">
         <div className="flex justify-center md:hidden">
           <img

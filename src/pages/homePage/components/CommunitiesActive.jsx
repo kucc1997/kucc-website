@@ -105,7 +105,7 @@ function CommunitiesActive() {
             pagination={{ clickable: true }}
           >
             {slides.map((slide) => (
-              <SwiperSlide key={slide.id} className="mb-16 bg-blue-100">
+              <SwiperSlide key={slide.id} className="mb-16 bg-blue-50">
                 <Slide icon={slide.icon} title={slide.title} />
               </SwiperSlide>
             ))}
