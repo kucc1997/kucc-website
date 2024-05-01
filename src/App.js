@@ -20,7 +20,6 @@ import StudentBlog from './components/StudentBlog'
 import BlogPage from './components/BlogPage'
 
 import HomePage from './pages/homePage/homePage'
-import NotFound from './pages/NotFound'
 
 const App = () => {
   return (
