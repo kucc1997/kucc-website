@@ -90,7 +90,7 @@ function CommunitiesActive() {
   return (
     <div className="flex-col space-y-8 p-6 h-full">
       <div className="flex-col">
-        <h1 className="text-blue-900 text-lg sm:text-2xl md:text-3xl font-bold text-center">
+        <h1 className="text-darkBlue text-lg sm:text-2xl md:text-3xl font-bold text-center">
           Communities Active at KUCC
         </h1>
         <div className="py-8">
@@ -105,7 +105,7 @@ function CommunitiesActive() {
             pagination={{ clickable: true }}
           >
             {slides.map((slide) => (
-              <SwiperSlide key={slide.id} className="mb-16 bg-blue-50">
+              <SwiperSlide key={slide.id} className="mb-16 bg-lightBlue">
                 <Slide icon={slide.icon} title={slide.title} />
               </SwiperSlide>
             ))}

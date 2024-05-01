@@ -101,7 +101,7 @@ const NavBar = () => {
   ]
 
   return (
-    <div className="flex w-full p-4 h-16 md:p-10 justify-between items-center bg-blue-50 z-50">
+    <div className="flex w-full p-4 h-16 md:p-10 justify-between items-center bg-lightBlue z-50">
       {/* logo */}
       <div>
         <Link to="/" className="cursor-pointer">
@@ -117,21 +117,21 @@ const NavBar = () => {
       <div className="flex items-center lg:hidden" ref={sidebarRef}>
         {/* hambuger menu */}
         <button
-          className="flex z-50 justify-center relative cursor-pointer items-center p-2 flex-col space-y-1 aspect-square hover:bg-[#0002] rounded transition-all"
+          className="flex z-50 justify-center relative cursor-pointer items-center p-2 flex-col space-y-1 aspect-square hover:bg-lightGray rounded transition-all"
           onClick={() => setOpen(!open)}
         >
           <div
-            className={`w-6 h-[2px] text-blue-900 rounded block transition-all ease-out duration-300 ${
+            className={`w-6 h-[2px] text-darkBlue rounded block transition-all ease-out duration-300 ${
               open ? 'rotate-45 translate-y-0.5' : '-translate-y-0.5'
             }`}
           ></div>
           <div
-            className={`w-6 h-[2px] text-blue-900 rounded block transition-all ease-out duration-300 ${
+            className={`w-6 h-[2px] text-darkBlue rounded block transition-all ease-out duration-300 ${
               open ? 'hidden' : 'flex'
             }`}
           ></div>
           <div
-            className={`w-6 h-[2px] text-blue-900 rounded block transition-all ease-out duration-300 ${
+            className={`w-6 h-[2px] text-darkBlue rounded block transition-all ease-out duration-300 ${
               open ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'
             }`}
           ></div>
@@ -149,7 +149,7 @@ const NavBar = () => {
                   {item.subItems ? (
                     // if item has subItems
                     <li>
-                      <div className="text-blue-900 font-semibold transition-all cursor-pointer relative md:group border-b-2 flex gap-4 hover:text-slate-400">
+                      <div className="text-darkBlue font-semibold transition-all cursor-pointer relative md:group border-b-2 flex gap-4 hover:text-hoverColor">
                         {item.icon}
                         {item.name}
                         <button
@@ -157,9 +157,9 @@ const NavBar = () => {
                           onClick={() => item.setOpen(!item.open)}
                         >
                           {!item.open ? (
-                            <ChevronDown className="bg-teal-100 rounded-md" />
+                            <ChevronDown className="bg-mediumLightBlue rounded-md" />
                           ) : (
-                            <ChevronUp className="bg-teal-100 rounded-md" />
+                            <ChevronUp className="bg-mediumLightBlue rounded-md" />
                           )}
                         </button>
                       </div>
@@ -172,7 +172,7 @@ const NavBar = () => {
                           return (
                             <li
                               key={index}
-                              className="cursor-pointer border-b border-gray-500 text-base hover:text-sky-800"
+                              className="cursor-pointer border-b border-gray-500 text-base hover:text-darkSky"
                             >
                               <Link to={subItem.link} onClick={() => setOpen(false)}>
                                 {subItem.name}
@@ -183,7 +183,7 @@ const NavBar = () => {
                       </ul>
                     </li>
                   ) : (
-                    <li className="text-blue-900 font-semibold transition cursor-pointer border-b-2 items-center hover:text-slate-400">
+                    <li className="text-darkBlue font-semibold transition cursor-pointer border-b-2 items-center hover:text-hoverColor">
                       {/* if item has no subItems */}
                       {item.useExternal ? (
                         <a href={item.link} target="_blank" rel="noreferrer" className="flex gap-4">
@@ -212,7 +212,7 @@ const NavBar = () => {
             <>
               {item.subItems ? (
                 <li
-                  className="text-blue-900 font-semibold transition-all cursor-pointer relative group hover:text-slate-400"
+                  className="text-darkBlue font-semibold transition-all cursor-pointer relative group hover:text-hoverColor"
                   key={index}
                 >
                   <div className="flex items-center gap-2">
@@ -222,7 +222,7 @@ const NavBar = () => {
                     {item.subItems.map((subItem, index) => {
                       return (
                         <li
-                          className="cursor-pointer border-b border-gray-500 text-base hover:text-sky-800"
+                          className="cursor-pointer border-b border-gray-500 text-base hover:text-darkSky"
                           key={index}
                         >
                           <Link to={subItem.link}>{subItem.name}</Link>
@@ -234,7 +234,7 @@ const NavBar = () => {
               ) : (
                 <li
                   key={index}
-                  className="text-blue-900 font-semibold transition cursor-pointer hover:text-slate-400"
+                  className="text-darkBlue font-semibold transition cursor-pointer hover:text-hoverColor"
                 >
                   {item.useExternal ? (
                     <a href={item.link} target="_blank" rel="noreferrer" className="flex gap-2">

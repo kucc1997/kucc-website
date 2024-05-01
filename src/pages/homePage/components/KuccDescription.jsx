@@ -15,11 +15,11 @@ export default function KuccDescription() {
 
         <div className="flex-col space-y-6">
           <div className="space-y-4 max-w-[80ch] mx-auto">
-            <h2 className="text-[#033b4a] font-semibold text-base sm:text-lg md:text-xl text-center md:text-start">
+            <h2 className="text-mediumGray font-semibold text-base sm:text-lg md:text-xl text-center md:text-start">
               {' '}
               Since 1997, The oldest student club
             </h2>
-            <h1 className="text-blue-900 text-lg sm:text-2xl md:text-3xl  font-bold text-center md:text-start">
+            <h1 className="text-darkBlue text-lg sm:text-2xl md:text-3xl  font-bold text-center md:text-start">
               {' '}
               Kathmandu University Computer Club
             </h1>
@@ -39,7 +39,7 @@ export default function KuccDescription() {
               develop and encourage emerging technological advancement.
             </p>
             <Link to={'contact'} className="flex justify-center md:justify-normal">
-              <button className="p-4 bg-blue-900 text-white rounded-xl hover:bg-transparent hover:text-black hover:border hover:border-violet-950 hover:delay-100">
+              <button className="p-4 bg-darkBlue text-white rounded-xl hover:bg-transparent hover:text-black hover:border hover:border-violet-950 hover:delay-100">
                 CONTACT US
               </button>
             </Link>
