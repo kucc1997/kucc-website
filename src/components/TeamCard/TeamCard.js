@@ -54,9 +54,9 @@ const TeamCard = ({ name, position, linkedin, image, mail }) => {
       </CardContent>
       <CardActions sx={{ justifyContent: 'center' }} disableSpacing>
         <IconButton aria-label="add to favorites">
-          <Link to={linkedin} target="_blank">
+          <a href={linkedin} target="_blank" rel="noreferrer">
             <LinkedInIcon />
-          </Link>
+          </a>
         </IconButton>
         {/* <IconButton aria-label="share">
           <GitHubIcon />

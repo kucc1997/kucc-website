@@ -43,6 +43,13 @@ const executivesList = [
     mail: 'darshanlamichhane012@gmail.com',
   },
   {
+    name: 'Sugat Sujakhu',
+    position: 'KUOSC Coordinator',
+    image: '/people/Sugat_Sujakhu.webp',
+    linkedin: 'https://www.linkedin.com/in/notsugat/',
+    mail: 'sugatsujakhu@gmail.com',
+  },
+  {
     name: 'Santosh Yadav',
     position: 'Executive Member',
     image: '/people/Santosh_Yadav.webp',
