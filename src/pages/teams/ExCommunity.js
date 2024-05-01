@@ -119,6 +119,10 @@ const ExCommunity = () => {
     <>
       <Helmet>
         <title> Executive Committee - KUCC</title>
+        <meta
+          name="description"
+          content="Executive Committee of Kathmandu University Computer Club (KUCC) 2024/25 comprises of Nirjal Bhurtel (President), Abhiyan Dhakal (Vice President), Jenisha Khulal Magar (General Secretary), Sadikshya Pokharel (Treasurer), Darshan Lamichhane (Club Secretary), Santosh Yadav (Executive Member), Shashinoor Ghimire (Executive Member), Phiroj Kumar Shah (Executive Member), Aagaman Bhandari (Executive Member), Diwas Parajuli (Executive Member), Sanjay Pahari (Executive Member), James Bhattarai (Executive Member), Royas Shakya (Executive Member), Ranjita Dhakal (Executive Member)"
+        />
       </Helmet>
       <Container sx={{ py: 8 }}>
         <Box textAlign="center" mb={3}>
