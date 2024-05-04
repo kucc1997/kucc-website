@@ -10,7 +10,6 @@ import EmailIcon from '@mui/icons-material/Email'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
-import { Link } from 'react-router-dom'
 
 const TeamCard = ({ name, position, linkedin, image, mail }) => {
   return (
@@ -54,9 +53,9 @@ const TeamCard = ({ name, position, linkedin, image, mail }) => {
       </CardContent>
       <CardActions sx={{ justifyContent: 'center' }} disableSpacing>
         <IconButton aria-label="add to favorites">
-          <Link to={linkedin} target="_blank">
+          <a href={linkedin} target="_blank" rel="noreferrer">
             <LinkedInIcon />
-          </Link>
+          </a>
         </IconButton>
         {/* <IconButton aria-label="share">
           <GitHubIcon />
@@ -65,9 +64,9 @@ const TeamCard = ({ name, position, linkedin, image, mail }) => {
           <TwitterIcon />
         </IconButton> */}
         <IconButton aria-label="share">
-          <Link to={`mailto:${mail}`} target="_blank">
+          <a href={`mailto:${mail}`} target="_blank" rel="noreferrer">
             <EmailIcon />
-          </Link>
+          </a>
         </IconButton>
       </CardActions>
     </Card>

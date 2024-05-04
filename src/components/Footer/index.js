@@ -75,11 +75,15 @@ export default function Footer() {
                     return <p key={index}>{link.title}</p>
                   }
 
-                  return (
-                    <Link to={link.link} target={link.target ? link.target : '_self'} key={index}>
-                      <p>{link.title}</p>
-                    </Link>
-                  )
+ return (           
+	 link.link.startsWith("https://")
+	 	?<a href={link.link} target={link.target ? link.target : '_self'} key={index}>
+  				<p>{link.title}</p>
+	 	</a>
+		:<Link to={link.link} target={link.target ? link.target : '_self'} key={index}>
+	 		<p>{link.title}</p> 
+	 	</Link>
+  )	
                 })}
               </div>
             )

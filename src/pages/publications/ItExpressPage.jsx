@@ -8,42 +8,42 @@ import { Underline } from 'lucide-react'
 import { blue } from '@mui/material/colors'
 
 const ItExpressList = [
-  // {
-  //   name: 'IT Express 2023',
-  //   link: '/docs/IT-EXPRESS-2023.pdf',
-  // },
-  {
-    name: 'IT Express 2022',
-    link: '/docs/IT-EXPRESS-2022.pdf',
-  },
-  {
-    name: 'IT Express 2021',
-    link: '/docs/IT-EXPRESS-2021.pdf',
-  },
-  {
-    name: 'IT Express 2019',
-    link: '/docs/IT-EXPRESS-2019.pdf',
-  },
-  {
-    name: 'IT Express 2018',
-    link: '/docs/IT-EXPRESS-2018.pdf',
-  },
+	// {
+	//   name: 'IT Express 2023',
+	//   link: '/docs/IT-EXPRESS-2023.pdf',
+	// },
+	{
+		name: 'IT Express 2022',
+		link: '/docs/IT-EXPRESS-2022.pdf',
+	},
+	{
+		name: 'IT Express 2021',
+		link: '/docs/IT-EXPRESS-2021.pdf',
+	},
+	{
+		name: 'IT Express 2019',
+		link: '/docs/IT-EXPRESS-2019.pdf',
+	},
+	{
+		name: 'IT Express 2018',
+		link: '/docs/IT-EXPRESS-2018.pdf',
+	},
 ]
 
 const ItExpressPage = () => {
-  const [data, setData] = useState(null)
+	const [data, setData] = useState(null)
 
-  const getData = () => {
-    onSnapshot(collection(db, 'itexpress'), (snapshot) => {
-      const itExpressList = snapshot.docs.map((doc) => doc.data())
-      itExpressList.sort((a, b) => b.year - a.year)
-      setData(itExpressList)
-    })
-  }
+	const getData = () => {
+		onSnapshot(collection(db, 'itexpress'), (snapshot) => {
+			const itExpressList = snapshot.docs.map((doc) => doc.data())
+			itExpressList.sort((a, b) => b.year - a.year)
+			setData(itExpressList)
+		})
+	}
 
-  useEffect(() => {
-    getData()
-  }, [])
+	useEffect(() => {
+		getData()
+	}, [])
 
   return (
     <>
@@ -67,13 +67,12 @@ const ItExpressPage = () => {
             data.map((itexp) => (
               <Box
                 key={itexp.year}
-                sx={{ display: 'flex', alignItems: 'center', borderBottom: '5px solid #dbeafe' }}
+                sx={{ display: 'flex', alignItems: 'center', borderBottom: '1px solid #dbeafe' }}
               >
                 <Link href={itexp.url} target="_blank">
                   <FileOpen fontSize="small" sx={{ color: '#dbeafe' }} />
                   <Typography
                     variant="subtitle"
-                    color="#dbeafe"
                     sx={{ fontWeight: 'bold', marginLeft: 1 }}
                   >
                     IT Express {itexp.year}
