@@ -15,7 +15,7 @@ export default function CounterUp() {
         setOn(true)
       }}
     >
-      <div className="flex justify-around items-center h-[30vh] bg-[#00baa3] text-white">
+      <div className="flex justify-around items-center h-[30vh] bg-counterBackground text-textOnDarkBg">
         {/* mobile view upto sm */}
         <div className="space-y-10 justify-center md:hidden">
           <div className="flex-col font-bold tracking-wider font-sans">

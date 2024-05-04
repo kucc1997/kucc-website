@@ -4,6 +4,8 @@ import { FileOpen } from '@mui/icons-material'
 import { Helmet } from 'react-helmet'
 import db from '../../config/firebase'
 import { collection, onSnapshot } from 'firebase/firestore'
+import { Underline } from 'lucide-react'
+import { blue } from '@mui/material/colors'
 
 const ItExpressList = [
 	// {
@@ -43,69 +45,64 @@ const ItExpressPage = () => {
 		getData()
 	}, [])
 
-	return (
-		<>
-			<Helmet>
-				<title> IT Express - KUCC</title>
-				<meta
-					name="description"
-					content="IT Express is a magazine published every year by the KUCC. It includes articles submitted by the students of DOCSE, research works, clubs information and messages from reputed personnel. Listed below is the archive of the e-copies of IT Express published since 2018."
-				/>
-			</Helmet>
-			<Container sx={{ py: 8 }}>
-				<Box textAlign="center" mb={4}>
-					<Typography variant="h5" mb={2} sx={{ fontWeight: 'bold' }}>
-						IT Express
-					</Typography>
-					<Typography variant="body1" color="text.secondary">
-						IT Express is a magazine published every year by the KUCC. It includes articles
-						submitted by the students of DOCSE, research works, clubs information and messages from
-						reputed personnel. Listed below is the archive of the e-copies of IT Express published
-						since 2018.
-					</Typography>
-				</Box>
-				<Stack spacing={4} sx={{ marginBottom: 1 }}>
-					{data &&
-						data.map((itexp) => (
-							<Box
-								key={itexp.year}
-								sx={{ display: 'flex', alignItems: 'center', borderBottom: '1px solid #d4d4d4' }}
-							>
-								<Link href={itexp.url} target="_blank">
-									<FileOpen fontSize="small" sx={{ color: '#25bcea' }} />
-									<Typography
-										variant="subtitle"
-										color="#25bcea"
-										sx={{ fontWeight: 'bold', marginLeft: 1 }}
-									>
-										IT Express {itexp.year}
-									</Typography>
-								</Link>
-							</Box>
-						))}
-				</Stack>
-				<Typography variant="caption" color="text.secondary">
-					{' '}
-					Note: Click on the pdf to download.
-				</Typography>
+  return (
+    <>
+      <Helmet>
+        <title> IT Express - KUCC</title>
+      </Helmet>
+      <Container sx={{ py: 8 }}>
+        <Box textAlign="center" mb={4}>
+          <Typography variant="h5" mb={2} sx={{ fontWeight: 'bold' }}>
+            IT Express
+          </Typography>
+          <Typography variant="body1" color="text.secondary">
+            IT Express is a magazine published every year by the KUCC. It includes articles
+            submitted by the students of DOCSE, research works, clubs information and messages from
+            reputed personnel. Listed below is the archive of the e-copies of IT Express published
+            since 2018.
+          </Typography>
+        </Box>
+        <Stack spacing={4} sx={{ marginBottom: 1 }}>
+          {data &&
+            data.map((itexp) => (
+              <Box
+                key={itexp.year}
+                sx={{ display: 'flex', alignItems: 'center', borderBottom: '1px solid #dbeafe' }}
+              >
+                <Link href={itexp.url} target="_blank">
+                  <FileOpen fontSize="small" sx={{ color: '#dbeafe' }} />
+                  <Typography
+                    variant="subtitle"
+                    sx={{ fontWeight: 'bold', marginLeft: 1 }}
+                  >
+                    IT Express {itexp.year}
+                  </Typography>
+                </Link>
+              </Box>
+            ))}
+        </Stack>
+        <Typography variant="caption" color="text.secondary">
+          {' '}
+          Note: Click on the pdf to download.
+        </Typography>
 
-				<Stack spacing={3} className="py-4">
-					{ItExpressList.map((itexp) => (
-						<div key={itexp.name}>
-							<Link
-								href={itexp.link}
-								target="_blank"
-								className="text-slate-800 flex items-center gap-2 text-xl"
-							>
-								<FileOpen fontSize="medium" />
-								<p className="text-slate-800">{itexp.name}</p>
-							</Link>
-						</div>
-					))}
-				</Stack>
-			</Container>
-		</>
-	)
+        <Stack spacing={3}  className="py-4">
+          {ItExpressList.map((itexp) => (
+            <div key={itexp.name}>
+              <Link
+                href={itexp.link}
+                target="_blank"
+                className="text-subTitleColor flex items-center gap-2 text-xl"
+              >
+                <FileOpen fontSize="medium" sx={{ color: '#93c5fd' }} />
+                <p className="text-subTitleColor underline decoration-secondBackground ">{itexp.name}</p>
+              </Link>
+            </div>
+          ))}
+        </Stack>
+      </Container>
+    </>
+  )
 }
 
 export default ItExpressPage

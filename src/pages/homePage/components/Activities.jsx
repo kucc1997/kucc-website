@@ -3,9 +3,9 @@ import ActivityCard from './ActivityCard'
 
 export default function Activities() {
   return (
-    <div className="flex flex-col space-y-2 p-5 justify-center items-center bg-[#00baa321]">
-      <h2 className="text-[#033b4a] font-semibold text-base sm:text-lg md:text-xl">What we do</h2>
-      <h1 className="text-[#00baa3] text-lg sm:text-2xl md:text-3xl  font-bold">
+    <div className="flex flex-col space-y-2 p-5 justify-center items-center bg-baseBackground">
+      <h2 className="text-subTitleColor font-semibold text-base sm:text-lg md:text-xl">What we do</h2>
+      <h1 className="text-titleColor text-lg sm:text-2xl md:text-3xl  font-bold">
         {' '}
         Activities We Are Actively Doing
       </h1>

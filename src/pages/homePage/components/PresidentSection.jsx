@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function PresidentSection() {
   return (
-    <div className="flex flex-col p-6 py-14 bg-[#00baa321]">
+    <div className="flex flex-col p-6 py-14 bg-baseBackground">
       <div className="space-y-6 md:space-y-0 md:space-x-6 lg:space-x-10 xl:space-x-14 md:flex md:items-center mx-auto max-w-screen-xl">
         <div className="flex justify-center md:hidden">
           <img
@@ -13,10 +13,10 @@ export default function PresidentSection() {
         </div>
         <div className="flex-col space-y-3 md:hidden">
           <div>
-            <h1 className="text-[#00baa3] text-xl font-semibold tracking-wide text-center">
+            <h1 className="text-titleColor text-xl font-semibold tracking-wide text-center">
               KUCC President
             </h1>
-            <h2 className="text-gray-700 text-lg font-medium tracking-wide text-center">
+            <h2 className="text-subTitleColor text-lg font-medium tracking-wide text-center">
               Nirjal Bhurtel
             </h2>
           </div>
@@ -32,7 +32,7 @@ export default function PresidentSection() {
           </p>
         </div>
         <div className="hidden md:flex md:flex-col md:space-y-6 md:items-center">
-          <h1 className=" text-[#00baa3] text-3xl lg:text-4xl font-bold tracking-wider">
+          <h1 className=" text-titleColor text-3xl lg:text-4xl font-bold tracking-wider">
             OUR PRESIDENT
           </h1>
           <p className="text-justify md:text-xl lg:text-2xl">
@@ -55,10 +55,10 @@ export default function PresidentSection() {
             />
           </div>
           <div>
-            <h1 className="text-[#00baa3] text-xl lg:text-2xl font-semibold tracking-wide text-center">
+            <h1 className="text-titleColor text-xl lg:text-2xl font-semibold tracking-wide text-center">
               KUCC President
             </h1>
-            <h2 className="text-gray-700 text-lg lg:text-xl font-medium tracking-wide text-center">
+            <h2 className="text-subTitleColor text-lg lg:text-xl font-medium tracking-wide text-center">
               Nirjal Bhurtel
             </h2>
           </div>
