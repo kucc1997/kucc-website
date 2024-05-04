@@ -93,10 +93,10 @@ const ItExpressPage = () => {
               <Link
                 href={itexp.link}
                 target="_blank"
-                className="text-slate-800 flex items-center gap-2 text-xl"
+                className="text-subTitleColor flex items-center gap-2 text-xl"
               >
                 <FileOpen fontSize="medium" sx={{ color: '#93c5fd' }} />
-                <p className="text-slate-800 underline decoration-blue-200 ">{itexp.name}</p>
+                <p className="text-subTitleColor underline decoration-secondBackground ">{itexp.name}</p>
               </Link>
             </div>
           ))}
