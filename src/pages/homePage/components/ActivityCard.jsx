@@ -21,7 +21,7 @@ export default function ActivityCard(props) {
       </div>
       <div className='space-y-3'>
         <h1 className="text-subTitleColor font-semibold text-base sm:text-lg md:text-xl text-center">{props.title}</h1>
-        <p className="flex text-justify ">{props.description}</p>
+        <p className="flex text-justify text-activityCardText ">{props.description}</p>
       </div>
     </div>
   )
