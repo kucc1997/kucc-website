@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { SiJavascript, SiRust, SiGnubash, SiPython, SiDart } from 'react-icons/si'
 import { MdOutlineHealthAndSafety } from 'react-icons/md'
@@ -25,6 +25,7 @@ function CommunitiesActive() {
   const [slidesPerView, setSlidesPerView] = useState(() => {
     let numOfSlides
 
+    if (typeof window === 'undefined') return 0
     if (window.innerWidth < 600) numOfSlides = 1
     if (window.innerWidth < 1000 && window.innerWidth > 600) numOfSlides = 2
     else if (window.innerWidth >= 1000 && window.innerWidth <= 1400) numOfSlides = 3
@@ -33,11 +34,17 @@ function CommunitiesActive() {
     return numOfSlides
   })
 
-  window.addEventListener('resize', () => {
-    if (window.innerWidth < 600) setSlidesPerView(1)
-    if (window.innerWidth < 1000 && window.innerWidth > 600) setSlidesPerView(2)
-    else if (window.innerWidth >= 1000 && window.innerWidth <= 1400) setSlidesPerView(3)
-    else if (window.innerWidth > 1400) setSlidesPerView(4)
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const listener = () => {
+      if (window.innerWidth < 600) setSlidesPerView(1)
+      if (window.innerWidth < 1000 && window.innerWidth > 600) setSlidesPerView(2)
+      else if (window.innerWidth >= 1000 && window.innerWidth <= 1400) setSlidesPerView(3)
+      else if (window.innerWidth > 1400) setSlidesPerView(4)
+    }
+    window.addEventListener('resize', listener)
+
+    return () => window.removeEventListener('resize', listener)
   })
 
   const slides = [

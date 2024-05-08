@@ -50,10 +50,12 @@ export default function PresidentSection() {
         </div>
         <div className="hidden md:flex md:flex-col md:space-y-4">
           <div className="md:w-[350px] lg:w-[450px] xl:w-[500px]">
-            <img
-              src="./nirjal_president.jpg"
+            <Image
+              src="/nirjal_president.jpg"
               className="rounded-2xl object-contain"
               alt="Nirjal Bhurtel, KUCC President"
+              height={600}
+              width={600}
             />
           </div>
           <div>
