@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 }
 
 const ItExpressList = [
-  // {
-  //   name: 'IT Express 2023',
-  //   link: '/docs/IT-EXPRESS-2023.pdf',
-  // },
+  {
+    name: 'IT Express 2023',
+    link: '/docs/IT-EXPRESS-2023.pdf',
+  },
   {
     name: 'IT Express 2022',
     link: '/docs/IT-EXPRESS-2022.pdf',
