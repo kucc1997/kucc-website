@@ -122,17 +122,17 @@ const NavBar = () => {
           onClick={() => setOpen(!open)}
         >
           <div
-            className={`w-6 h-[2px] text-titleColor rounded block transition-all ease-out duration-300 ${
+            className={`w-6 h-[2px] bg-titleColor rounded block transition-all ease-out duration-300 ${
               open ? 'rotate-45 translate-y-0.5' : '-translate-y-0.5'
             }`}
           ></div>
           <div
-            className={`w-6 h-[2px] text-titleColor rounded block transition-all ease-out duration-300 ${
+            className={`w-6 h-[2px] bg-titleColor rounded block transition-all ease-out duration-300 ${
               open ? 'hidden' : 'flex'
             }`}
           ></div>
           <div
-            className={`w-6 h-[2px] text-titleColor rounded block transition-all ease-out duration-300 ${
+            className={`w-6 h-[2px] bg-titleColor rounded block transition-all ease-out duration-300 ${
               open ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'
             }`}
           ></div>
