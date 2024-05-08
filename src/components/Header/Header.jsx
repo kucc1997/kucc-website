@@ -1,15 +1,14 @@
+'use client'
 import React, { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { Home } from 'lucide-react'
 import { Users } from 'lucide-react'
 import { NotebookPen } from 'lucide-react'
-import { Newspaper } from 'lucide-react'
-import { CalendarSearch } from 'lucide-react'
-import { BookKey } from 'lucide-react'
 import { Contact } from 'lucide-react'
 import { BadgeCheck } from 'lucide-react'
 import { ChevronDown } from 'lucide-react'
 import { ChevronUp } from 'lucide-react'
+import Image from 'next/image'
 
 const NavBar = () => {
   const [open, setOpen] = useState('')
@@ -104,11 +103,13 @@ const NavBar = () => {
     <div className="flex w-full p-4 h-16 md:p-10 justify-between items-center bg-baseBackground z-50">
       {/* logo */}
       <div>
-        <Link to="/" className="cursor-pointer">
-          <img
-            src={'kucc-logo.png'}
+        <Link href="/" className="cursor-pointer">
+          <Image
+            src={'/kucc-logo.png'}
             className="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 object-cover"
             alt="logo"
+            height={100}
+            width={100}
           />
         </Link>
       </div>
@@ -121,17 +122,17 @@ const NavBar = () => {
           onClick={() => setOpen(!open)}
         >
           <div
-            className={`w-6 h-[2px] text-titleColor rounded block transition-all ease-out duration-300 ${
+            className={`w-6 h-[2px] bg-titleColor rounded block transition-all ease-out duration-300 ${
               open ? 'rotate-45 translate-y-0.5' : '-translate-y-0.5'
             }`}
           ></div>
           <div
-            className={`w-6 h-[2px] text-titleColor rounded block transition-all ease-out duration-300 ${
+            className={`w-6 h-[2px] bg-titleColor rounded block transition-all ease-out duration-300 ${
               open ? 'hidden' : 'flex'
             }`}
           ></div>
           <div
-            className={`w-6 h-[2px] text-titleColor rounded block transition-all ease-out duration-300 ${
+            className={`w-6 h-[2px] bg-titleColor rounded block transition-all ease-out duration-300 ${
               open ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'
             }`}
           ></div>
@@ -174,7 +175,7 @@ const NavBar = () => {
                               key={index}
                               className="cursor-pointer border-b border-navSubitemBorder text-base hover:text-counterBackground"
                             >
-                              <Link to={subItem.link} onClick={() => setOpen(false)}>
+                              <Link href={subItem.link} onClick={() => setOpen(false)}>
                                 {subItem.name}
                               </Link>
                             </li>
@@ -191,7 +192,11 @@ const NavBar = () => {
                           {item.name}
                         </a>
                       ) : (
-                        <Link to={item.link} className="flex gap-4" onClick={() => setOpen(false)}>
+                        <Link
+                          href={item.link}
+                          className="flex gap-4"
+                          onClick={() => setOpen(false)}
+                        >
                           {item.icon}
                           {item.name}
                         </Link>
@@ -225,7 +230,7 @@ const NavBar = () => {
                           className="cursor-pointer border-b border-navSubitemBorder text-base hover:text-counterBackground"
                           key={index}
                         >
-                          <Link to={subItem.link}>{subItem.name}</Link>
+                          <Link href={subItem.link}>{subItem.name}</Link>
                         </li>
                       )
                     })}
@@ -241,7 +246,7 @@ const NavBar = () => {
                       {item.name}
                     </a>
                   ) : (
-                    <Link to={item.link} className="flex gap-2" onClick={() => setOpen(false)}>
+                    <Link href={item.link} className="flex gap-2" onClick={() => setOpen(false)}>
                       {item.name}
                     </Link>
                   )}
