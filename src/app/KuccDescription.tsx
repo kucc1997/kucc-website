@@ -1,11 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Button } from "@/components/ui/button"
 
 export default function KuccDescription() {
   return (
-    <div className="flex-col p-5 pt-20 items-center max-w-screen-xl mx-auto">
-      <div className="lg:flex space-y-4 pt-16">
+    <div className="flex flex-col p-5 justify-center items-center max-w-screen-xl min-h-[85vh] mx-auto">
+      <div className="lg:flex space-y-4">
         <div className="flex justify-center">
           <Image
             src="/kucc-logo.png"
@@ -26,7 +27,7 @@ export default function KuccDescription() {
               {' '}
               Kathmandu University Computer Club
             </h1>
-            <p className="text-center md:text-justify">
+            <p className="text-justify">
               KUCC is a non-profit, independent club formed by students of the Department of
               Computer Science and Engineering in the year 1997. Being registered as the first club
               of Kathmandu University with the registration number 001/1997 in the Student Welfare,
@@ -42,9 +43,9 @@ export default function KuccDescription() {
               develop and encourage emerging technological advancement.
             </p>
             <Link href={'contact'} className="flex justify-center md:justify-normal">
-              <button className="p-4 bg-titleColor text-textOnDarkBg rounded-xl hover:bg-transparent hover:text-black hover:border hover:border-titleColor hover:delay-100">
+              <Button className="bg-titleColor">
                 CONTACT US
-              </button>
+              </Button>
             </Link>
           </div>
         </div>
