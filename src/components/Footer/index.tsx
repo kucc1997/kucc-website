@@ -1,6 +1,6 @@
 'use client'
-import './Footer.sass'
-import { FaInstagram, FaTwitter, FaFacebook, FaLinkedin, FaYoutube } from 'react-icons/fa'
+import { FaInstagram, FaFacebook, FaLinkedin, FaYoutube } from 'react-icons/fa'
+import { FaSquareXTwitter } from "react-icons/fa6";
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
@@ -15,7 +15,7 @@ export default function Footer() {
       link: 'https://www.youtube.com/channel/UChOg5n4TKmK-NHs8vM6Y7Rg',
     },
     {
-      icon: <FaTwitter color="#0066FF" />,
+      icon: <FaSquareXTwitter color="black" />,
       link: 'https://twitter.com/kucc1997',
     },
     {
@@ -47,9 +47,9 @@ export default function Footer() {
     {
       title: 'Contacts',
       links: [
+        { title: 'kucc@ku.edu.np', link: 'mailto:kucc@ku.edu.np', target: "_blank" },
         { title: '+977 9865599415' },
-        { title: 'kucc@ku.edu.np', link: 'mailto:kucc@ku.edu.np' },
-        { title: 'Dhulihel KU' },
+        { title: 'Dhulikhel, Nepal' },
       ],
     },
   ]
@@ -59,15 +59,15 @@ export default function Footer() {
   // ]
 
   return (
-    <div className="Footer">
-      <div className="redirect">
-        <div className="socialMedia">
-          <Image src={'/kucc-logo.png'} alt="Logo" width={100} height={100} />
-          <div className="socialHandles">
+    <div className="flex flex-col w-full h-full p-6 lg:px-16 xl:px-20 bg-baseBackground z-50 space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8">
+      <div className='flex flex-col items-center space-y-4 sm:space-y-5 md:space-y-10'>
+        <div className="flex items-center space-x-10 sm:space-x-12 md:space-x-20 lg:space-x-28 xl:space-x-40">
+          <Image src={'/kucc-logo.png'} alt="Logo" width={100} height={100} className='cursor-pointer transition-all hover:translate-y-0.5'/>
+          <div className="flex gap-4 sm:gap-6 md:gap-8 lg:gap-14 text-3xl lg:text-4xl">
             {socialHandles.map((iteam, index) => {
               return (
                 <div
-                  className="border"
+                  className='cursor-pointer transition-all hover:translate-y-0.5'
                   onClick={() => {
                     if (typeof window !== 'undefined') router.push(iteam.link)
                   }}
@@ -79,23 +79,47 @@ export default function Footer() {
             })}
           </div>
         </div>
-        <div className="links">
+        <div className="flex-col items-center space-y-6 sm:space-y-8 md:hidden">
           {titles.map((iteam, index) => {
             return (
-              <div className="title" key={index}>
-                <h3>{iteam.title}</h3>
+              <div className="text-lg sm:text-xl text-center" key={index}>
+                <h3 className='text-titleColor font-semibold text-2xl'>{iteam.title}</h3>
                 {iteam.links.map((link, index) => {
                   if (!link.link) {
-                    return <p key={index}>{link.title}</p>
+                    return <p key={index} className='mt-2 sm:mt-3'>{link.title}</p>
                   }
 
                   return link.link.startsWith('https://') ? (
                     <a href={link.link} target={link.target ? link.target : '_self'} key={index}>
-                      <p>{link.title}</p>
+                      <p className='mt-2 sm:mt-3 cursor-pointer hover:text-gray-500'>{link.title}</p>
                     </a>
                   ) : (
                     <Link href={link.link} target={link.target ? link.target : '_self'} key={index}>
-                      <p>{link.title}</p>
+                      <p className='mt-2 sm:mt-3'>{link.title}</p>
+                    </Link>
+                  )
+                })}
+              </div>
+            )
+          })}
+        </div>
+        <div className="hidden items-center md:flex space-x-24 lg:space-x-48 xl:space-x-64">
+          {titles.map((iteam, index) => {
+            return (
+              <div className="text-xl text-center" key={index}>
+                <h3 className='text-titleColor font-semibold text-2xl lg:text-3xl'>{iteam.title}</h3>
+                {iteam.links.map((link, index) => {
+                  if (!link.link) {
+                    return <p key={index} className='mt-5 lg:mt-6'>{link.title}</p>
+                  }
+
+                  return link.link.startsWith('https://') ? (
+                    <a href={link.link} target={link.target ? link.target : '_self'} key={index}>
+                      <p className='mt-5 lg:mt-6 cursor-pointer hover:text-gray-500'>{link.title}</p>
+                    </a>
+                  ) : (
+                    <Link href={link.link} target={link.target ? link.target : '_self'} key={index}>
+                      <p className='mt-5 lg:mt-6 hover:text-gray-500'>{link.title}</p>
                     </Link>
                   )
                 })}
@@ -104,8 +128,9 @@ export default function Footer() {
           })}
         </div>
       </div>
-      <div className="copyright">
-        <p style={{ color: '#71717A' }}>
+      <div className='flex-col space-y-3 md:space-y-4'>
+        <div className='w-full border border-gray-300'></div>
+        <p className='text-[#71717A] text-sm md:text-base lg:text-lg text-center'>
           © Copyright 2024, Kathmandu University Computer Club. All rights reserved.
         </p>
       </div>
