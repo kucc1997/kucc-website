@@ -10,7 +10,7 @@ import { ChevronDown } from 'lucide-react'
 import { ChevronUp } from 'lucide-react'
 import Image from 'next/image'
 
-const NavBar = () => {
+export default function NavBar() {
   const [open, setOpen] = useState('')
   const [ourTeam, setOurTeam] = useState('')
   const [ourPub, setOurPub] = useState('')
@@ -260,4 +260,3 @@ const NavBar = () => {
   )
 }
 
-export default NavBar

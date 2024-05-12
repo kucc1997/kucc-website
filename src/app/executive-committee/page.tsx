@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { Box, Container, Grid, Typography } from '@mui/material'
-import TeamCard from '@/components/TeamCard'
+import ExecutiveCard from './components/Executivecard'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 export const metadata: Metadata = {
   title: 'Executive Committee - Kathmandu University Computer Club (KUCC)',
@@ -125,26 +132,32 @@ const executivesList: {
   },
 ]
 
-const ExCommunity = () => {
+export default function ExCommunity() {
   return (
-    <>
-      <Container sx={{ py: 8 }}>
-        <Box textAlign="center" mb={3}>
-          <Typography variant="subtitle1" color="text.secondary">
-            KUCC Board 2024-25
-          </Typography>
-          <Typography variant="h4">Executive Committee</Typography>
-        </Box>
-        <Grid container rowSpacing={4} columnSpacing={2}>
+    <div className='flex flex-col p-5 justify-center items-center max-w-screen-xl mx-auto'>
+      <Card className='w-full border-2 shadow-lg bg-baseBackground px-4'>
+        <CardHeader className='flex items-center'>
+        <CardDescription className='text-gray-500 text-lg'>KUCC Board 2024-25</CardDescription>
+          <CardTitle className='text-titleColor text-3xl'>Executive Committee</CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-col space-y-5 sm:hidden justify-center items-center rounded-xl mt-2">
           {executivesList.map((executive) => (
-            <Grid item md={4} sm={6} xs={12} key={executive.mail}>
-              <TeamCard {...executive} />
-            </Grid>
+            <div key={executive.mail}>
+              <ExecutiveCard {...executive} />
+            </div>
           ))}
-        </Grid>
-      </Container>
-    </>
+        </CardContent>
+        <CardContent className="hidden sm:flex flex-wrap justify-around rounded-lg mt-4 gap-4">
+          {executivesList.map((executive) => (
+            <div key={executive.mail}>
+              <ExecutiveCard {...executive} />
+            </div>
+          ))}
+        </CardContent>
+        <CardFooter className='flex justify-center items-center'>
+          <h1 className='text-titleColor text-sm sm:text-base md:text-xl md:mt-4'>Department of Computer Science and Engineering</h1>
+        </CardFooter>
+      </Card>
+    </div>
   )
 }
-
-export default ExCommunity

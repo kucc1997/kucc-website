@@ -1,7 +1,14 @@
-import React from 'react'
-import { Box, Container, Grid, Typography } from '@mui/material'
-import TeamCard from '@/components/TeamCard'
+import AdvisoryCard from '@/app/advisory-board/components/AdvisoryCard'
 import { Metadata } from 'next'
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 export const metadata: Metadata = {
   title: 'Advisory Board - Kathmandu University Computer Club',
@@ -26,26 +33,32 @@ const advisorsList = [
   },
 ]
 
-const AdvBoard = () => {
+export default function AdvBoard() {
   return (
-    <>
-      <Container sx={{ py: 8 }}>
-        <Box textAlign="center" mb={3}>
-          <Typography variant="subtitle1" color="text.secondary">
-            KUCC Board 2023-24
-          </Typography>
-          <Typography variant="h4">Advisors</Typography>
-        </Box>
-        <Grid container rowSpacing={4} columnSpacing={2}>
+    <div className='flex flex-col p-5 justify-center items-center max-w-screen-xl mx-auto'>
+      <Card className='w-full border-2 shadow-lg bg-baseBackground px-4'>
+        <CardHeader className='flex items-center'>
+          <CardDescription className='text-gray-500 text-lg'>KUCC Board 2023-24</CardDescription>
+          <CardTitle className='text-titleColor text-3xl'>Advisors</CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-col space-y-5 lg:hidden justify-center items-center rounded-xl">
           {advisorsList.map((advisor) => (
-            <Grid item md={4} sm={6} xs={12} key={advisor.mail}>
-              <TeamCard {...advisor} />
-            </Grid>
+            <div key={advisor.mail}>
+              <AdvisoryCard {...advisor} />
+            </div>
           ))}
-        </Grid>
-      </Container>
-    </>
+        </CardContent>
+        <CardContent className="hidden lg:flex lg:space-y-0 space-x-10 xl:space-x-12 justify-around rounded-xl">
+          {advisorsList.map((advisor) => (
+            <div key={advisor.mail}>
+              <AdvisoryCard {...advisor} />
+            </div>
+          ))}
+        </CardContent>
+        <CardFooter className='flex justify-center items-center'>
+          <h1 className='text-titleColor text-sm sm:text-base md:text-xl'>Department of Computer Science and Engineering</h1>
+        </CardFooter>
+      </Card>
+    </div>
   )
 }
-
-export default AdvBoard

@@ -2,11 +2,19 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
+import { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+  title: 'KUCC Description',
+  description:
+    'KUCC description tells what KUCC exactly is.',
+}
 
 export default function KuccDescription() {
   return (
-    <div className="flex flex-col p-5 justify-center items-center max-w-screen-xl min-h-[85vh] mx-auto">
-      <div className="lg:flex space-y-4">
+    <div className="flex flex-col p-5 justify-center items-center max-w-screen-xl min-h-[80vh] md:min-h-[85vh] mx-auto">
+      <div className="lg:flex space-y-8">
         <div className="flex justify-center">
           <Image
             src="/kucc-logo.png"
@@ -17,13 +25,13 @@ export default function KuccDescription() {
           />
         </div>
 
-        <div className="flex-col space-y-6">
-          <div className="space-y-4 max-w-[80ch] mx-auto">
-            <h2 className="text-subTitleColor font-semibold text-base sm:text-lg md:text-xl text-center md:text-start">
+        <div className="flex-col">
+          <div className="space-y-6 md:space-y-8 max-w-[80ch] mx-auto">
+            <h2 className="text-subTitleColor font-semibold text-base sm:text-lg md:text-xl text-center lg:text-start">
               {' '}
               Since 1997, The oldest student club
             </h2>
-            <h1 className="text-titleColor text-lg sm:text-2xl md:text-3xl  font-bold text-center md:text-start">
+            <h1 className="text-titleColor text-lg sm:text-2xl md:text-3xl  font-bold text-center lg:text-start">
               {' '}
               Kathmandu University Computer Club
             </h1>
@@ -42,7 +50,7 @@ export default function KuccDescription() {
               program and tutorial sessions to name a few, with an unwavering intention to promote,
               develop and encourage emerging technological advancement.
             </p>
-            <Link href={'contact'} className="flex justify-center md:justify-normal">
+            <Link href={'contact'} className="flex justify-center lg:justify-normal">
               <Button className="bg-titleColor">
                 CONTACT US
               </Button>

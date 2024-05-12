@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Box, Grid, Typography } from '@mui/material'
-import GetInTouch from './GetInTouch'
+import GetInTouch from './components/GetInTouch'
 
 export const metadata = {
   title: 'Contact - Kathmandu University Computer Club (KUCC)',
