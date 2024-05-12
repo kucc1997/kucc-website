@@ -1,4 +1,4 @@
-import ActivityCard from '@/components/ActivityCard'
+import ActivityCard from '@/app/activities-ku/components/ActivityCard'
 
 export default function Activities() {
   return (

@@ -1,4 +1,13 @@
+import React from 'react'
 import Image from 'next/image'
+import { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+  title: 'KUCC President',
+  description:
+    'Current President of Kathmandu University Computer Club (KUCC)',
+}
 
 export default function PresidentSection() {
   return (
