@@ -32,14 +32,11 @@ export default function PresidentSection() {
             </h2>
           </div>
           <p className="text-justify sm:text-xl">
-            Welcome to Kathmandu University Computer Club. Our heartfelt goal is to provide a
-            platform for students to advance their technical and soft skills, grow their confidence,
-            and bridge the gap between academia and industry. KUCC fulfills its mission by
-            conducting several events, talk shows, hackathons, workshops, and much more bringing
-            together everyone under the same roof. We are proud to have a community of talented
-            students, alumni, faculty, staff, and friends who care about this club like no other.
-            This is what makes our community diverse and inclusive. Let’s all strive to live up to
-            our motto “KUCC for all since 1997”.
+            Welcome to Kathmandu University Computer Club (KUCC)!
+            For 26 years, KUCC has been at the forefront of ICT development. We provide a platform for students to explore technology, gain industry exposure, and enhance both their technical and soft skills.
+            KUCC is more than a club—it's a community where passion meets dreams, fostering growth and collaboration among tech enthusiasts. We laugh, we enjoy, and we grow together in KUCC. We believe in "KUCC for all since 1997."
+            Join us in shaping the future of ICT. Welcome to the KUCC family!
+            Sayonara, Matane.
           </p>
         </div>
         <div className="hidden md:flex md:flex-col md:space-y-6 md:items-center">
