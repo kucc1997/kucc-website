@@ -31,13 +31,24 @@ export default function PresidentSection() {
               Nirjal Bhurtel
             </h2>
           </div>
-          <p className="text-justify sm:text-xl">
-            Welcome to Kathmandu University Computer Club (KUCC)!
-            For 26 years, KUCC has been at the forefront of ICT development. We provide a platform for students to explore technology, gain industry exposure, and enhance both their technical and soft skills.
-            KUCC is more than a club—it's a community where passion meets dreams, fostering growth and collaboration among tech enthusiasts. We laugh, we enjoy, and we grow together in KUCC. We believe in "KUCC for all since 1997."
-            Join us in shaping the future of ICT. Welcome to the KUCC family!
-            Sayonara, Matane.
-          </p>
+          <div className="text-justify sm:text-xl">
+            <p>
+              Welcome to Kathmandu University Computer Club (KUCC)!
+            </p>
+            <p >
+              For 26 years, KUCC has been at the forefront of ICT development. We provide a platform for students to explore technology, gain industry exposure, and enhance both their technical and soft skills.
+            </p>
+            <p>
+                KUCC is more than a club—it's a community where passion meets dreams, fostering growth and collaboration among tech enthusiasts. We laugh, we enjoy, and we grow together in KUCC. We believe in "KUCC for all since 1997."
+            </p>
+            <p>
+                Join us in shaping the future of ICT. Welcome to the KUCC family!
+            </p>
+            <p>
+                Sayonara, Matane.
+            </p>
+            </p>
+          </div>
         </div>
         <div className="hidden md:flex md:flex-col md:space-y-6 md:items-center">
           <h1 className=" text-titleColor text-3xl lg:text-4xl font-bold tracking-wider">
