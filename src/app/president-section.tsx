@@ -45,39 +45,46 @@ export default function PresidentSection() {
             <p>Sayonara, Matane.</p>
           </div>
         </div>
-      </div>
-      <div className="hidden md:flex md:flex-col md:space-y-6 md:items-center">
-        <h1 className=" text-titleColor text-3xl lg:text-4xl font-bold tracking-wider">
-          OUR PRESIDENT
-        </h1>
-        <p className="text-justify md:text-xl lg:text-2xl">
-          Welcome to Kathmandu University Computer Club. Our heartfelt goal is to provide a platform
-          for students to advance their technical and soft skills, grow their confidence, and bridge
-          the gap between academia and industry. KUCC fulfills its mission by conducting several
-          events, talk shows, hackathons, workshops, and much more bringing together everyone under
-          the same roof. We are proud to have a community of talented students, alumni, faculty,
-          staff, and friends who care about this club like no other. This is what makes our
-          community diverse and inclusive. Let’s all strive to live up to our motto “KUCC for all
-          since 1997”.
-        </p>
-      </div>
-      <div className="hidden md:flex md:flex-col md:space-y-4">
-        <div className="md:w-[350px] lg:w-[450px] xl:w-[500px]">
-          <Image
-            src="/nirjal_president.jpg"
-            className="rounded-2xl object-contain"
-            alt="Nirjal Bhurtel, KUCC President"
-            height={600}
-            width={600}
-          />
-        </div>
-        <div>
-          <h1 className="text-titleColor text-xl lg:text-2xl font-semibold tracking-wide text-center">
-            KUCC President
+
+        {/* Desktop view */}
+        <div className="hidden md:flex md:flex-col md:space-y-6 md:items-center">
+          <h1 className=" text-titleColor text-3xl lg:text-4xl font-bold tracking-wider">
+            OUR PRESIDENT
           </h1>
-          <h2 className="text-subTitleColor text-lg lg:text-xl font-medium tracking-wide text-center">
-            Nirjal Bhurtel
-          </h2>
+          <div className="text-justify sm:text-xl grid gap-4">
+            <p>Welcome to Kathmandu University Computer Club (KUCC)!</p>
+            <p>
+              For 26 years, KUCC has been at the forefront of ICT development. We provide a platform
+              for students to explore technology, gain industry exposure, and enhance both their
+              technical and soft skills.
+            </p>
+            <p>
+              {`KUCC is more than a club—it's a community where passion meets dreams, fostering growth
+              and collaboration among tech enthusiasts. We laugh, we enjoy, and we grow together in
+              KUCC. We believe in "KUCC for all since 1997."`}
+            </p>
+            <p>Join us in shaping the future of ICT. Welcome to the KUCC family!</p>
+            <p>Sayonara, Matane.</p>
+          </div>
+        </div>
+        <div className="hidden md:flex md:flex-col md:space-y-4">
+          <div className="md:w-[350px] lg:w-[450px] xl:w-[500px]">
+            <Image
+              src="/nirjal_president.jpg"
+              className="rounded-2xl object-contain"
+              alt="Nirjal Bhurtel, KUCC President"
+              height={600}
+              width={600}
+            />
+          </div>
+          <div>
+            <h1 className="text-titleColor text-xl lg:text-2xl font-semibold tracking-wide text-center">
+              KUCC President
+            </h1>
+            <h2 className="text-subTitleColor text-lg lg:text-xl font-medium tracking-wide text-center">
+              Nirjal Bhurtel
+            </h2>
+          </div>
         </div>
       </div>
     </div>
