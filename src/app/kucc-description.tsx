@@ -1,14 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button'
 import { Metadata } from 'next'
-
 
 export const metadata: Metadata = {
   title: 'KUCC Description',
-  description:
-    'KUCC description tells what KUCC exactly is.',
+  description: 'KUCC description tells what KUCC exactly is.',
 }
 
 export default function KuccDescription() {
@@ -51,9 +49,7 @@ export default function KuccDescription() {
               develop and encourage emerging technological advancement.
             </p>
             <Link href={'contact'} className="flex justify-center lg:justify-normal">
-              <Button className="bg-titleColor">
-                CONTACT US
-              </Button>
+              <Button className="bg-titleColor">CONTACT US</Button>
             </Link>
           </div>
         </div>
