@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import CountUp from 'react-countup'
-import { useState } from 'react'
 
 export default function CounterUp() {
   return (

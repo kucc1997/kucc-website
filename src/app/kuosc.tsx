@@ -10,7 +10,12 @@ export default function KUOSC() {
 
       <div className="flex flex-col-reverse md:flex-row max-w-screen-xl mx-auto md:gap-8 place-items-center justify-center">
         <p className="text-justify max-w-[80ch]">
-          <Link href="https://kuosc.org.np" target="_blank" rel="noreferrer" className='font-semibold'>
+          <Link
+            href="https://kuosc.org.np"
+            target="_blank"
+            rel="noreferrer"
+            className="font-semibold"
+          >
             Kathmandu University Open Source Community (KUOSC)
           </Link>{' '}
           is the Open Source related wing of KUCC. It is a vibrant historic community from Kathmandu

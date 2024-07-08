@@ -1,3 +1,4 @@
+'use client'
 import { MdMonetizationOn } from 'react-icons/md'
 import { MdVolunteerActivism } from 'react-icons/md'
 import { GrWorkshop } from 'react-icons/gr'
