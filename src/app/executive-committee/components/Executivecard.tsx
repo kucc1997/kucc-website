@@ -26,7 +26,7 @@ export default function ExecutiveCard({
   mail,
 }: ExecutiveCardProps) {
   return (
-    <Card className='w-full border-2 shadow-2xl rounded-3xl sm:p-3 p-5 bg-slate-50'>
+    <Card className='w-[290px] md:w-[300px] border border-titleColor shadow-2xl rounded-3xl p-5 bg-slate-50'>
       <CardHeader className="flex justify-center items-center relative">
         <Image 
           src="/kucc-logo.png"
@@ -36,16 +36,16 @@ export default function ExecutiveCard({
           className="absolute left-0 top-0"
         />
         <Image
-          className="rounded-full object-cover w-[220px] h-[220px] sm:w-[160px] sm:h-[160px] border-4 border-titleColor p-[6px]"
+          className="rounded-full object-cover w-[150px] h-[150px] sm:w-[160px] sm:h-[160px] border-4 bg-blue-100 border-titleColor p-[6px]"
           src={image}
           alt={name}
           width={200}
           height={200}
         />
       </CardHeader>
-      <CardContent className="flex-col flex-wrap text-wrap bg-baseBackground rounded-md p-5 sm:p-4 space-y-2">
-        <h1 className="text-xl text-center font-semibold text-titleColor">{name}</h1>
-        <h2 className="text-base text-center font-medium ">{position.toUpperCase()}</h2>
+      <CardContent className="flex-col flex-wrap bg-baseBackground rounded-md p-5 sm:p-4 space-y-2">
+        <h1 className="text-xl text-wrap text-center font-semibold text-titleColor">{name}</h1>
+        <h2 className="text-base text-wrap text-center font-medium ">{position.toUpperCase()}</h2>
       </CardContent>
       <CardFooter className="flex justify-center space-x-4 p-2">
         <Link href={linkedin} target="_blank" className="transition-all hover:translate-y-0.5">

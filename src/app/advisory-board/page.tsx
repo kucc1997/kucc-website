@@ -56,7 +56,7 @@ export default function AdvBoard() {
           ))}
         </CardContent>
         <CardFooter className='flex justify-center items-center'>
-          <h1 className='text-titleColor text-sm sm:text-base md:text-xl'>Department of Computer Science and Engineering</h1>
+          <h1 className='text-titleColor text-[10px] sm:text-base md:text-xl'>Department of Computer Science and Engineering</h1>
         </CardFooter>
       </Card>
     </div>

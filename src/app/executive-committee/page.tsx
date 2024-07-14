@@ -138,7 +138,7 @@ export default function ExCommunity() {
       <Card className='w-full border-2 shadow-lg bg-baseBackground px-4'>
         <CardHeader className='flex items-center'>
         <CardDescription className='text-gray-500 text-lg'>KUCC Board 2024-25</CardDescription>
-          <CardTitle className='text-titleColor text-3xl'>Executive Committee</CardTitle>
+          <CardTitle className='text-titleColor text-2xl md:text-3xl'>Executive Committee</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col space-y-5 sm:hidden justify-center items-center rounded-xl mt-2">
           {executivesList.map((executive) => (
@@ -147,7 +147,7 @@ export default function ExCommunity() {
             </div>
           ))}
         </CardContent>
-        <CardContent className="hidden sm:flex flex-wrap justify-around rounded-lg mt-4 gap-4">
+        <CardContent className="hidden sm:flex flex-wrap justify-around rounded-lg mt-4 gap-5">
           {executivesList.map((executive) => (
             <div key={executive.mail}>
               <ExecutiveCard {...executive} />
@@ -155,7 +155,7 @@ export default function ExCommunity() {
           ))}
         </CardContent>
         <CardFooter className='flex justify-center items-center'>
-          <h1 className='text-titleColor text-sm sm:text-base md:text-xl md:mt-4'>Department of Computer Science and Engineering</h1>
+          <h1 className='text-titleColor text-[10px] sm:text-base md:text-xl md:mt-4'>Department of Computer Science and Engineering</h1>
         </CardFooter>
       </Card>
     </div>
