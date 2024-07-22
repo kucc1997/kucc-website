@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { Home } from 'lucide-react'
+import { Home, UsersRound } from 'lucide-react'
 import { Users } from 'lucide-react'
 import { NotebookPen } from 'lucide-react'
 import { Contact } from 'lucide-react'
@@ -59,6 +59,11 @@ export default function NavBar() {
         //   link: '/documentation-teams',
         // },
       ],
+    },
+    {
+      name: 'Communities',
+      link: '/communities',
+      icon: <UsersRound />,
     },
     {
       name: 'Publications',
@@ -122,26 +127,22 @@ export default function NavBar() {
           onClick={() => setOpen(!open)}
         >
           <div
-            className={`w-6 h-[2px] bg-titleColor rounded block transition-all ease-out duration-300 ${
-              open ? 'rotate-45 translate-y-0.5' : '-translate-y-0.5'
-            }`}
+            className={`w-6 h-[2px] bg-titleColor rounded block transition-all ease-out duration-300 ${open ? 'rotate-45 translate-y-0.5' : '-translate-y-0.5'
+              }`}
           ></div>
           <div
-            className={`w-6 h-[2px] bg-titleColor rounded block transition-all ease-out duration-300 ${
-              open ? 'hidden' : 'flex'
-            }`}
+            className={`w-6 h-[2px] bg-titleColor rounded block transition-all ease-out duration-300 ${open ? 'hidden' : 'flex'
+              }`}
           ></div>
           <div
-            className={`w-6 h-[2px] bg-titleColor rounded block transition-all ease-out duration-300 ${
-              open ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'
-            }`}
+            className={`w-6 h-[2px] bg-titleColor rounded block transition-all ease-out duration-300 ${open ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'
+              }`}
           ></div>
         </button>
 
         <div
-          className={`flex space-y-8 transition origin-right z-40 h-screen bg-white fixed top-0 right-0 w-2/3 sm:w-1/3 md:w-2/4 shadow-xl ${
-            open ? 'scale-x-100' : 'scale-x-0'
-          }`}
+          className={`flex space-y-8 transition origin-right z-40 h-screen bg-white fixed top-0 right-0 w-2/3 sm:w-1/3 md:w-2/4 shadow-xl ${open ? 'scale-x-100' : 'scale-x-0'
+            }`}
         >
           <div className="flex-col mt-28 px-8 space-y-8 font-sans list-none">
             {navItems.map((item, index) => {
@@ -165,9 +166,8 @@ export default function NavBar() {
                         </button>
                       </div>
                       <ul
-                        className={`space-y-2 z-10 origin-top list-none transition ${
-                          item.open ? 'scale-y-100 p-[20px]' : 'scale-y-0 h-0 p-0 duration-0'
-                        }`}
+                        className={`space-y-2 z-10 origin-top list-none transition ${item.open ? 'scale-y-100 p-[20px]' : 'scale-y-0 h-0 p-0 duration-0'
+                          }`}
                       >
                         {item.subItems.map((subItem, index) => {
                           return (
@@ -259,4 +259,3 @@ export default function NavBar() {
     </div>
   )
 }
-
