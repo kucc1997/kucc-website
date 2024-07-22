@@ -5,5 +5,5 @@ export type Community = {
   title: string
   Icon: IconType
   description: string
-  path: string
+  path?: string
 }

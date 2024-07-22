@@ -52,7 +52,7 @@ const Communities = () => {
       Icon: MdOutlineHealthAndSafety,
       description:
         'Explore technology in healthcare through workshops and collaborations, enhancing skills and contributing to innovative projects.',
-      path: '/communities/health-informatics',
+      path: '/hi',
     },
     {
       id: 7,
