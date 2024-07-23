@@ -91,7 +91,7 @@ const Communities = () => {
     },
     {
       id: 12,
-      title: 'Java Community',
+      title: 'Java and Kotlin Community',
       Icon: FaJava,
       description:
         'Develop your Java expertise with workshops, collaborative projects, and career insights. Ideal for developers interested in backend and Android applications.',
