@@ -94,13 +94,13 @@ const Coordinator = ({ imgSrc, name, quote }: { imgSrc: string; name: string; qu
 const HICommunityCoordinator = () => {
   const coordinators = [
     {
-      imgSrc: '/people/Nirjal_Bhurtel.webp',
+      imgSrc: '/people/Dipen_Khatri.webp',
       name: 'Dipen Khatri',
       quote:
         '“Health Informatics is the future of healthcare. Join us to revolutionize healthcare in Nepal.”',
     },
     {
-      imgSrc: '/people/Abhiyan_Dhakal.webp',
+      imgSrc: '/people/Sushan_Adhikari.webp',
       name: 'Sushan Adhikari',
       quote:
         '“Health Informatics is the future of healthcare. Join us to revolutionize healthcare in Nepal.”',
