@@ -18,15 +18,8 @@ export const metadata: Metadata = {
 
 const advisorsList = [
   {
-    name: 'Assoc. Prof. Dr. Bal Krishna Bal',
-    position: 'Head of Department, DoCSE',
-    image: '/people/Bal_Krishna_Bal.webp',
-    linkedin: 'https://www.linkedin.com/in/bal-krishna-bal-4bb71a19/',
-    mail: 'bal@ku.edu.np',
-  },
-  {
     name: 'Asst. Prof. Pankaj Raj Dawadi',
-    position: 'Assistant Professor, DoCSE',
+    position: 'Acting, Head of Department, DoCSE',
     image: '/people/Pankaj_Raj_Dawadi.webp',
     linkedin: 'https://www.linkedin.com/in/pankaj-dawadi-83467b7a/',
     mail: 'pdawadi@ku.edu.np',
