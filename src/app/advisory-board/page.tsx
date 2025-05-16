@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 const advisorsList = [
   {
-    name: 'Asst. Prof. Pankaj Raj Dawadi',
+    name: 'Asst. Prof. Pankaj Raj Dawadi, PhD',
     position: 'Acting, Head of Department, DoCSE',
     image: '/people/Pankaj_Raj_Dawadi.webp',
     linkedin: 'https://www.linkedin.com/in/pankaj-dawadi-83467b7a/',
