@@ -27,7 +27,7 @@ const advisorsList = [
   {
     name: 'Sanjog Sigdel',
     position: 'Lecturer, DoCSE',
-    inage: '/people/Sanjog_Sigdel.jpg',
+    image: '/people/Sanjog_Sigdel1.jpg',
     linkedin: 'https://www.linkedin.com/in/sigdelsanjog ',
     mail: 'sanjog.sigdel@ku.edu.np'
   }
