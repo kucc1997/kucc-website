@@ -8,7 +8,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from '@/components/ui/card'
 
 export const metadata: Metadata = {
   title: 'Advisory Board - Kathmandu University Computer Club',
@@ -27,19 +27,19 @@ const advisorsList = [
   {
     name: 'Sanjog Sigdel',
     position: 'Lecturer, DoCSE',
-    inage: '/people/Sanjog_Sigdel.jpg',
+    image: '/people/Sanjog_Sigdel.jpg',
     linkedin: 'https://www.linkedin.com/in/sigdelsanjog ',
-    mail: 'sanjog.sigdel@ku.edu.np'
-  }
+    mail: 'sanjog.sigdel@ku.edu.np',
+  },
 ]
 
 export default function AdvBoard() {
   return (
-    <div className='flex flex-col p-5 justify-center items-center max-w-screen-xl mx-auto'>
-      <Card className='w-full border-2 shadow-lg bg-baseBackground px-4'>
-        <CardHeader className='flex items-center'>
-          <CardDescription className='text-gray-500 text-lg'>KUCC Board 2025</CardDescription>
-          <CardTitle className='text-titleColor text-3xl'>Advisors</CardTitle>
+    <div className="flex flex-col p-5 justify-center items-center max-w-screen-xl mx-auto">
+      <Card className="w-full border-2 shadow-lg bg-baseBackground px-4">
+        <CardHeader className="flex items-center">
+          <CardDescription className="text-gray-500 text-lg">KUCC Board 2025</CardDescription>
+          <CardTitle className="text-titleColor text-3xl">Advisors</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col space-y-5 lg:hidden justify-center items-center rounded-xl">
           {advisorsList.map((advisor) => (
@@ -55,8 +55,10 @@ export default function AdvBoard() {
             </div>
           ))}
         </CardContent>
-        <CardFooter className='flex justify-center items-center'>
-          <h1 className='text-titleColor text-[10px] sm:text-base md:text-xl'>Department of Computer Science and Engineering</h1>
+        <CardFooter className="flex justify-center items-center">
+          <h1 className="text-titleColor text-[10px] sm:text-base md:text-xl">
+            Department of Computer Science and Engineering
+          </h1>
         </CardFooter>
       </Card>
     </div>
