@@ -7,12 +7,12 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from '@/components/ui/card'
 
 export const metadata: Metadata = {
   title: 'Executive Committee - Kathmandu University Computer Club (KUCC)',
   description:
-    'Executive Committee of Kathmandu University Computer Club (KUCC) 2024/25 comprises of Nirjal Bhurtel (President), Abhiyan Dhakal (Vice President), Jenisha Khulal Magar (General Secretary), Sadikshya Pokharel (Treasurer), Darshan Lamichhane (Club Secretary), Santosh Yadav (Executive Member), Shashinoor Ghimire (Executive Member), Phiroj Kumar Shah (Executive Member), Aagaman Bhandari (Executive Member), Diwas Parajuli (Executive Member), Sanjay Pahari (Executive Member), James Bhattarai (Executive Member), Royas Shakya (Executive Member), Ranjita Dhakal (Executive Member)',
+    'Executive Committee of Kathmandu University Computer Club (KUCC) 2024/25 comprises of Abhiyan Dhakal (President), Saroj Sigdel (Vice President), Mukul Aryal (General Secretary), Suyog Ghimire (Treasurer), Sakshi KC (Club Secretary), Ashwini Subedi (KUOSC Coordinator), Aakriti Pandey (Executive Member), Aatmiyata Pokhrel (Executive Member), Abhinav Bhatt (Executive Member), Bishist Bikram Pant (Executive Member), Kiran Dahal (Executive Member), Lawan Poudyal (Executive Member), Nischal Subedi (Executive Member).',
 }
 
 /**
@@ -120,11 +120,13 @@ const executivesList: {
 
 export default function ExCommunity() {
   return (
-    <div className='flex flex-col p-5 justify-center items-center max-w-screen-xl mx-auto'>
-      <Card className='w-full border-2 shadow-lg bg-baseBackground px-4'>
-        <CardHeader className='flex items-center'>
-        <CardDescription className='text-gray-500 text-lg'>KUCC Board 2025</CardDescription>
-          <CardTitle className='text-titleColor text-2xl md:text-3xl'>Executive Committee</CardTitle>
+    <div className="flex flex-col p-5 justify-center items-center max-w-screen-xl mx-auto">
+      <Card className="w-full border-2 shadow-lg bg-baseBackground px-4">
+        <CardHeader className="flex items-center">
+          <CardDescription className="text-gray-500 text-lg">KUCC Board 2025</CardDescription>
+          <CardTitle className="text-titleColor text-2xl md:text-3xl">
+            Executive Committee
+          </CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col space-y-5 sm:hidden justify-center items-center rounded-xl mt-2">
           {executivesList.map((executive) => (
@@ -140,8 +142,10 @@ export default function ExCommunity() {
             </div>
           ))}
         </CardContent>
-        <CardFooter className='flex justify-center items-center'>
-          <h1 className='text-titleColor text-[10px] sm:text-base md:text-xl md:mt-4'>Department of Computer Science and Engineering</h1>
+        <CardFooter className="flex justify-center items-center">
+          <h1 className="text-titleColor text-[10px] sm:text-base md:text-xl md:mt-4">
+            Department of Computer Science and Engineering
+          </h1>
         </CardFooter>
       </Card>
     </div>
