@@ -13,9 +13,9 @@ export default function PresidentSection() {
       <div className="space-y-6 md:space-y-0 md:space-x-6 lg:space-x-10 xl:space-x-14 md:flex md:items-center mx-auto max-w-screen-xl">
         <div className="flex justify-center md:hidden">
           <Image
-            src="/nirjal_president.jpg"
+            src="/Abhiyan_Dhakal.webp"
             className="rounded-2xl object-contain"
-            alt="Nirjal Bhurtel, KUCC President"
+            alt="Abhiyan Dhakal, KUCC President"
             width={600}
             height={600}
           />
@@ -26,7 +26,7 @@ export default function PresidentSection() {
               KUCC President
             </h1>
             <h2 className="text-subTitleColor text-lg font-medium tracking-wide text-center">
-              Nirjal Bhurtel
+              Abhiyan Dhakal
             </h2>
           </div>
           <div className="text-justify sm:text-xl">
@@ -51,28 +51,32 @@ export default function PresidentSection() {
           <h1 className=" text-titleColor text-3xl lg:text-4xl font-bold tracking-wider">
             OUR PRESIDENT
           </h1>
+
           <div className="text-justify sm:text-xl grid gap-4">
-            <p>Welcome to Kathmandu University Computer Club (KUCC)!</p>
             <p>
-              For 26 years, KUCC has been at the forefront of ICT development. We provide a platform
-              for students to explore technology, gain industry exposure, and enhance both their
-              technical and soft skills.
+              As President of KUCC, I’m excited to lead us back to what really matters: technology,
+              research, cool projects, and an awesome community. We’re all about getting hands-on,
+              learning deeply, and having fun while we do it.
             </p>
+
             <p>
-              {`KUCC is more than a club—it's a community where passion meets dreams, fostering growth
-              and collaboration among tech enthusiasts. We laugh, we enjoy, and we grow together in
-              KUCC. We believe in "KUCC for all since 1997."`}
+              This year, we’re kicking off something big. The National Conference on Computer
+              Innovations, or NCCI, is a chance for all of us to show off our research, share ideas,
+              and spark new innovations.
             </p>
-            <p>Join us in shaping the future of ICT. Welcome to the KUCC family!</p>
-            <p>Sayonara, Matane.</p>
+
+            <p>
+              Let’s dive in, build together, and make KUCC the place where ideas come alive. Ready
+              to shape the future? Let’s go!
+            </p>
           </div>
         </div>
         <div className="hidden md:flex md:flex-col md:space-y-4">
           <div className="md:w-[350px] lg:w-[450px] xl:w-[500px]">
             <Image
-              src="/nirjal_president.jpg"
+              src="/Abhiyan_Dhakal.webp"
               className="rounded-2xl object-contain"
-              alt="Nirjal Bhurtel, KUCC President"
+              alt="Abhiyan Dhakal, KUCC President"
               height={600}
               width={600}
             />
@@ -82,7 +86,7 @@ export default function PresidentSection() {
               KUCC President
             </h1>
             <h2 className="text-subTitleColor text-lg lg:text-xl font-medium tracking-wide text-center">
-              Nirjal Bhurtel
+              Abhiyan Dhakal
             </h2>
           </div>
         </div>
