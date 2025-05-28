@@ -5,24 +5,21 @@ const GetInTouch = () => {
   const clubRepresentatives = [
     {
       id: 1,
-      name: 'Nirjal Bhurtel',
-      position: 'Club President',
-      phoneNumber: '9849460170',
-      email: 'sunnynirjal@gmail.com',
+      name: 'Abhiyan Dhakal',
+      position: 'President',
+      phoneNumber: '9847382531',
     },
     {
       id: 2,
-      name: 'Abhiyan Dhakal ',
-      position: 'Club Vice President',
-      phoneNumber: '9847382531',
-      email: 'itsabhiyandhakal@gmail.com',
+      name: 'Saroj Sigdel',
+      position: 'Vice President',
+      phoneNumber: '9762513456',
     },
     {
       id: 3,
-      name: 'Jenisha Khulal ',
+      name: 'Mukul Aryal',
       position: 'General Secretary',
-      phoneNumber: '9865599415',
-      email: 'jenishakhulal@gmail.com',
+      phoneNumber: '9861367984',
     },
   ]
   return (
@@ -44,7 +41,7 @@ const GetInTouch = () => {
         >
           {clubRepresentatives.map((representative) => {
             return (
-              <Grid item xs={12} md={4} sx={{ textAlign: 'center' }} key={representative.email}>
+              <Grid item xs={12} md={4} sx={{ textAlign: 'center' }} key={representative.id}>
                 <Typography variant="h6" pb={1}>
                   {representative.name}
                 </Typography>
@@ -53,9 +50,6 @@ const GetInTouch = () => {
                 </Typography>
                 <Typography variant="subtitle2" pb={1} color="text.secondary">
                   {representative.phoneNumber}
-                </Typography>
-                <Typography variant="subtitle2" color="text.secondary">
-                  {representative.email}
                 </Typography>
               </Grid>
             )
