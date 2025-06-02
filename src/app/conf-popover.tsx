@@ -125,7 +125,7 @@ export default function ConferencePopover() {
 
             <div className="space-y-3">
               <p className="text-gray-700 leading-relaxed text-center text-sm">
-                Join Nepal's premier national conference on computer innovations! Connect with
+                Join Nepal&apos;s premier national conference on computer innovations! Connect with
                 leading researchers, explore cutting-edge technologies, and be part of shaping the
                 future of technology and innovation.
               </p>
