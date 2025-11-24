@@ -34,20 +34,20 @@ const ItExpressList = [
 
 const ItExpressPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-baseBackground via-gray-900 to-gray-950 tech-grid py-16 px-5">
-      {/* Gradient decorative blobs */}
+    <div className="min-h-screen bg-baseBackground tech-grid py-16 px-5">
+      {/* Decorative blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-10 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl"></div>
         <div className="absolute inset-0 circuit-pattern opacity-10"></div>
       </div>
 
       <div className="max-w-4xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 text-4xl md:text-5xl font-bold mb-6 tech-text holographic highlight-text">
+          <h1 className="text-accentBlueLight text-4xl md:text-5xl font-bold mb-6 tech-text highlight-text">
             IT Express
           </h1>
-          <div className="w-32 h-1 bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 rounded-full mx-auto mb-8"></div>
+          <div className="w-32 h-1 bg-accentBlue rounded-full mx-auto mb-8"></div>
           
           <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-6">
             IT Express is a magazine published every year by the KUCC. It includes articles
@@ -69,19 +69,19 @@ const ItExpressPage = () => {
               target="_blank"
               className="group block"
             >
-              <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800/50 rounded-2xl p-6 hover:scale-105 transition-all duration-300 shadow-xl shadow-accentBlue/10 hover:shadow-accentBlue/20">
-                {/* Gradient glow effect */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accentBlue/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative bg-gray-900 border border-gray-800/50 rounded-2xl p-6 hover:scale-105 transition-all duration-300 shadow-xl shadow-accentBlue/10 hover:shadow-accentBlue/20">
+                {/* Glow effect */}
+                <div className="absolute inset-0 rounded-2xl bg-accentBlue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 <div className="relative z-10 flex items-center gap-4">
                   {/* Icon */}
-                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-accentBlue/20 to-purple-500/20 flex items-center justify-center border border-gray-700/50 group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-accentBlue/20 flex items-center justify-center border border-gray-700/50 group-hover:scale-110 transition-transform duration-300">
                     <HiDocumentText className="text-3xl text-accentBlue" />
                   </div>
                   
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 group-hover:from-accentBlue group-hover:to-purple-400 transition-all duration-300 tech-text">
+                    <h3 className="text-xl font-semibold text-white group-hover:text-accentBlueLight transition-all duration-300 tech-text">
                       {itexp.name}
                     </h3>
                     <p className="text-sm text-gray-500 mt-1">Click to view PDF</p>

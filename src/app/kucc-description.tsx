@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 
 export default function KuccDescription() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-baseBackground via-gray-900 to-baseBackground tech-grid-animated">
+    <section className="relative overflow-hidden bg-baseBackground tech-grid-animated">
       {/* Tech Grid Overlay */}
       <div className="absolute inset-0 tech-grid opacity-50" />
       
       {/* Decorative Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-accentBlue/20 to-purple-500/20 rounded-full blur-3xl -z-0" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-techAccent/20 to-pink-500/20 rounded-full blur-3xl -z-0" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl -z-0" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl -z-0" />
       
       {/* Circuit pattern overlay */}
       <div className="absolute inset-0 circuit-pattern opacity-30" />
@@ -28,7 +28,7 @@ export default function KuccDescription() {
           {/* Left Content */}
           <div className="space-y-8 order-2 lg:order-1">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-accentBlue/20 to-purple-500/20 border border-accentBlue/30 text-accentBlueLight rounded-full text-sm font-medium backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accentBlue/20 border border-accentBlue/30 text-accentBlueLight rounded-full text-sm font-medium backdrop-blur-sm">
               <Calendar size={16} />
               <span>Since 1997, The First Student Club</span>
             </div>
@@ -37,10 +37,10 @@ export default function KuccDescription() {
             <div className="space-y-4">
               <h1 className="space-y-2">
                 <span className="block text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-400 tech-text">Kathmandu University</span>
-                <span className="block text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-accentBlue via-purple-400 to-techAccent bg-clip-text text-transparent holographic highlight-text tech-text">Computer Club</span>
+                <span className="block text-4xl sm:text-5xl lg:text-6xl font-bold text-accentBlueLight highlight-text tech-text">Computer Club</span>
               </h1>
               <p className="text-lg sm:text-xl text-subTitleColor leading-relaxed">
-                Pioneering <span className="highlight-glow neon-underline text-accentBlueLight">technological innovation</span> and excellence at KU for over two decades
+                Pioneering <span className="highlight-glow text-accentBlueLight">technological innovation</span> and excellence at KU for over two decades
               </p>
             </div>
 
@@ -55,22 +55,22 @@ export default function KuccDescription() {
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-4">
-              <div className="space-y-1 p-4 rounded-xl bg-gradient-to-br from-accentBlue/10 to-transparent border border-accentBlue/20 backdrop-blur-sm">
+              <div className="space-y-1 p-4 rounded-xl bg-accentBlue/10 border border-accentBlue/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 text-accentBlueLight">
                   <Calendar size={20} />
                   <span className="text-2xl font-bold text-titleColor tech-number">27+</span>
                 </div>
                 <p className="text-sm text-gray-400 tech-text">Years Active</p>
               </div>
-              <div className="space-y-1 p-4 rounded-xl bg-gradient-to-br from-purple-500/10 to-transparent border border-purple-500/20 backdrop-blur-sm">
-                <div className="flex items-center gap-2 text-purple-400">
+              <div className="space-y-1 p-4 rounded-xl bg-accentBlue/10 border border-accentBlue/20 backdrop-blur-sm">
+                <div className="flex items-center gap-2 text-accentBlueLight">
                   <Users size={20} />
                   <span className="text-2xl font-bold text-titleColor tech-number">1000+</span>
                 </div>
                 <p className="text-sm text-gray-400 tech-text">Members</p>
               </div>
-              <div className="space-y-1 p-4 rounded-xl bg-gradient-to-br from-techAccent/10 to-transparent border border-techAccent/20 backdrop-blur-sm">
-                <div className="flex items-center gap-2 text-techAccent">
+              <div className="space-y-1 p-4 rounded-xl bg-accentBlue/10 border border-accentBlue/20 backdrop-blur-sm">
+                <div className="flex items-center gap-2 text-accentBlueLight">
                   <Trophy size={20} />
                   <span className="text-2xl font-bold text-titleColor tech-number">100+</span>
                 </div>
@@ -81,7 +81,7 @@ export default function KuccDescription() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 pt-2">
               <Link href="/contact">
-                <Button className="bg-gradient-to-r from-accentBlue to-purple-600 hover:from-accentBlueDark hover:to-purple-700 text-white px-6 py-6 text-base font-semibold rounded-lg shadow-lg shadow-accentBlue/25 hover:shadow-xl hover:shadow-accentBlue/40 transition-all group">
+                <Button className="bg-accentBlue hover:bg-accentBlueDark text-white px-6 py-6 text-base font-semibold rounded-lg shadow-lg shadow-accentBlue/25 hover:shadow-xl hover:shadow-accentBlue/40 transition-all group">
                   Contact Us
                   <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -98,12 +98,12 @@ export default function KuccDescription() {
           <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
               {/* Decorative rings */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accentBlue/30 via-purple-500/30 to-pink-500/30 rounded-full blur-3xl animate-pulse" />
+              <div className="absolute inset-0 bg-accentBlue/20 rounded-full blur-3xl animate-pulse" />
               <div className="absolute -inset-4 border-2 border-accentBlue/30 rounded-full" />
-              <div className="absolute -inset-8 border-2 border-purple-500/20 rounded-full" />
+              <div className="absolute -inset-8 border-2 border-accentBlue/20 rounded-full" />
               
               {/* Logo */}
-              <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-full p-8 shadow-2xl shadow-accentBlue/20 border border-gray-700/50">
+              <div className="relative bg-gray-900 rounded-full p-8 shadow-2xl shadow-accentBlue/20 border border-gray-700/50">
                 <Image
                   src="/kucc-logo.svg"
                   className="object-contain w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"

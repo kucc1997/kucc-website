@@ -62,20 +62,20 @@ const Communities = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-baseBackground via-gray-900 to-gray-950 tech-grid-animated py-16 px-5">
-      {/* Gradient decorative blobs */}
+    <div className="min-h-screen bg-baseBackground tech-grid-animated py-16 px-5">
+      {/* Decorative blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl"></div>
         <div className="absolute inset-0 circuit-pattern opacity-10"></div>
       </div>
 
       <div className="max-w-screen-xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 text-4xl md:text-5xl font-bold mb-4 tech-text holographic highlight-text">
+          <h1 className="text-accentBlueLight text-4xl md:text-5xl font-bold mb-4 tech-text highlight-text">
             Communities Under KUCC
           </h1>
-          <div className="w-32 h-1 bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 rounded-full mx-auto"></div>
+          <div className="w-32 h-1 bg-accentBlue rounded-full mx-auto"></div>
         </div>
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-24">
@@ -85,18 +85,18 @@ const Communities = () => {
               key={community.id}
               className="group"
             >
-              <div className="relative flex items-center space-x-6 p-8 bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800/50 rounded-2xl hover:scale-105 transition-all duration-300 shadow-xl shadow-accentBlue/10 hover:shadow-accentBlue/20">
-                {/* Gradient glow effect */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accentBlue/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative flex items-center space-x-6 p-8 bg-gray-900 border border-gray-800/50 rounded-2xl hover:scale-105 transition-all duration-300 shadow-xl shadow-accentBlue/10 hover:shadow-accentBlue/20">
+                {/* Glow effect */}
+                <div className="absolute inset-0 rounded-2xl bg-accentBlue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 {/* Icon container */}
-                <div className="relative z-10 flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-gradient-to-br from-gray-950/50 to-gray-900/50 backdrop-blur-sm border border-gray-800/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="relative z-10 flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-gray-950/50 backdrop-blur-sm border border-gray-800/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <community.Icon className="text-gray-400 group-hover:text-accentBlue transition-colors duration-300 text-5xl md:text-6xl" />
                 </div>
                 
                 {/* Content */}
                 <div className="relative z-10 flex-1">
-                  <h2 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 group-hover:from-accentBlue group-hover:to-purple-400 transition-all duration-300 mb-2 tech-text">
+                  <h2 className="text-xl font-semibold text-white group-hover:text-accentBlueLight transition-all duration-300 mb-2 tech-text">
                     {community.title}
                   </h2>
                   <p className="text-sm text-gray-400 leading-relaxed">{community.description}</p>

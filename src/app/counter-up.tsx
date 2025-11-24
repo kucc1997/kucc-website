@@ -26,10 +26,10 @@ export default function CounterUp() {
   ]
 
   return (
-    <section className="relative py-16 md:py-20 bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 tech-grid-animated overflow-hidden border-y border-accentBlue/20 scanline">
+    <section className="relative py-16 md:py-20 bg-baseBackground tech-grid-animated overflow-hidden border-y border-accentBlue/20 scanline">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-1/4 w-64 h-64 bg-accentBlue/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accentBlue/10 rounded-full blur-3xl" />
       <div className="absolute inset-0 circuit-pattern opacity-20 pointer-events-none" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,7 +38,7 @@ export default function CounterUp() {
             <div key={index} className="text-center space-y-3">
               {/* Icon */}
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-accentBlue/20 to-purple-500/20 border border-accentBlue/30 rounded-2xl flex items-center justify-center text-accentBlueLight backdrop-blur-sm">
+                <div className="w-16 h-16 bg-accentBlue/20 border border-accentBlue/30 rounded-2xl flex items-center justify-center text-accentBlueLight backdrop-blur-sm">
                   {stat.icon}
                 </div>
               </div>

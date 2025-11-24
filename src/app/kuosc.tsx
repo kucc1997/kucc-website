@@ -4,9 +4,9 @@ import { ExternalLink } from 'lucide-react'
 
 export default function KUOSC() {
   return (
-    <section className="relative py-20 md:py-28 bg-gradient-to-br from-baseBackground to-gray-900 overflow-hidden">
+    <section className="relative py-20 md:py-28 bg-baseBackground overflow-hidden">
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-accentBlue/10 to-purple-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -14,10 +14,10 @@ export default function KUOSC() {
           <div className="flex justify-center lg:justify-start order-2 lg:order-1">
             <div className="relative">
               {/* Decorative ring */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accentBlue/30 to-purple-500/30 rounded-full blur-2xl" />
+              <div className="absolute inset-0 bg-accentBlue/20 rounded-full blur-2xl" />
               
               {/* Logo container */}
-              <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 shadow-2xl shadow-accentBlue/20 border border-gray-700">
+              <div className="relative bg-gray-900 rounded-3xl p-8 shadow-2xl shadow-accentBlue/20 border border-gray-700">
                 <Image
                   src="/kuosc.png"
                   alt="KUOSC Logo"
@@ -32,14 +32,14 @@ export default function KUOSC() {
           {/* Content Section */}
           <div className="space-y-6 order-1 lg:order-2">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 text-green-400 rounded-full text-sm font-medium backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-500/30 text-green-400 rounded-full text-sm font-medium backdrop-blur-sm">
               <span>Open Source Wing</span>
             </div>
 
             {/* Title */}
             <h2 className="space-y-2">
               <span className="block text-xl md:text-2xl lg:text-3xl font-bold text-gray-400 tech-text">Kathmandu University</span>
-              <span className="block text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 bg-clip-text text-transparent tech-text">Open Source Community</span>
+              <span className="block text-2xl md:text-3xl lg:text-4xl font-bold text-accentBlueLight tech-text">Open Source Community</span>
             </h2>
 
             {/* Description */}
@@ -66,7 +66,7 @@ export default function KUOSC() {
                 href="https://kuosc.org.np"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold rounded-lg shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/40 transition-all group"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/40 transition-all group"
               >
                 Visit KUOSC Website
                 <ExternalLink size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

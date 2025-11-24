@@ -21,9 +21,9 @@ export default function ActivityCard(props: { title: string; description: string
     }
   }
   
-  const cardClasses = "group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:shadow-2xl hover:shadow-accentBlue/10 hover:-translate-y-2 hover:border-accentBlue/30 transition-all duration-300 cursor-pointer"
+  const cardClasses = "group bg-gray-900 border border-gray-700 rounded-2xl p-8 hover:shadow-2xl hover:shadow-accentBlue/10 hover:-translate-y-2 hover:border-accentBlue/30 transition-all duration-300 cursor-pointer"
   
-  const iconBgClasses = "w-20 h-20 bg-gradient-to-br from-accentBlue/20 to-purple-500/20 border border-accentBlue/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+  const iconBgClasses = "w-20 h-20 bg-accentBlue/20 border border-accentBlue/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
   
   const titleHoverClasses = "text-titleColor font-bold text-xl group-hover:text-accentBlueLight transition-colors tech-text"
   
