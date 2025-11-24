@@ -75,7 +75,7 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <div className="bg-gradient-to-br from-white to-gray-100 p-2 rounded-lg">
                   <Image 
-                    src="/kucc-logo.png" 
+                    src="/kucc-logo.svg" 
                     alt="KUCC Logo" 
                     width={50} 
                     height={50} 
