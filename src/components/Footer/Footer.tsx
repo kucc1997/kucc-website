@@ -73,13 +73,15 @@ export default function Footer() {
           <div className="lg:col-span-1 space-y-6">
             <Link href="/" className="inline-block group">
               <div className="flex items-center space-x-3">
-                <Image 
-                  src="/kucc-logo.png" 
-                  alt="KUCC Logo" 
-                  width={60} 
-                  height={60} 
-                  className="group-hover:scale-105 transition-transform"
-                />
+                <div className="bg-gradient-to-br from-white to-gray-100 p-2 rounded-lg">
+                  <Image 
+                    src="/kucc-logo.png" 
+                    alt="KUCC Logo" 
+                    width={50} 
+                    height={50} 
+                    className="group-hover:scale-105 transition-transform"
+                  />
+                </div>
                 <div>
                   <div className="text-2xl font-bold">KUCC</div>
                   <div className="text-xs text-gray-400">Since 1997</div>

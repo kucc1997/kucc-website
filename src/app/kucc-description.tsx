@@ -103,7 +103,7 @@ export default function KuccDescription() {
               <div className="absolute -inset-8 border-2 border-purple-500/20 rounded-full" />
               
               {/* Logo */}
-              <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-full p-8 shadow-2xl shadow-accentBlue/20 border border-gray-700/50">
+              <div className="relative bg-gradient-to-br from-white via-gray-100 to-gray-200 rounded-full p-8 shadow-2xl shadow-accentBlue/30 border border-accentBlue/30">
                 <Image
                   src="/kucc-logo.png"
                   className="object-contain w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"

@@ -92,13 +92,13 @@ export default function NavBar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative">
+            <div className="relative bg-gradient-to-br from-white to-gray-100 rounded-lg p-2 shadow-lg shadow-accentBlue/10">
               <Image
                 src={'/kucc-logo.png'}
-                className="w-12 h-12 md:w-14 md:h-14 object-contain transition-transform group-hover:scale-105"
+                className="w-8 h-8 md:w-10 md:h-10 object-contain transition-transform group-hover:scale-105"
                 alt="KUCC Logo"
-                height={56}
-                width={56}
+                height={40}
+                width={40}
                 priority
               />
             </div>
@@ -187,13 +187,15 @@ export default function NavBar() {
           {/* Mobile Menu Header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-700">
             <div className="flex items-center space-x-3">
-              <Image
-                src={'/kucc-logo.png'}
-                className="w-10 h-10 object-contain"
-                alt="KUCC Logo"
-                height={40}
-                width={40}
-              />
+              <div className="bg-gradient-to-br from-white to-gray-100 rounded-lg p-1.5">
+                <Image
+                  src={'/kucc-logo.png'}
+                  className="w-8 h-8 object-contain"
+                  alt="KUCC Logo"
+                  height={32}
+                  width={32}
+                />
+              </div>
               <span className="bg-gradient-to-r from-accentBlue to-purple-400 bg-clip-text text-transparent font-bold text-lg">KUCC</span>
             </div>
             <button
