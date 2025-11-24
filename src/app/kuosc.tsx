@@ -32,7 +32,7 @@ export default function KUOSC() {
           {/* Content Section */}
           <div className="space-y-6 order-1 lg:order-2">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-accentBlue/20 to-purple-500/20 border border-accentBlue/30 text-accentBlueLight rounded-full text-sm font-medium backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 text-green-400 rounded-full text-sm font-medium backdrop-blur-sm">
               <span>Open Source Wing</span>
             </div>
 
@@ -48,7 +48,7 @@ export default function KUOSC() {
                 href="https://kuosc.org.np"
                 target="_blank"
                 rel="noreferrer"
-                className="font-semibold text-accentBlueLight hover:text-accentBlue underline decoration-2 underline-offset-2 transition-colors"
+                className="font-semibold text-green-400 hover:text-green-300 underline decoration-2 underline-offset-2 transition-colors"
               >
                 Kathmandu University Open Source Community (KUOSC)
               </Link>{' '}
@@ -66,7 +66,7 @@ export default function KUOSC() {
                 href="https://kuosc.org.np"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accentBlue to-purple-600 hover:from-accentBlueDark hover:to-purple-700 text-white font-semibold rounded-lg shadow-lg shadow-accentBlue/25 hover:shadow-xl hover:shadow-accentBlue/40 transition-all group"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold rounded-lg shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/40 transition-all group"
               >
                 Visit KUOSC Website
                 <ExternalLink size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
