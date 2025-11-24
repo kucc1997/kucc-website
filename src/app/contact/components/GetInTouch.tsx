@@ -26,7 +26,7 @@ const GetInTouch = () => {
   return (
     <div className="w-full">
       <div className="text-center mb-8">
-        <h2 className="text-2xl md:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
+        <h2 className="text-2xl md:text-3xl font-semibold text-white">
           Get in touch with the club.
         </h2>
       </div>
@@ -36,21 +36,18 @@ const GetInTouch = () => {
           return (
             <div 
               key={representative.id}
-              className="group relative bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800/50 rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl shadow-accentBlue/10 hover:shadow-accentBlue/20"
+              className="group relative bg-gray-900 border border-gray-800/50 rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl shadow-accentBlue/10 hover:shadow-accentBlue/20"
             >
-              {/* Gradient glow effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accentBlue/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
               <div className="relative z-10 text-center space-y-4">
                 {/* Icon */}
                 <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accentBlue/20 to-purple-500/20 flex items-center justify-center border border-gray-700/50">
+                  <div className="w-16 h-16 rounded-full bg-accentBlue/20 flex items-center justify-center border border-gray-700/50">
                     <FaUser className="text-3xl text-accentBlue" />
                   </div>
                 </div>
                 
                 {/* Name */}
-                <h3 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
+                <h3 className="text-xl font-semibold text-white">
                   {representative.name}
                 </h3>
                 

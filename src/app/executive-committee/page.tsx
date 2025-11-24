@@ -120,22 +120,15 @@ const executivesList: {
 
 export default function ExCommunity() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-baseBackground via-gray-900 to-gray-950 tech-grid py-16 px-5">
+    <div className="min-h-screen bg-baseBackground tech-grid py-16 px-5">
       <div className="max-w-screen-xl mx-auto">
-        {/* Gradient decorative blobs */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute inset-0 circuit-pattern opacity-10"></div>
-        </div>
-
-        <Card className="relative w-full border border-gray-800/50 shadow-2xl bg-gradient-to-br from-gray-900/90 via-gray-800/80 to-gray-900/90 backdrop-blur-xl px-4 rounded-3xl">
+        <Card className="relative w-full border border-gray-800/50 shadow-2xl bg-gray-900/90 backdrop-blur-xl px-4 rounded-3xl">
           <CardHeader className="flex items-center relative z-10">
             <CardDescription className="text-gray-400 text-lg mb-2 tech-text">KUCC Board 2025</CardDescription>
-            <CardTitle className="text-transparent bg-clip-text bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 text-3xl md:text-4xl font-bold tech-text holographic highlight-text">
+            <CardTitle className="text-accentBlueLight text-3xl md:text-4xl font-bold tech-text highlight-text">
               Executive Committee
             </CardTitle>
-            <div className="w-32 h-1 bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 rounded-full mt-4"></div>
+            <div className="w-32 h-1 bg-accentBlue rounded-full mt-4"></div>
           </CardHeader>
           
           <CardContent className="flex flex-col space-y-5 sm:hidden justify-center items-center rounded-xl mt-2 relative z-10">
@@ -155,7 +148,7 @@ export default function ExCommunity() {
           </CardContent>
           
           <CardFooter className="flex justify-center items-center mt-8 relative z-10">
-            <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-500 text-[10px] sm:text-base md:text-xl font-medium">
+            <h1 className="text-gray-400 text-[10px] sm:text-base md:text-xl font-medium">
               Department of Computer Science and Engineering
             </h1>
           </CardFooter>

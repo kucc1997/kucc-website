@@ -1,6 +1,5 @@
 import ActivityCard from '@/components/ActivityCard'
 import Image from 'next/image'
-import { title } from 'process'
 import React from 'react'
 import { MdOutlineHealthAndSafety } from 'react-icons/md'
 import HICounter from '../communities/components/HICounter'
@@ -27,21 +26,14 @@ const Achievements: Achievement[] = [
 
 const HealthInformaticsCommunity = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-baseBackground via-gray-900 to-gray-950 tech-grid py-16 px-5">
-      {/* Gradient decorative blobs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute inset-0 circuit-pattern opacity-10"></div>
-      </div>
-
+    <div className="min-h-screen bg-baseBackground tech-grid py-16 px-5">
       <div className="max-w-screen-xl mx-auto space-y-16 relative z-10">
         <section className="flex items-center gap-12">
           <div className="space-y-6 max-w-[60%]">
-            <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400">
+            <h1 className="text-4xl md:text-5xl font-bold text-accentBlueLight">
               Health Informatics Community
             </h1>
-            <div className="w-32 h-1 bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 rounded-full"></div>
+            <div className="w-32 h-1 bg-accentBlue rounded-full"></div>
             <p className="text-gray-300 text-base md:text-lg leading-relaxed">
               The Health Informatics (HI) community at Kathmandu University Computer Club (KUCC) is
               dedicated to promoting healthcare innovation through technology and data. We foster
@@ -50,7 +42,7 @@ const HealthInformaticsCommunity = () => {
             </p>
           </div>
           <div className="grid place-items-center w-full">
-            <div className="w-48 h-48 rounded-3xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-800/30 flex items-center justify-center">
+            <div className="w-48 h-48 rounded-3xl bg-gray-900/50 backdrop-blur-sm border border-gray-800/30 flex items-center justify-center">
               <MdOutlineHealthAndSafety className="text-[8rem] text-accentBlue" />
             </div>
           </div>
@@ -68,10 +60,10 @@ const HealthInformaticsAchievements = () => {
   return (
     <div className="flex flex-col space-y-8 p-5 justify-center items-center">
       <div className="text-center">
-        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 text-2xl md:text-3xl font-bold mb-4">
+        <h1 className="text-accentBlueLight text-2xl md:text-3xl font-bold mb-4">
           Achievements of HI Community
         </h1>
-        <div className="w-32 h-1 bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 rounded-full mx-auto"></div>
+        <div className="w-32 h-1 bg-accentBlue rounded-full mx-auto"></div>
       </div>
       <div className="flex-col p-2 w-full">
         <div className="space-y-5 grid sm:grid-cols-2 md:grid-cols-3 md:space-y-0 md:gap-6 max-w-screen-xl mx-auto">
@@ -90,15 +82,14 @@ const HealthInformaticsAchievements = () => {
 
 const Coordinator = ({ imgSrc, name, quote }: { imgSrc: string; name: string; quote: string }) => {
   return (
-    <div className="flex items-center gap-4 bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800/50 p-8 rounded-2xl hover:scale-105 transition-all duration-300 shadow-xl shadow-accentBlue/10">
+    <div className="flex items-center gap-4 bg-gray-900 border border-gray-800/50 p-8 rounded-2xl hover:scale-105 transition-all duration-300 shadow-xl shadow-accentBlue/10">
       <div className="relative">
-        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accentBlue/30 via-purple-500/20 to-pink-500/20 blur-xl"></div>
         <Image
           src={imgSrc}
           alt={name}
           height={200}
           width={200}
-          className="relative h-24 w-24 rounded-full border-2 border-gray-700/50 bg-gradient-to-br from-gray-800 to-gray-900"
+          className="relative h-24 w-24 rounded-full border-2 border-gray-700/50 bg-gray-800"
         />
       </div>
       <div className="space-y-2">
@@ -126,10 +117,10 @@ const HICommunityCoordinator = () => {
   return (
     <div className="grid place-items-center space-y-8">
       <div className="text-center">
-        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 text-3xl font-bold mb-4">
+        <h1 className="text-accentBlueLight text-3xl font-bold mb-4">
           Community Coordinators
         </h1>
-        <div className="w-32 h-1 bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 rounded-full mx-auto"></div>
+        <div className="w-32 h-1 bg-accentBlue rounded-full mx-auto"></div>
       </div>
       <div className="flex flex-col md:flex-row items-center gap-8">
         {coordinators.map((coordinator, index) => (
@@ -156,13 +147,12 @@ const PlannedActivity = ({
   description: string
 }) => {
   return (
-    <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800/50 flex rounded-2xl gap-6 max-w-[80%] mx-auto p-6 hover:scale-105 transition-all duration-300 shadow-xl shadow-accentBlue/10">
+    <div className="bg-gray-900 border border-gray-800/50 flex rounded-2xl gap-6 max-w-[80%] mx-auto p-6 hover:scale-105 transition-all duration-300 shadow-xl shadow-accentBlue/10">
       <div className="relative flex-shrink-0">
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-accentBlue/20 via-purple-500/10 to-pink-500/10 blur-lg"></div>
         <Image src={imgSrc} height={200} width={400} alt={title} className="relative h-40 w-40 rounded-xl object-cover border border-gray-700/50" />
       </div>
       <div className="space-y-3 flex-1">
-        <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">{title}</h1>
+        <h1 className="text-2xl font-semibold text-white">{title}</h1>
         <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
       </div>
     </div>
@@ -173,10 +163,10 @@ const HIPlannedActivities = () => {
   return (
     <div className="space-y-8">
       <div className="text-center">
-        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 text-2xl md:text-3xl font-bold mb-4">
+        <h1 className="text-accentBlueLight text-2xl md:text-3xl font-bold mb-4">
           Upcoming Events by HI Community
         </h1>
-        <div className="w-32 h-1 bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 rounded-full mx-auto"></div>
+        <div className="w-32 h-1 bg-accentBlue rounded-full mx-auto"></div>
       </div>
       <PlannedActivity
         imgSrc="/assets/images/communities/hi/dhis.png"
