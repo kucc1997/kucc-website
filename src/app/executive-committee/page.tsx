@@ -90,7 +90,7 @@ const executivesList: {
     mail: 'khatridalton1235@gmail.com',
     position: 'Executive Member',
     image: '/people/dalton-khatri.jpg',
-    linkedin: 'Dalton Khatri'
+    linkedin: 'https://www.linkedin.com/in/dalton-khatri-856259342/'
   },
  
    {
@@ -103,8 +103,8 @@ const executivesList: {
     name: 'Sahaj Wagle',
     mail: 'sahajwagle567@gmail.com',
     position: 'Executive Member',
-    image: '',
-    linkedin: ''
+    image: '/people/sahaj-wagle.jpeg',
+    linkedin: 'https://www.linkedin.com/in/sahaj-wagle-4a5285385/'
   },
   
 ]
