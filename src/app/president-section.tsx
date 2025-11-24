@@ -33,30 +33,30 @@ export default function PresidentSection() {
           <div className="space-y-6 order-2 lg:order-1">
             <div className="space-y-5 text-lg leading-relaxed bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
               <p className="text-gray-300">
-                As President of KUCC, I&apos;m excited to lead us back to what really matters: technology,
-                research, cool projects, and an awesome community. We&apos;re all about getting hands-on,
-                learning deeply, and having fun while we do it.
+                As President of KUCC, I am honored to lead this vibrant community of technology enthusiasts, 
+                innovators, and learners. KUCC has always been a place where passion meets purpose, and I am 
+                committed to fostering an environment where every member can explore, create, and excel.
               </p>
 
               <p className="text-gray-300">
-                This year, we&apos;re kicking off something big. The National Conference on Computer
-                Innovations, or NCCI, is a chance for all of us to show off our research, share ideas,
-                and spark new innovations.
+                This year, we focus on building stronger communities, driving impactful projects, and creating 
+                opportunities for growth through workshops, events, and collaborative initiatives. Together, 
+                we will continue to push boundaries and inspire innovation.
               </p>
 
               <p className="text-gray-300">
-                Let&apos;s dive in, build together, and make KUCC the place where ideas come alive. Ready
-                to shape the future? Let&apos;s go!
+                Let&apos;s embrace challenges, celebrate achievements, and make KUCC a platform where ideas 
+                flourish and dreams turn into reality. Excited for what we&apos;ll accomplish together!
               </p>
             </div>
 
             {/* President Info */}
             <div className="pt-6 border-t border-accentBlue/20">
               <h3 className="text-2xl font-bold text-titleColor mb-1">
-                Abhiyan Dhakal
+                Sakshi KC
               </h3>
               <p className="text-accentBlueLight font-medium text-lg tech-text">
-                President, KUCC
+                President, KUCC Board 25/26
               </p>
             </div>
           </div>
@@ -68,9 +68,9 @@ export default function PresidentSection() {
               <div className="relative bg-gray-900 p-2 rounded-2xl shadow-2xl shadow-accentBlue/20 border border-gray-700">
                 <div className="relative overflow-hidden rounded-xl">
                   <Image
-                    src="/people/Abhiyan_Dhakal.webp"
+                    src="/people/Sakshi_KC.jpg"
                     className="w-full h-auto object-cover"
-                    alt="Abhiyan Dhakal, KUCC President"
+                    alt="Sakshi KC, KUCC President"
                     width={500}
                     height={500}
                     priority
@@ -82,7 +82,7 @@ export default function PresidentSection() {
 
               {/* Floating badge */}
               <div className="absolute -bottom-6 -right-6 bg-accentBlue rounded-xl shadow-xl shadow-accentBlue/30 p-4 border border-accentBlue/30 backdrop-blur-sm">
-                <div className="text-white font-bold text-2xl tech-number">2024</div>
+                <div className="text-white font-bold text-2xl tech-number">25/26</div>
                 <div className="text-white/90 text-sm font-medium tech-text">President</div>
               </div>
             </div>
