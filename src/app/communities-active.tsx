@@ -98,7 +98,7 @@ function CommunitiesActive() {
   ]
 
   return (
-    <section className="relative py-20 md:py-28 bg-baseBackground overflow-hidden border-y border-gray-800">
+    <section className="relative py-20 md:py-28 bg-baseBackground tech-grid overflow-hidden border-y border-gray-800">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">

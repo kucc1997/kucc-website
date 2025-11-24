@@ -4,7 +4,8 @@ import { ExternalLink } from 'lucide-react'
 
 export default function KUOSC() {
   return (
-    <section className="relative py-20 md:py-28 bg-baseBackground overflow-hidden">
+    <section className="relative py-20 md:py-28 bg-baseBackground tech-grid overflow-hidden">
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Logo Section */}
