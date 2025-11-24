@@ -1,100 +1,63 @@
 import React from 'react'
 import { HiPaintBrush } from 'react-icons/hi2'
 import { LuBrainCircuit } from 'react-icons/lu'
-import { MdOutlineHealthAndSafety } from 'react-icons/md'
-import { PiLineSegments } from 'react-icons/pi'
-import { SiDart, SiGnubash, SiJavascript, SiPython, SiRust } from 'react-icons/si'
+import { SiGnubash } from 'react-icons/si'
 import { Community } from '../../../types'
-import { FaGamepad, FaJava } from 'react-icons/fa'
 import { BsJournalBookmarkFill } from 'react-icons/bs'
+import { FaCloud, FaMobileAlt } from 'react-icons/fa'
+import { MdWeb } from 'react-icons/md'
 import Link from 'next/link'
 
 const Communities = () => {
   const communities: Community[] = [
     {
       id: 1,
-      title: 'JavaScript Community',
-      Icon: SiJavascript,
-      description:
-        'Join us to enhance your JavaScript skills, participate in workshops, and collaborate on exciting projects with fellow developers.',
-    },
-    {
-      id: 2,
-      title: 'Design Community',
-      Icon: HiPaintBrush,
-      description:
-        'Explore creative design through workshops, hands-on activities, and networking with design professionals. All skill levels welcome!',
-    },
-    {
-      id: 3,
-      title: 'Python Community',
-      Icon: SiPython,
-      description:
-        'Dive into Python programming and data science with workshops, coding challenges, and collaborative projects for all levels.',
-    },
-    {
-      id: 4,
-      title: 'Cybersecurity Community',
-      Icon: SiGnubash,
-      description:
-        'Gain practical insights into networking and cybersecurity through workshops and interactive sessions. Ideal for all skill levels.',
-    },
-    {
-      id: 5,
-      title: 'Entrepreneurship and Monetization Community',
-      Icon: PiLineSegments,
-      description:
-        'Empower your tech ideas with practical guidance, workshops, and mentorship on entrepreneurship and monetization.',
-    },
-    {
-      id: 6,
-      title: 'Health Informatics Community',
-      Icon: MdOutlineHealthAndSafety,
-      description:
-        'Explore technology in healthcare through workshops and collaborations, enhancing skills and contributing to innovative projects.',
-      path: '/hi',
-    },
-    {
-      id: 7,
-      title: 'Dart Community',
-      Icon: SiDart,
-      description:
-        'Master Dart and Flutter with workshops, server-side Dart exploration, and community projects. For all levels of experience.',
-    },
-    {
-      id: 8,
-      title: 'Rust Community',
-      Icon: SiRust,
-      description:
-        'Connect with Rust enthusiasts, enhance your skills, and collaborate on projects in a supportive environment for all levels.',
-    },
-    {
-      id: 9,
-      title: 'Machine Learning and Data Science Community',
-      Icon: LuBrainCircuit,
-      description:
-        'Advance your skills in machine learning and data science with dynamic workshops, collaborative projects, and career opportunities.',
-    },
-    {
-      id: 10,
-      title: 'Game Developmet Community',
-      Icon: FaGamepad,
-      description:
-        'Explore game development through workshops, collaborative projects, and competitions. Perfect for all levels of enthusiasts and developers.',
-    },
-    {
-      id: 11,
       title: 'Documentation Community',
       Icon: BsJournalBookmarkFill,
       description:
         'Enhance your documentation skills through workshops, research paper writing, and collaborative projects to streamline processes and impact.',
     },
     {
-      id: 12,
-      title: 'Java and Kotlin Community',
-      Icon: FaJava,
+      id: 2,
+      title: 'Machine Learning Community',
+      Icon: LuBrainCircuit,
       description:
-        'Develop your Java expertise with workshops, collaborative projects, and career insights. Ideal for developers interested in backend and Android applications.',
+        'Advance your skills in machine learning and data science with dynamic workshops, collaborative projects, and career opportunities.',
+    },
+    {
+      id: 3,
+      title: 'Web Development Community',
+      Icon: MdWeb,
+      description:
+        'Master modern web technologies through hands-on workshops, collaborative projects, and mentorship. Build responsive and dynamic web applications.',
+    },
+    {
+      id: 4,
+      title: 'Design Community',
+      Icon: HiPaintBrush,
+      description:
+        'Explore creative design through workshops, hands-on activities, and networking with design professionals. All skill levels welcome!',
+    },
+    {
+      id: 5,
+      title: 'Cloud Community',
+      Icon: FaCloud,
+      description:
+        'Dive into cloud computing with AWS, Azure, and GCP. Learn infrastructure, deployment, and cloud-native technologies through practical workshops.',
+    },
+    {
+      id: 6,
+      title: 'Mobile App Development Community',
+      Icon: FaMobileAlt,
+      description:
+        'Build cross-platform mobile applications with Flutter, React Native, and native technologies. Engage in workshops and collaborative projects.',
+    },
+    {
+      id: 7,
+      title: 'Cybersecurity & Networking Community',
+      Icon: SiGnubash,
+      description:
+        'Gain practical insights into networking and cybersecurity through workshops and interactive sessions. Ideal for all skill levels.',
     },
   ]
 

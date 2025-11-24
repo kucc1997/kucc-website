@@ -1,5 +1,4 @@
 import KUOSC from './kuosc'
-import CommunitiesActive from './communities-active'
 import Activities from './activities-ku'
 import CounterUp from './counter-up'
 import PresidentSection from './president-section'
@@ -10,7 +9,6 @@ export default function HomePage() {
     <>
       <KuccDescription />
       <KUOSC />
-      <CommunitiesActive />
       <Activities />
       <CounterUp />
       <PresidentSection />
