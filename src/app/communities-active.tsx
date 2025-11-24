@@ -15,7 +15,7 @@ import 'swiper/css/scrollbar'
 
 const Slide = ({ icon, title }: { icon: React.ReactNode; title: string }) => {
   return (
-    <div className="group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 h-[240px] flex flex-col items-center justify-center space-y-4 hover:shadow-2xl hover:shadow-accentBlue/10 hover:border-accentBlue/50 transition-all duration-300">
+    <div className="group bg-gray-900 border border-gray-700 rounded-2xl p-8 h-[240px] flex flex-col items-center justify-center space-y-4 hover:shadow-2xl hover:shadow-accentBlue/10 hover:border-accentBlue/50 transition-all duration-300">
       <div className="group-hover:scale-110 transition-transform text-accentBlueLight">
         {icon}
       </div>
@@ -98,14 +98,11 @@ function CommunitiesActive() {
   ]
 
   return (
-    <section className="relative py-20 md:py-28 bg-gradient-to-br from-gray-900 to-baseBackground overflow-hidden border-y border-gray-800">
-      {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-accentBlue/10 to-purple-500/10 rounded-full blur-3xl" />
-      
+    <section className="relative py-20 md:py-28 bg-baseBackground overflow-hidden border-y border-gray-800">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accentBlue/20 to-purple-500/20 border border-accentBlue/30 rounded-full mb-4 backdrop-blur-sm">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-accentBlue/20 border border-accentBlue/30 rounded-full mb-4 backdrop-blur-sm">
             <Users size={32} className="text-accentBlueLight" />
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-titleColor mb-4">
@@ -114,7 +111,7 @@ function CommunitiesActive() {
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Explore our diverse range of tech communities, each fostering innovation and collaboration
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 mx-auto rounded-full mt-6" />
+          <div className="w-24 h-1 bg-accentBlue mx-auto rounded-full mt-6" />
         </div>
 
         {/* Communities Carousel */}

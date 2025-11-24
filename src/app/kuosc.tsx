@@ -5,17 +5,11 @@ import { ExternalLink } from 'lucide-react'
 export default function KUOSC() {
   return (
     <section className="relative py-20 md:py-28 bg-baseBackground overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl" />
-      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Logo Section */}
           <div className="flex justify-center lg:justify-start order-2 lg:order-1">
             <div className="relative">
-              {/* Decorative ring */}
-              <div className="absolute inset-0 bg-accentBlue/20 rounded-full blur-2xl" />
-              
               {/* Logo container */}
               <div className="relative bg-gray-900 rounded-3xl p-8 shadow-2xl shadow-accentBlue/20 border border-gray-700">
                 <Image

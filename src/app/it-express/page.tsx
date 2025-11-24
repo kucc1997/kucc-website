@@ -37,8 +37,6 @@ const ItExpressPage = () => {
     <div className="min-h-screen bg-baseBackground tech-grid py-16 px-5">
       {/* Decorative blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-10 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl"></div>
         <div className="absolute inset-0 circuit-pattern opacity-10"></div>
       </div>
 

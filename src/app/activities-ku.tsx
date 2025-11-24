@@ -5,7 +5,6 @@ export default function Activities() {
   return (
     <section className="relative py-20 md:py-28 bg-baseBackground tech-grid overflow-hidden">
       {/* Decorative Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl" />
       <div className="absolute inset-0 circuit-pattern opacity-10 pointer-events-none" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

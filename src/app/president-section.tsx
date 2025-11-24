@@ -13,10 +13,6 @@ export default function PresidentSection() {
     <section className="relative py-20 md:py-28 bg-baseBackground overflow-hidden border-y border-accentBlue/20 tech-grid-animated">
       {/* Tech Grid Overlay */}
       <div className="absolute inset-0 tech-grid opacity-30" />
-      
-      {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl" />
       <div className="absolute inset-0 circuit-pattern opacity-20 pointer-events-none" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,9 +64,6 @@ export default function PresidentSection() {
           {/* Right - Image */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
-              {/* Decorative border */}
-              <div className="absolute -inset-4 bg-accentBlue/30 rounded-2xl blur-xl opacity-50" />
-              
               {/* Image container */}
               <div className="relative bg-gray-900 p-2 rounded-2xl shadow-2xl shadow-accentBlue/20 border border-gray-700">
                 <div className="relative overflow-hidden rounded-xl">

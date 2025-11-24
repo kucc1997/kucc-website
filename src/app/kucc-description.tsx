@@ -16,10 +16,6 @@ export default function KuccDescription() {
       {/* Tech Grid Overlay */}
       <div className="absolute inset-0 tech-grid opacity-50" />
       
-      {/* Decorative Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl -z-0" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl -z-0" />
-      
       {/* Circuit pattern overlay */}
       <div className="absolute inset-0 circuit-pattern opacity-30" />
       
@@ -98,7 +94,6 @@ export default function KuccDescription() {
           <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
               {/* Decorative rings */}
-              <div className="absolute inset-0 bg-accentBlue/20 rounded-full blur-3xl animate-pulse" />
               <div className="absolute -inset-4 border-2 border-accentBlue/30 rounded-full" />
               <div className="absolute -inset-8 border-2 border-accentBlue/20 rounded-full" />
               

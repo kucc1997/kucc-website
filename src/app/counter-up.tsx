@@ -28,8 +28,6 @@ export default function CounterUp() {
   return (
     <section className="relative py-16 md:py-20 bg-baseBackground tech-grid-animated overflow-hidden border-y border-accentBlue/20 scanline">
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-1/4 w-64 h-64 bg-accentBlue/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accentBlue/10 rounded-full blur-3xl" />
       <div className="absolute inset-0 circuit-pattern opacity-20 pointer-events-none" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
