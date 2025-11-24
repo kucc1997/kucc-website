@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: 'Executive Committee - Kathmandu University Computer Club (KUCC)',
   description:
-    'Executive Committee of Kathmandu University Computer Club (KUCC) 2024/25 comprises of Abhiyan Dhakal (President), Saroj Sigdel (Vice President), Mukul Aryal (General Secretary), Suyog Ghimire (Treasurer), Sakshi KC (Club Secretary), Ashwini Subedi (KUOSC Coordinator), Aakriti Pandey (Executive Member), Aatmiyata Pokhrel (Executive Member), Abhinav Bhatt (Executive Member), Bishist Bikram Pant (Executive Member), Kiran Dahal (Executive Member), Lawan Poudyal (Executive Member), Nischal Subedi (Executive Member).',
+    'Executive Committee of Kathmandu University Computer Club (KUCC) 2025/26 comprises of Sakshi K.C. (President), Kiran Dahal (Vice President), Saksham Gyawali (General Secretary), Innima Karki (Treasurer), Lawan Poudyal (Club Secretary), Shriharsh Sharma Acharya (KUOSC Coordinator), Mimansh Pokharel (Executive Member), Abhyudaya Pokhrel (Executive Member), Dalton Khatri (Executive Member), Niraj Kumar Ram (Executive Member), Sahaj Wagle (Executive Member).',
 }
 
 /**
