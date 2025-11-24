@@ -1,13 +1,14 @@
 'use client'
-import { MdMonetizationOn, MdVolunteerActivism } from 'react-icons/md'
+import { MdVolunteerActivism } from 'react-icons/md'
 import { GrWorkshop } from 'react-icons/gr'
+import { CalendarDays } from 'lucide-react'
 
 export default function ActivityCard(props: { title: string; description: string; url?: string }) {
   const isSFD = props.title === 'Software Freedom Day'
   
   function Icon() {
     if (props.title === 'IT Meet') {
-      return <MdMonetizationOn className="text-accentBlue w-12 h-12" />
+      return <CalendarDays className="text-accentBlue w-12 h-12" />
     } else if (isSFD) {
       return <MdVolunteerActivism className="text-green-400 w-12 h-12" />
     } else {
