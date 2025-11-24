@@ -44,7 +44,7 @@ const ItExpressPage = () => {
 
       <div className="max-w-4xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 text-4xl md:text-5xl font-bold mb-6 tech-text holographic highlight-text">
             IT Express
           </h1>
           <div className="w-32 h-1 bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 rounded-full mx-auto mb-8"></div>
@@ -81,7 +81,7 @@ const ItExpressPage = () => {
                   
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 group-hover:from-accentBlue group-hover:to-purple-400 transition-all duration-300">
+                    <h3 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 group-hover:from-accentBlue group-hover:to-purple-400 transition-all duration-300 tech-text">
                       {itexp.name}
                     </h3>
                     <p className="text-sm text-gray-500 mt-1">Click to view PDF</p>

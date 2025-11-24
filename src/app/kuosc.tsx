@@ -37,9 +37,9 @@ export default function KUOSC() {
             </div>
 
             {/* Title */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-titleColor leading-tight">
-              Kathmandu University
-              <span className="block bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 bg-clip-text text-transparent">Open Source Community</span>
+            <h2 className="space-y-2">
+              <span className="block text-xl md:text-2xl lg:text-3xl font-bold text-gray-400 tech-text">Kathmandu University</span>
+              <span className="block text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 bg-clip-text text-transparent tech-text">Open Source Community</span>
             </h2>
 
             {/* Description */}

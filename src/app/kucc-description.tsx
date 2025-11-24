@@ -35,12 +35,12 @@ export default function KuccDescription() {
 
             {/* Main Heading */}
             <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-titleColor leading-tight">
-                Kathmandu University
-                <span className="block bg-gradient-to-r from-accentBlue via-purple-400 to-techAccent bg-clip-text text-transparent">Computer Club</span>
+              <h1 className="space-y-2">
+                <span className="block text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-400 tech-text">Kathmandu University</span>
+                <span className="block text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-accentBlue via-purple-400 to-techAccent bg-clip-text text-transparent holographic highlight-text tech-text">Computer Club</span>
               </h1>
               <p className="text-lg sm:text-xl text-subTitleColor leading-relaxed">
-                Pioneering technological innovation and excellence at KU for over two decades
+                Pioneering <span className="highlight-glow neon-underline text-accentBlueLight">technological innovation</span> and excellence at KU for over two decades
               </p>
             </div>
 
@@ -58,23 +58,23 @@ export default function KuccDescription() {
               <div className="space-y-1 p-4 rounded-xl bg-gradient-to-br from-accentBlue/10 to-transparent border border-accentBlue/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 text-accentBlueLight">
                   <Calendar size={20} />
-                  <span className="text-2xl font-bold text-titleColor">27+</span>
+                  <span className="text-2xl font-bold text-titleColor tech-number">27+</span>
                 </div>
-                <p className="text-sm text-gray-400">Years Active</p>
+                <p className="text-sm text-gray-400 tech-text">Years Active</p>
               </div>
               <div className="space-y-1 p-4 rounded-xl bg-gradient-to-br from-purple-500/10 to-transparent border border-purple-500/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 text-purple-400">
                   <Users size={20} />
-                  <span className="text-2xl font-bold text-titleColor">1000+</span>
+                  <span className="text-2xl font-bold text-titleColor tech-number">1000+</span>
                 </div>
-                <p className="text-sm text-gray-400">Members</p>
+                <p className="text-sm text-gray-400 tech-text">Members</p>
               </div>
               <div className="space-y-1 p-4 rounded-xl bg-gradient-to-br from-techAccent/10 to-transparent border border-techAccent/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 text-techAccent">
                   <Trophy size={20} />
-                  <span className="text-2xl font-bold text-titleColor">100+</span>
+                  <span className="text-2xl font-bold text-titleColor tech-number">100+</span>
                 </div>
-                <p className="text-sm text-gray-400">Events</p>
+                <p className="text-sm text-gray-400 tech-text">Events</p>
               </div>
             </div>
 

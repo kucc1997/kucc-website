@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter as FontSans } from "next/font/google"
+import { Orbitron as FontTech } from "next/font/google"
 import './globals.css'
 import Footer from '../components/Footer/Footer'
 import { cn } from "@/lib/utils"
@@ -8,6 +9,12 @@ import NavBar from '../components/Navbar/Navbar'
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+})
+
+const fontTech = FontTech({
+  subsets: ["latin"],
+  variable: "--font-tech",
+  weight: ["400", "500", "600", "700", "800", "900"],
 })
 
 export const metadata: Metadata = {
@@ -25,7 +32,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(
           "min-h-screen bg-baseBackground font-sans antialiased",
-          fontSans.variable
+          fontSans.variable,
+          fontTech.variable
         )}
       >
         <NavBar />

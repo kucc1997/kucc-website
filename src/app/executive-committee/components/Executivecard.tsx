@@ -49,7 +49,7 @@ export default function ExecutiveCard({
       </CardHeader>
       <CardContent className="flex-col flex-wrap bg-gradient-to-br from-gray-950/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-5 sm:p-4 space-y-2 border border-gray-800/30">
         <h1 className="text-xl text-wrap text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">{name}</h1>
-        <h2 className="text-sm text-wrap text-center font-medium text-gray-400">{position.toUpperCase()}</h2>
+        <h2 className="text-sm text-wrap text-center font-medium text-gray-400 tech-text">{position.toUpperCase()}</h2>
       </CardContent>
       <CardFooter className="flex justify-center space-x-4 p-2 mt-2">
         <Link href={linkedin} target="_blank" className="transition-all hover:translate-y-[-2px] hover:scale-110 duration-300">

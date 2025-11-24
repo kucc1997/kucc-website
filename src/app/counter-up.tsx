@@ -12,12 +12,6 @@ export default function CounterUp() {
       suffix: '+'
     },
     {
-      icon: <Award size={32} />,
-      end: 10,
-      label: 'Communities',
-      suffix: '+'
-    },
-    {
       icon: <TrendingUp size={32} />,
       end: 500,
       label: 'Workshops',
@@ -39,7 +33,7 @@ export default function CounterUp() {
       <div className="absolute inset-0 circuit-pattern opacity-20 pointer-events-none" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {stats.map((stat, index) => (
             <div key={index} className="text-center space-y-3">
               {/* Icon */}
@@ -59,9 +53,9 @@ export default function CounterUp() {
                   delay={0}
                   enableScrollSpy
                   scrollSpyOnce
-                  className="block text-4xl md:text-5xl lg:text-6xl font-bold text-white"
+                  className="block text-4xl md:text-5xl lg:text-6xl font-bold text-white tech-number"
                 />
-                <div className="text-lg md:text-xl font-medium text-white/90 uppercase tracking-wide">
+                <div className="text-lg md:text-xl font-medium text-white/90 uppercase tracking-wide tech-text">
                   {stat.label}
                 </div>
               </div>

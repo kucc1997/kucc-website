@@ -2,7 +2,7 @@
 import { MdMonetizationOn, MdVolunteerActivism } from 'react-icons/md'
 import { GrWorkshop } from 'react-icons/gr'
 
-export default function ActivityCard(props: { title: string; description: string }) {
+export default function ActivityCard(props: { title: string; description: string; url?: string }) {
   function Icon() {
     if (props.title === 'IT Meet') {
       return <MdMonetizationOn className="text-accentBlue w-12 h-12" />
@@ -12,9 +12,15 @@ export default function ActivityCard(props: { title: string; description: string
       return <GrWorkshop className="text-accentBlue w-12 h-12" />
     }
   }
+
+  const handleClick = () => {
+    if (props.url) {
+      window.open(props.url, '_blank')
+    }
+  }
   
   return (
-    <div className="group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:shadow-2xl hover:shadow-accentBlue/10 hover:-translate-y-2 hover:border-accentBlue/30 transition-all duration-300 cursor-pointer">
+    <div onClick={handleClick} className="group bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 hover:shadow-2xl hover:shadow-accentBlue/10 hover:-translate-y-2 hover:border-accentBlue/30 transition-all duration-300 cursor-pointer">
       {/* Icon with gradient background */}
       <div className="w-20 h-20 bg-gradient-to-br from-accentBlue/20 to-purple-500/20 border border-accentBlue/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
         <Icon />
@@ -22,7 +28,7 @@ export default function ActivityCard(props: { title: string; description: string
       
       {/* Content */}
       <div className="space-y-3">
-        <h3 className="text-titleColor font-bold text-xl group-hover:text-accentBlueLight transition-colors">
+        <h3 className="text-titleColor font-bold text-xl group-hover:text-accentBlueLight transition-colors tech-text">
           {props.title}
         </h3>
         <p className="text-gray-400 leading-relaxed">

@@ -72,7 +72,7 @@ const Communities = () => {
 
       <div className="max-w-screen-xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 text-4xl md:text-5xl font-bold mb-4 tech-text holographic highlight-text">
             Communities Under KUCC
           </h1>
           <div className="w-32 h-1 bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 rounded-full mx-auto"></div>
@@ -96,7 +96,7 @@ const Communities = () => {
                 
                 {/* Content */}
                 <div className="relative z-10 flex-1">
-                  <h2 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 group-hover:from-accentBlue group-hover:to-purple-400 transition-all duration-300 mb-2">
+                  <h2 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 group-hover:from-accentBlue group-hover:to-purple-400 transition-all duration-300 mb-2 tech-text">
                     {community.title}
                   </h2>
                   <p className="text-sm text-gray-400 leading-relaxed">{community.description}</p>

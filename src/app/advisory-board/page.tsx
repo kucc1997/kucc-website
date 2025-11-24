@@ -46,8 +46,8 @@ export default function AdvBoard() {
 
         <Card className="relative w-full border border-gray-800/50 shadow-2xl bg-gradient-to-br from-gray-900/90 via-gray-800/80 to-gray-900/90 backdrop-blur-xl px-4 rounded-3xl">
           <CardHeader className="flex items-center relative z-10">
-            <CardDescription className="text-gray-400 text-lg mb-2">KUCC Board 2025</CardDescription>
-            <CardTitle className="text-transparent bg-clip-text bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 text-3xl md:text-4xl font-bold">
+            <CardDescription className="text-gray-400 text-lg mb-2 tech-text">KUCC Board 2025</CardDescription>
+            <CardTitle className="text-transparent bg-clip-text bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 text-3xl md:text-4xl font-bold tech-text holographic highlight-text">
               Advisors
             </CardTitle>
             <div className="w-32 h-1 bg-gradient-to-r from-accentBlue via-purple-400 to-pink-400 rounded-full mt-4"></div>
