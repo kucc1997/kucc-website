@@ -120,34 +120,40 @@ const executivesList: {
 
 export default function ExCommunity() {
   return (
-    <div className="flex flex-col p-5 justify-center items-center max-w-screen-xl mx-auto">
-      <Card className="w-full border-2 shadow-lg bg-baseBackground px-4">
-        <CardHeader className="flex items-center">
-          <CardDescription className="text-gray-500 text-lg">KUCC Board 2025</CardDescription>
-          <CardTitle className="text-titleColor text-2xl md:text-3xl">
-            Executive Committee
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="flex flex-col space-y-5 sm:hidden justify-center items-center rounded-xl mt-2">
-          {executivesList.map((executive) => (
-            <div key={executive.mail}>
-              <ExecutiveCard {...executive} />
-            </div>
-          ))}
-        </CardContent>
-        <CardContent className="hidden sm:flex flex-wrap justify-around rounded-lg mt-4 gap-5">
-          {executivesList.map((executive) => (
-            <div key={executive.mail}>
-              <ExecutiveCard {...executive} />
-            </div>
-          ))}
-        </CardContent>
-        <CardFooter className="flex justify-center items-center">
-          <h1 className="text-titleColor text-[10px] sm:text-base md:text-xl md:mt-4">
-            Department of Computer Science and Engineering
-          </h1>
-        </CardFooter>
-      </Card>
+    <div className="min-h-screen bg-baseBackground tech-grid py-16 px-5">
+      <div className="max-w-screen-xl mx-auto">
+        <Card className="relative w-full border border-gray-800/50 shadow-2xl bg-gray-900/90 backdrop-blur-xl px-4 rounded-3xl">
+          <CardHeader className="flex items-center relative z-10">
+            <CardDescription className="text-gray-400 text-lg mb-2 tech-text">KUCC Board 2025</CardDescription>
+            <CardTitle className="text-accentBlueLight text-3xl md:text-4xl font-bold tech-text highlight-text">
+              Executive Committee
+            </CardTitle>
+            <div className="w-32 h-1 bg-accentBlue rounded-full mt-4"></div>
+          </CardHeader>
+          
+          <CardContent className="flex flex-col space-y-5 sm:hidden justify-center items-center rounded-xl mt-2 relative z-10">
+            {executivesList.map((executive) => (
+              <div key={executive.mail}>
+                <ExecutiveCard {...executive} />
+              </div>
+            ))}
+          </CardContent>
+          
+          <CardContent className="hidden sm:flex flex-wrap justify-around rounded-lg mt-4 gap-5 relative z-10">
+            {executivesList.map((executive) => (
+              <div key={executive.mail}>
+                <ExecutiveCard {...executive} />
+              </div>
+            ))}
+          </CardContent>
+          
+          <CardFooter className="flex justify-center items-center mt-8 relative z-10">
+            <h1 className="text-gray-400 text-[10px] sm:text-base md:text-xl font-medium">
+              Department of Computer Science and Engineering
+            </h1>
+          </CardFooter>
+        </Card>
+      </div>
     </div>
   )
 }

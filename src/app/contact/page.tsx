@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container, Box, Grid, Typography } from '@mui/material'
 import GetInTouch from './components/GetInTouch'
 
 export const metadata = {
@@ -9,20 +8,19 @@ export const metadata = {
 
 const ContactPage = () => {
   return (
-    <>
-      <Container sx={{ py: 8 }}>
-        <Box textAlign="center" mb={6}>
-          <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
+    <div className="min-h-screen bg-baseBackground tech-grid py-16 px-5">
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-12">
+          <h1 className="text-accentBlueLight text-4xl md:text-5xl font-bold mb-4">
             Contact Us
-          </Typography>
-        </Box>
-        <Grid sx={{ background: 'text.light' }} container rowSpacing={4} columnSpacing={{ xs: 1 }}>
-          <Grid item xs={12} sm={6} md={4}></Grid>
-          <Grid item xs={12} sm={6} lg={8}></Grid>
-          <Grid item xs={12}>
-            <GetInTouch />
-          </Grid>
-          <Grid item xs={12} mt={4}>
+          </h1>
+          <div className="w-32 h-1 bg-accentBlue rounded-full mx-auto"></div>
+        </div>
+
+        <div className="space-y-8">
+          <GetInTouch />
+          
+          <div className="relative rounded-3xl overflow-hidden border border-gray-800/50 shadow-2xl shadow-accentBlue/10">
             <iframe
               src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=ku-location&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               width="100%"
@@ -31,11 +29,12 @@ const ContactPage = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              className="filter brightness-90 grayscale-[20%]"
             ></iframe>
-          </Grid>
-        </Grid>
-      </Container>
-    </>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
