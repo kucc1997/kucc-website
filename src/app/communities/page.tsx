@@ -62,11 +62,12 @@ const Communities = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-baseBackground via-gray-900 to-gray-950 py-16 px-5">
+    <div className="min-h-screen bg-gradient-to-br from-baseBackground via-gray-900 to-gray-950 tech-grid-animated py-16 px-5">
       {/* Gradient decorative blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 circuit-pattern opacity-10"></div>
       </div>
 
       <div className="max-w-screen-xl mx-auto relative z-10">

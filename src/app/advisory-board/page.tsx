@@ -35,12 +35,13 @@ const advisorsList = [
 
 export default function AdvBoard() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-baseBackground via-gray-900 to-gray-950 py-16 px-5">
+    <div className="min-h-screen bg-gradient-to-br from-baseBackground via-gray-900 to-gray-950 tech-grid py-16 px-5">
       <div className="max-w-screen-xl mx-auto">
         {/* Gradient decorative blobs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 left-10 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl"></div>
+          <div className="absolute inset-0 circuit-pattern opacity-10"></div>
         </div>
 
         <Card className="relative w-full border border-gray-800/50 shadow-2xl bg-gradient-to-br from-gray-900/90 via-gray-800/80 to-gray-900/90 backdrop-blur-xl px-4 rounded-3xl">

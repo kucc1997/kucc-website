@@ -32,10 +32,11 @@ export default function CounterUp() {
   ]
 
   return (
-    <section className="relative py-16 md:py-20 bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 overflow-hidden border-y border-gray-800">
+    <section className="relative py-16 md:py-20 bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 tech-grid-animated overflow-hidden border-y border-accentBlue/20 scanline">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-1/4 w-64 h-64 bg-accentBlue/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl" />
+      <div className="absolute inset-0 circuit-pattern opacity-20 pointer-events-none" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">

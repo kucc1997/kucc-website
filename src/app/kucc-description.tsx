@@ -12,10 +12,16 @@ export const metadata: Metadata = {
 
 export default function KuccDescription() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-baseBackground via-gray-900 to-baseBackground">
+    <section className="relative overflow-hidden bg-gradient-to-br from-baseBackground via-gray-900 to-baseBackground tech-grid-animated">
+      {/* Tech Grid Overlay */}
+      <div className="absolute inset-0 tech-grid opacity-50" />
+      
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-accentBlue/20 to-purple-500/20 rounded-full blur-3xl -z-0" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-techAccent/20 to-pink-500/20 rounded-full blur-3xl -z-0" />
+      
+      {/* Circuit pattern overlay */}
+      <div className="absolute inset-0 circuit-pattern opacity-30" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -108,11 +114,7 @@ export default function KuccDescription() {
                 />
               </div>
 
-              {/* Floating badges */}
-              <div className="hidden lg:block absolute -left-8 top-1/4 bg-gradient-to-br from-gray-900 to-gray-800 border border-accentBlue/30 rounded-xl shadow-xl shadow-accentBlue/20 p-4 animate-bounce backdrop-blur-sm" style={{animationDuration: '3s'}}>
-                <div className="text-accentBlueLight font-bold text-lg">Reg. No.</div>
-                <div className="text-titleColor font-semibold">001/1997</div>
-              </div>
+
             </div>
           </div>
         </div>

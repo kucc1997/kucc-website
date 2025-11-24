@@ -63,7 +63,9 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white border-t border-gray-800">
+    <footer className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white border-t border-accentBlue/20 tech-grid overflow-hidden">
+      {/* Tech pattern overlay */}
+      <div className="absolute inset-0 circuit-pattern opacity-20 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-12">
