@@ -15,7 +15,7 @@ export default function PresidentSection() {
           <Image
             src="/people/Abhiyan_Dhakal.webp"
             className="rounded-2xl object-contain"
-            alt="Abhiyan Dhakal, KUCC President"
+            alt="Sakshi K.C., KUCC President"
             width={600}
             height={600}
           />
@@ -26,25 +26,24 @@ export default function PresidentSection() {
               KUCC President
             </h1>
             <h2 className="text-subTitleColor text-lg font-medium tracking-wide text-center">
-              Abhiyan Dhakal
+              Sakshi K.C.
             </h2>
           </div>
           <div className="text-justify sm:text-xl">
             <p>
-              As President of KUCC, I’m excited to lead us back to what really matters: technology,
-              research, cool projects, and an awesome community. We’re all about getting hands-on,
-              learning deeply, and having fun while we do it.
+              KUCC is more than just a club, it’s a space to try new things, work together, and support each other along the way. 
+
             </p>
 
             <p>
-              This year, we’re kicking off something big. The National Conference on Computer
-              Innovations, or NCCI, is a chance for all of us to show off our research, share ideas,
-              and spark new innovations.
+              It’s about learning from one another, celebrating small wins, and turning curiosity into action.
+Every effort counts, and every contribution makes a difference.
+
             </p>
 
             <p>
-              Let’s dive in, build together, and make KUCC the place where ideas come alive. Ready
-              to shape the future? Let’s go!
+              This year, I hope to make KUCC even more welcoming and vibrant. Let’s keep inspiring each other, building meaningful projects, and creating a community where ideas don’t just stay on paper.
+
             </p>
           </div>
         </div>
@@ -57,29 +56,27 @@ export default function PresidentSection() {
 
           <div className="text-justify sm:text-xl grid gap-4">
             <p>
-              As President of KUCC, I’m excited to lead us back to what really matters: technology,
-              research, cool projects, and an awesome community. We’re all about getting hands-on,
-              learning deeply, and having fun while we do it.
+                         KUCC is more than just a club, it’s a space to try new things, work together, and support each other along the way. 
+
             </p>
 
             <p>
-              This year, we’re kicking off something big. The National Conference on Computer
-              Innovations, or NCCI, is a chance for all of us to show off our research, share ideas,
-              and spark new innovations.
+               It’s about learning from one another, celebrating small wins, and turning curiosity into action.
+Every effort counts, and every contribution makes a difference.
             </p>
 
             <p>
-              Let’s dive in, build together, and make KUCC the place where ideas come alive. Ready
-              to shape the future? Let’s go!
+            This year, I hope to make KUCC even more welcoming and vibrant. Let’s keep inspiring each other, building meaningful projects, and creating a community where ideas don’t just stay on paper.
+
             </p>
           </div>
         </div>
         <div className="hidden md:flex md:flex-col md:space-y-4">
           <div className="md:w-[350px] lg:w-[450px] xl:w-[500px]">
             <Image
-              src="/people/Abhiyan_Dhakal.webp"
+              src="/people/sakshi-kc.jpg"
               className="rounded-2xl object-contain"
-              alt="Abhiyan Dhakal, KUCC President"
+              alt="Sakshi K.C., KUCC President"
               height={600}
               width={600}
             />
@@ -89,7 +86,7 @@ export default function PresidentSection() {
               KUCC President
             </h1>
             <h2 className="text-subTitleColor text-lg lg:text-xl font-medium tracking-wide text-center">
-              Abhiyan Dhakal
+              Sakshi K.C.
             </h2>
           </div>
         </div>
