@@ -1,12 +1,12 @@
 'use client'
-import { MdMonetizationOn } from 'react-icons/md'
+import { FaPeopleGroup       } from 'react-icons/fa6'
 import { MdVolunteerActivism } from 'react-icons/md'
 import { GrWorkshop } from 'react-icons/gr'
 
 export default function ActivityCard(props: { title: string; description: string }) {
   function Icon() {
     if (props.title === 'IT Meet') {
-      return <MdMonetizationOn className="text-titleColor w-10 h-10" />
+      return <FaPeopleGroup      className="text-titleColor w-10 h-10" />
     } else if (props.title === 'Software Freedom Day') {
       return <MdVolunteerActivism className="text-titleColor w-10 h-10" />
     } else {

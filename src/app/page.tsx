@@ -15,7 +15,6 @@ export default function HomePage() {
       <Activities />
       <CounterUp />
       <PresidentSection />
-      <ConferencePopover />
     </>
   )
 }
