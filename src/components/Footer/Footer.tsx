@@ -63,7 +63,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white border-t border-accentBlue/20 tech-grid overflow-hidden">
+    <footer className="relative bg-gray-950 text-white border-t border-accentBlue/20 tech-grid overflow-hidden">
       {/* Tech pattern overlay */}
       <div className="absolute inset-0 circuit-pattern opacity-20 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -73,7 +73,7 @@ export default function Footer() {
           <div className="lg:col-span-1 space-y-6">
             <Link href="/" className="inline-block group">
               <div className="flex items-center space-x-3">
-                <div className="bg-gradient-to-br from-white to-gray-100 p-2 rounded-lg">
+                <div className="bg-white p-2 rounded-lg">
                   <Image 
                     src="/kucc-logo.svg" 
                     alt="KUCC Logo" 
@@ -110,7 +110,7 @@ export default function Footer() {
 
           {/* KUCC Links */}
           <div>
-            <h3 className="text-lg font-bold mb-6 bg-gradient-to-r from-accentBlue to-purple-400 bg-clip-text text-transparent">KUCC</h3>
+            <h3 className="text-lg font-bold mb-6 text-accentBlueLight">KUCC</h3>
             <ul className="space-y-3">
               {footerLinks.kucc.map((link, index) => (
                 <li key={index}>
@@ -138,7 +138,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-6 bg-gradient-to-r from-accentBlue to-purple-400 bg-clip-text text-transparent">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-6 text-accentBlueLight">Quick Links</h3>
             <ul className="space-y-3">
               {footerLinks.quickLinks.map((link, index) => (
                 <li key={index}>
@@ -155,7 +155,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-bold mb-6 bg-gradient-to-r from-accentBlue to-purple-400 bg-clip-text text-transparent">Contact Us</h3>
+            <h3 className="text-lg font-bold mb-6 text-accentBlueLight">Contact Us</h3>
             <ul className="space-y-4">
               {contactInfo.map((info, index) => (
                 <li key={index} className="flex items-start gap-3">

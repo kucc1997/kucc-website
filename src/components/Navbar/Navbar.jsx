@@ -92,7 +92,7 @@ export default function NavBar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative bg-gradient-to-br from-white to-gray-100 rounded-lg p-2 shadow-lg shadow-accentBlue/10">
+            <div className="relative bg-white rounded-lg p-2 shadow-lg shadow-accentBlue/10">
               <Image
                 src={'/kucc-logo.png'}
                 className="w-8 h-8 md:w-10 md:h-10 object-contain transition-transform group-hover:scale-105"
@@ -102,7 +102,7 @@ export default function NavBar() {
                 priority
               />
             </div>
-            <span className="hidden sm:block bg-gradient-to-r from-accentBlue to-purple-400 bg-clip-text text-transparent font-bold text-lg md:text-xl">
+            <span className="hidden sm:block text-accentBlueLight font-bold text-lg md:text-xl">
               KUCC
             </span>
           </Link>
@@ -158,7 +158,7 @@ export default function NavBar() {
               href="https://forms.gle/Y5vHobrCDVx2fPMaA"
               target="_blank"
               rel="noreferrer"
-              className="ml-4 flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-accentBlue to-purple-600 rounded-lg hover:from-accentBlueDark hover:to-purple-700 transition-all shadow-lg shadow-accentBlue/25 hover:shadow-xl hover:shadow-accentBlue/40"
+              className="ml-4 flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-accentBlue rounded-lg hover:bg-accentBlueDark transition-all shadow-lg shadow-accentBlue/25 hover:shadow-xl hover:shadow-accentBlue/40"
             >
               <BadgeCheck size={18} />
               Join KUCC
@@ -179,7 +179,7 @@ export default function NavBar() {
       {/* Mobile Menu */}
       <div
         ref={sidebarRef}
-        className={`lg:hidden fixed top-0 right-0 h-screen w-80 bg-gradient-to-b from-gray-900 to-gray-800 shadow-2xl shadow-accentBlue/10 border-l border-gray-700 transform transition-transform duration-300 ease-in-out ${
+        className={`lg:hidden fixed top-0 right-0 h-screen w-80 bg-gray-900 shadow-2xl shadow-accentBlue/10 border-l border-gray-700 transform transition-transform duration-300 ease-in-out ${
           open ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -187,7 +187,7 @@ export default function NavBar() {
           {/* Mobile Menu Header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-700">
             <div className="flex items-center space-x-3">
-              <div className="bg-gradient-to-br from-white to-gray-100 rounded-lg p-1.5">
+              <div className="bg-white rounded-lg p-1.5">
                 <Image
                   src={'/kucc-logo.png'}
                   className="w-8 h-8 object-contain"
@@ -196,7 +196,7 @@ export default function NavBar() {
                   width={32}
                 />
               </div>
-              <span className="bg-gradient-to-r from-accentBlue to-purple-400 bg-clip-text text-transparent font-bold text-lg">KUCC</span>
+              <span className="text-accentBlueLight font-bold text-lg">KUCC</span>
             </div>
             <button
               onClick={() => setOpen(false)}
@@ -278,7 +278,7 @@ export default function NavBar() {
               href="https://forms.gle/Y5vHobrCDVx2fPMaA"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center gap-2 w-full px-5 py-3 text-sm font-semibold text-white bg-gradient-to-r from-accentBlue to-purple-600 rounded-lg hover:from-accentBlueDark hover:to-purple-700 transition-all shadow-lg shadow-accentBlue/25"
+              className="flex items-center justify-center gap-2 w-full px-5 py-3 text-sm font-semibold text-white bg-accentBlue rounded-lg hover:bg-accentBlueDark transition-all shadow-lg shadow-accentBlue/25"
             >
               <BadgeCheck size={18} />
               Join KUCC
