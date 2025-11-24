@@ -1,21 +1,25 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { Home, UsersRound } from 'lucide-react'
-import { Users } from 'lucide-react'
-import { NotebookPen } from 'lucide-react'
-import { Contact } from 'lucide-react'
-import { BadgeCheck } from 'lucide-react'
-import { ChevronDown } from 'lucide-react'
-import { ChevronUp } from 'lucide-react'
+import { Home, UsersRound, Users, NotebookPen, Contact, BadgeCheck, ChevronDown, Menu, X } from 'lucide-react'
 import Image from 'next/image'
 
 export default function NavBar() {
-  const [open, setOpen] = useState('')
-  const [ourTeam, setOurTeam] = useState('')
-  const [ourPub, setOurPub] = useState('')
+  const [open, setOpen] = useState(false)
+  const [ourTeam, setOurTeam] = useState(false)
+  const [ourPub, setOurPub] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   const sidebarRef = useRef(null)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -34,11 +38,11 @@ export default function NavBar() {
     {
       name: 'Home',
       link: '/',
-      icon: <Home />,
+      icon: <Home size={18} />,
     },
     {
       name: 'Our Team',
-      icon: <Users />,
+      icon: <Users size={18} />,
       open: ourTeam,
       setOpen: setOurTeam,
       subItems: [
@@ -50,212 +54,244 @@ export default function NavBar() {
           name: 'Advisory Board',
           link: '/advisory-board',
         },
-        // {
-        //   name: 'Community Coordinators',
-        //   link: '/community-coordinators',
-        // },
-        // {
-        //   name: 'Documentation Team',
-        //   link: '/documentation-teams',
-        // },
       ],
     },
     {
       name: 'Communities',
       link: '/communities',
-      icon: <UsersRound />,
+      icon: <UsersRound size={18} />,
     },
     {
       name: 'Publications',
       open: ourPub,
       setOpen: setOurPub,
-      icon: <NotebookPen />,
+      icon: <NotebookPen size={18} />,
       subItems: [
         {
           name: 'IT Express',
           link: '/it-express',
         },
-        // {
-        //   name: 'Student Blogs',
-        //   link: '/blogs',
-        // },
       ],
     },
-    // {
-    //   name: 'News and Notices',
-    //   icon: <Newspaper />,
-    //   link: '/news-and-notices',
-    // },
-    // {
-    //   name: 'Events',
-    //   icon: <CalendarSearch />,
-    //   link: '/events',
-    // },
     {
       name: 'Contact',
-      icon: <Contact />,
+      icon: <Contact size={18} />,
       link: '/contact',
-    },
-    {
-      name: 'Apply to be a Member',
-      icon: <BadgeCheck />,
-      link: 'https://forms.gle/Y5vHobrCDVx2fPMaA',
-      useExternal: true,
     },
   ]
 
   return (
-    <div className="flex w-full p-4 h-16 md:p-10 justify-between items-center bg-baseBackground z-50">
-      {/* logo */}
-      <div>
-        <Link href="/" className="cursor-pointer">
-          <Image
-            src={'/kucc-logo.png'}
-            className="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 object-cover"
-            alt="logo"
-            height={100}
-            width={100}
-          />
-        </Link>
+    <nav 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled 
+          ? 'bg-gray-900/95 backdrop-blur-md shadow-lg shadow-accentBlue/5 border-b border-gray-800' 
+          : 'bg-gray-900/80 backdrop-blur-sm'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="relative">
+              <Image
+                src={'/kucc-logo.png'}
+                className="w-12 h-12 md:w-14 md:h-14 object-contain transition-transform group-hover:scale-105"
+                alt="KUCC Logo"
+                height={56}
+                width={56}
+                priority
+              />
+            </div>
+            <span className="hidden sm:block bg-gradient-to-r from-accentBlue to-purple-400 bg-clip-text text-transparent font-bold text-lg md:text-xl">
+              KUCC
+            </span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-1">
+            {navItems.map((item, index) => (
+              <div key={index} className="relative group">
+                {item.subItems ? (
+                  <div>
+                    <button className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-gray-300 rounded-lg hover:text-accentBlueLight hover:bg-gray-800 transition-all">
+                      {item.name}
+                      <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
+                    </button>
+                    <div className="absolute top-full left-0 mt-1 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                      <div className="bg-gray-800 rounded-lg shadow-xl shadow-accentBlue/10 border border-gray-700 overflow-hidden backdrop-blur-md">
+                        {item.subItems.map((subItem, subIndex) => (
+                          <Link
+                            key={subIndex}
+                            href={subItem.link}
+                            className="block px-4 py-3 text-sm text-gray-300 hover:bg-gray-700 hover:text-accentBlueLight transition-colors"
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  item.useExternal ? (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-gray-300 rounded-lg hover:text-accentBlueLight hover:bg-gray-800 transition-all"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.link}
+                      className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-gray-300 rounded-lg hover:text-accentBlueLight hover:bg-gray-800 transition-all"
+                    >
+                      {item.name}
+                    </Link>
+                  )
+                )}
+              </div>
+            ))}
+            
+            {/* CTA Button */}
+            <a
+              href="https://forms.gle/Y5vHobrCDVx2fPMaA"
+              target="_blank"
+              rel="noreferrer"
+              className="ml-4 flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-accentBlue to-purple-600 rounded-lg hover:from-accentBlueDark hover:to-purple-700 transition-all shadow-lg shadow-accentBlue/25 hover:shadow-xl hover:shadow-accentBlue/40"
+            >
+              <BadgeCheck size={18} />
+              Join KUCC
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="lg:hidden p-2 text-gray-300 hover:bg-gray-800 rounded-lg transition-all"
+            aria-label="Toggle menu"
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
-      {/* mobile view */}
-      <div className="flex items-center lg:hidden" ref={sidebarRef}>
-        {/* hambuger menu */}
-        <button
-          className="flex z-50 justify-center relative cursor-pointer items-center p-2 flex-col space-y-1 aspect-square hover:bg-hoverBgColor rounded transition-all"
-          onClick={() => setOpen(!open)}
-        >
-          <div
-            className={`w-6 h-[2px] bg-titleColor rounded block transition-all ease-out duration-300 ${open ? 'rotate-45 translate-y-0.5' : '-translate-y-0.5'
-              }`}
-          ></div>
-          <div
-            className={`w-6 h-[2px] bg-titleColor rounded block transition-all ease-out duration-300 ${open ? 'hidden' : 'flex'
-              }`}
-          ></div>
-          <div
-            className={`w-6 h-[2px] bg-titleColor rounded block transition-all ease-out duration-300 ${open ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'
-              }`}
-          ></div>
-        </button>
+      {/* Mobile Menu */}
+      <div
+        ref={sidebarRef}
+        className={`lg:hidden fixed top-0 right-0 h-screen w-80 bg-gradient-to-b from-gray-900 to-gray-800 shadow-2xl shadow-accentBlue/10 border-l border-gray-700 transform transition-transform duration-300 ease-in-out ${
+          open ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className="flex flex-col h-full">
+          {/* Mobile Menu Header */}
+          <div className="flex items-center justify-between p-6 border-b border-gray-700">
+            <div className="flex items-center space-x-3">
+              <Image
+                src={'/kucc-logo.png'}
+                className="w-10 h-10 object-contain"
+                alt="KUCC Logo"
+                height={40}
+                width={40}
+              />
+              <span className="bg-gradient-to-r from-accentBlue to-purple-400 bg-clip-text text-transparent font-bold text-lg">KUCC</span>
+            </div>
+            <button
+              onClick={() => setOpen(false)}
+              className="p-2 text-gray-300 hover:bg-gray-800 rounded-lg transition-all"
+            >
+              <X size={24} />
+            </button>
+          </div>
 
-        <div
-          className={`flex space-y-8 transition origin-right z-40 h-screen bg-white fixed top-0 right-0 w-2/3 sm:w-1/3 md:w-2/4 shadow-xl ${open ? 'scale-x-100' : 'scale-x-0'
-            }`}
-        >
-          <div className="flex-col mt-28 px-8 space-y-8 font-sans list-none">
-            {navItems.map((item, index) => {
-              return (
+          {/* Mobile Menu Items */}
+          <div className="flex-1 overflow-y-auto py-6 px-4">
+            <nav className="space-y-1">
+              {navItems.map((item, index) => (
                 <div key={index}>
                   {item.subItems ? (
-                    // if item has subItems
-                    <li>
-                      <div className="text-titleColor font-semibold transition-all cursor-pointer relative md:group border-b-2 flex gap-4 hover:text-hoverTextColor">
+                    <div>
+                      <button
+                        onClick={() => item.setOpen(!item.open)}
+                        className="w-full flex items-center justify-between px-4 py-3 text-gray-300 font-medium rounded-lg hover:bg-gray-800 transition-all"
+                      >
+                        <span className="flex items-center gap-3">
+                          {item.icon}
+                          {item.name}
+                        </span>
+                        <ChevronDown 
+                          size={18} 
+                          className={`transition-transform ${item.open ? 'rotate-180' : ''}`}
+                        />
+                      </button>
+                      <div
+                        className={`overflow-hidden transition-all duration-200 ${
+                          item.open ? 'max-h-96 mt-1' : 'max-h-0'
+                        }`}
+                      >
+                        <div className="ml-4 pl-4 border-l-2 border-gray-700 space-y-1">
+                          {item.subItems.map((subItem, subIndex) => (
+                            <Link
+                              key={subIndex}
+                              href={subItem.link}
+                              onClick={() => setOpen(false)}
+                              className="block px-4 py-2 text-sm text-gray-400 hover:text-accentBlueLight hover:bg-gray-800 rounded-lg transition-all"
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    item.useExternal ? (
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-3 px-4 py-3 text-gray-300 font-medium rounded-lg hover:bg-gray-800 transition-all"
+                      >
                         {item.icon}
                         {item.name}
-                        <button
-                          className="flex rounded-full"
-                          onClick={() => item.setOpen(!item.open)}
-                        >
-                          {!item.open ? (
-                            <ChevronDown className="bg-secondBackground rounded-md" />
-                          ) : (
-                            <ChevronUp className="bg-secondBackground rounded-md" />
-                          )}
-                        </button>
-                      </div>
-                      <ul
-                        className={`space-y-2 z-10 origin-top list-none transition ${item.open ? 'scale-y-100 p-[20px]' : 'scale-y-0 h-0 p-0 duration-0'
-                          }`}
+                      </a>
+                    ) : (
+                      <Link
+                        href={item.link}
+                        onClick={() => setOpen(false)}
+                        className="flex items-center gap-3 px-4 py-3 text-gray-300 font-medium rounded-lg hover:bg-gray-800 transition-all"
                       >
-                        {item.subItems.map((subItem, index) => {
-                          return (
-                            <li
-                              key={index}
-                              className="cursor-pointer border-b border-navSubitemBorder text-base hover:text-counterBackground"
-                            >
-                              <Link href={subItem.link} onClick={() => setOpen(false)}>
-                                {subItem.name}
-                              </Link>
-                            </li>
-                          )
-                        })}
-                      </ul>
-                    </li>
-                  ) : (
-                    <li className="text-titleColor font-semibold transition cursor-pointer border-b-2 items-center hover:text-hoverTextColor">
-                      {/* if item has no subItems */}
-                      {item.useExternal ? (
-                        <a href={item.link} target="_blank" rel="noreferrer" className="flex gap-4">
-                          {item.icon}
-                          {item.name}
-                        </a>
-                      ) : (
-                        <Link
-                          href={item.link}
-                          className="flex gap-4"
-                          onClick={() => setOpen(false)}
-                        >
-                          {item.icon}
-                          {item.name}
-                        </Link>
-                      )}
-                    </li>
+                        {item.icon}
+                        {item.name}
+                      </Link>
+                    )
                   )}
                 </div>
-              )
-            })}
+              ))}
+            </nav>
+          </div>
+
+          {/* Mobile Menu Footer - CTA */}
+          <div className="p-6 border-t border-gray-700">
+            <a
+              href="https://forms.gle/Y5vHobrCDVx2fPMaA"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center gap-2 w-full px-5 py-3 text-sm font-semibold text-white bg-gradient-to-r from-accentBlue to-purple-600 rounded-lg hover:from-accentBlueDark hover:to-purple-700 transition-all shadow-lg shadow-accentBlue/25"
+            >
+              <BadgeCheck size={18} />
+              Join KUCC
+            </a>
           </div>
         </div>
       </div>
 
-      {/* desktop view */}
-      <div className="hidden lg:flex items-center text-sm xl:text-lg space-x-3 lg:space-x-10 list-none">
-        {navItems.map((item, index) => {
-          return (
-            <>
-              {item.subItems ? (
-                <li
-                  className="text-titleColor font-semibold transition-all cursor-pointer relative group hover:text-hoverTextColor"
-                  key={index}
-                >
-                  <div className="flex items-center gap-2">
-                    {item.name} <ChevronDown className="bg-secondBackground rounded-md" />
-                  </div>
-                  <ul className="hidden space-y-3 w-56 absolute z-10 p-[20px] list-none bg-navSubitemsBg text-textOnDarkBg group-hover:block transform duration-700">
-                    {item.subItems.map((subItem, index) => {
-                      return (
-                        <li
-                          className="cursor-pointer border-b border-navSubitemBorder text-base hover:text-counterBackground"
-                          key={index}
-                        >
-                          <Link href={subItem.link}>{subItem.name}</Link>
-                        </li>
-                      )
-                    })}
-                  </ul>
-                </li>
-              ) : (
-                <li
-                  key={index}
-                  className="text-titleColor font-semibold transition cursor-pointer hover:text-hoverTextColor"
-                >
-                  {item.useExternal ? (
-                    <a href={item.link} target="_blank" rel="noreferrer" className="flex gap-2">
-                      {item.name}
-                    </a>
-                  ) : (
-                    <Link href={item.link} className="flex gap-2" onClick={() => setOpen(false)}>
-                      {item.name}
-                    </Link>
-                  )}
-                </li>
-              )}
-            </>
-          )
-        })}
-      </div>
-    </div>
+      {/* Overlay */}
+      {open && (
+        <div
+          className="lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm"
+          onClick={() => setOpen(false)}
+        />
+      )}
+    </nav>
   )
 }

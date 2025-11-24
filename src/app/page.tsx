@@ -4,7 +4,6 @@ import Activities from './activities-ku'
 import CounterUp from './counter-up'
 import PresidentSection from './president-section'
 import KuccDescription from './kucc-description'
-import ConferencePopover from './conf-popover'
 
 export default function HomePage() {
   return (
@@ -15,7 +14,6 @@ export default function HomePage() {
       <Activities />
       <CounterUp />
       <PresidentSection />
-      <ConferencePopover />
     </>
   )
 }

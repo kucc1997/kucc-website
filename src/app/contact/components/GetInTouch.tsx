@@ -1,5 +1,5 @@
-import { Container, Box, Grid, Typography } from '@mui/material'
 import React from 'react'
+import { FaPhoneAlt, FaUser } from 'react-icons/fa'
 
 const GetInTouch = () => {
   const clubRepresentatives = [
@@ -22,41 +22,59 @@ const GetInTouch = () => {
       phoneNumber: '9861367984',
     },
   ]
+  
   return (
-    <Container>
-      <Box
-        sx={{
-          textAlign: 'center',
-        }}
-      >
-        <Typography variant="h5"> Get in touch with the club.</Typography>
-      </Box>
-      <Box>
-        <Grid
-          container
-          rowSpacing={{ xs: 3, sm: 4, md: 4, lg: 2 }}
-          sx={{
-            pt: 4,
-          }}
-        >
-          {clubRepresentatives.map((representative) => {
-            return (
-              <Grid item xs={12} md={4} sx={{ textAlign: 'center' }} key={representative.id}>
-                <Typography variant="h6" pb={1}>
+    <div className="w-full">
+      <div className="text-center mb-8">
+        <h2 className="text-2xl md:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
+          Get in touch with the club.
+        </h2>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 pt-4">
+        {clubRepresentatives.map((representative) => {
+          return (
+            <div 
+              key={representative.id}
+              className="group relative bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800/50 rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl shadow-accentBlue/10 hover:shadow-accentBlue/20"
+            >
+              {/* Gradient glow effect */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accentBlue/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              <div className="relative z-10 text-center space-y-4">
+                {/* Icon */}
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accentBlue/20 to-purple-500/20 flex items-center justify-center border border-gray-700/50">
+                    <FaUser className="text-3xl text-accentBlue" />
+                  </div>
+                </div>
+                
+                {/* Name */}
+                <h3 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
                   {representative.name}
-                </Typography>
-                <Typography variant="subtitle2" pb={1} color="text.secondary">
+                </h3>
+                
+                {/* Position */}
+                <p className="text-sm font-medium text-gray-400 uppercase tracking-wide">
                   {representative.position}
-                </Typography>
-                <Typography variant="subtitle2" pb={1} color="text.secondary">
-                  {representative.phoneNumber}
-                </Typography>
-              </Grid>
-            )
-          })}
-        </Grid>
-      </Box>
-    </Container>
+                </p>
+                
+                {/* Phone with icon */}
+                <div className="flex items-center justify-center space-x-2 text-gray-300 pt-2">
+                  <FaPhoneAlt className="text-accentBlue text-sm" />
+                  <a 
+                    href={`tel:${representative.phoneNumber}`}
+                    className="text-base hover:text-accentBlue transition-colors"
+                  >
+                    {representative.phoneNumber}
+                  </a>
+                </div>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+    </div>
   )
 }
 
