@@ -10,42 +10,16 @@ export const metadata: Metadata = {
 
 export default function PresidentSection() {
   return (
-    <div className="flex flex-col p-6 py-14">
-      <div className="space-y-6 md:space-y-0 md:space-x-6 lg:space-x-10 xl:space-x-14 md:flex md:items-center mx-auto max-w-screen-xl">
-        <div className="flex justify-center md:hidden">
-          <Image
-            src="/people/Abhiyan_Dhakal.webp"
-            className="rounded-2xl object-contain"
-            alt="Sakshi K.C., KUCC President"
-            width={600}
-            height={600}
-          />
-        </div>
-        <div className="flex-col space-y-3 md:hidden">
-          <div>
-            <h1 className="text-titleColor text-xl font-semibold tracking-wide text-center">
-              KUCC President
-            </h1>
-            <h2 className="text-subTitleColor text-lg font-medium tracking-wide text-center">
-              Sakshi K.C.
-            </h2>
-          </div>
-          <div className="text-justify sm:text-xl">
-            <p>
-              KUCC is more than just a club, it’s a space to try new things, work together, and support each other along the way. 
-
-            </p>
-
-            <p>
-              It’s about learning from one another, celebrating small wins, and turning curiosity into action.
-Every effort counts, and every contribution makes a difference.
-
-            </p>
-
-            <p>
-              This year, I hope to make KUCC even more welcoming and vibrant. Let’s keep inspiring each other, building meaningful projects, and creating a community where ideas don’t just stay on paper.
-
-            </p>
+    <section className="relative py-20 md:py-28 bg-baseBackground overflow-hidden border-y border-accentBlue/20 tech-grid-animated">
+      {/* Tech Grid Overlay */}
+      <div className="absolute inset-0 tech-grid opacity-30" />
+      <div className="absolute inset-0 circuit-pattern opacity-20 pointer-events-none" />
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-accentBlue/20 border border-accentBlue/30 rounded-full mb-4 backdrop-blur-sm">
+            <Quote size={32} className="text-accentBlueLight" />
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-titleColor mb-4">
             Message from <span className="highlight-glow tech-text text-accentBlueLight">Our President</span>
@@ -59,45 +33,58 @@ Every effort counts, and every contribution makes a difference.
           <div className="space-y-6 order-2 lg:order-1">
             <div className="space-y-5 text-lg leading-relaxed bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
               <p className="text-gray-300">
-                As President of KUCC, I am honored to lead this vibrant community of technology enthusiasts, 
-                innovators, and learners. KUCC has always been a place where passion meets purpose, and I am 
-                committed to fostering an environment where every member can explore, create, and excel.
+                KUCC is more than just a club, it&apos;s a space to try new things, work together, and support 
+                each other along the way.
               </p>
 
-          <div className="text-justify sm:text-xl grid gap-4">
-            <p>
-                         KUCC is more than just a club, it’s a space to try new things, work together, and support each other along the way. 
+              <p className="text-gray-300">
+                It&apos;s about learning from one another, celebrating small wins, and turning curiosity into 
+                action. Every effort counts, and every contribution makes a difference.
+              </p>
 
-            </p>
+              <p className="text-gray-300">
+                This year, I hope to make KUCC even more welcoming and vibrant. Let&apos;s keep inspiring each 
+                other, building meaningful projects, and creating a community where ideas don&apos;t just stay 
+                on paper.
+              </p>
+            </div>
 
-            <p>
-               It’s about learning from one another, celebrating small wins, and turning curiosity into action.
-Every effort counts, and every contribution makes a difference.
-            </p>
-
-            <p>
-            This year, I hope to make KUCC even more welcoming and vibrant. Let’s keep inspiring each other, building meaningful projects, and creating a community where ideas don’t just stay on paper.
-
-            </p>
+            {/* President Info */}
+            <div className="pt-6 border-t border-accentBlue/20">
+              <h3 className="text-2xl font-bold text-titleColor mb-1">
+                Sakshi KC
+              </h3>
+              <p className="text-accentBlueLight font-medium text-lg tech-text">
+                President, KUCC Board 25/26
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="hidden md:flex md:flex-col md:space-y-4">
-          <div className="md:w-[350px] lg:w-[450px] xl:w-[500px]">
-            <Image
-              src="/people/sakshi-kc.jpg"
-              className="rounded-2xl object-contain"
-              alt="Sakshi K.C., KUCC President"
-              height={600}
-              width={600}
-            />
-          </div>
-          <div>
-            <h1 className="text-titleColor text-xl lg:text-2xl font-semibold tracking-wide text-center">
-              KUCC President
-            </h1>
-            <h2 className="text-subTitleColor text-lg lg:text-xl font-medium tracking-wide text-center">
-              Sakshi K.C.
-            </h2>
+
+          {/* Right - Image */}
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+            <div className="relative">
+              {/* Image container */}
+              <div className="relative bg-gray-900 p-2 rounded-2xl shadow-2xl shadow-accentBlue/20 border border-gray-700">
+                <div className="relative overflow-hidden rounded-xl">
+                  <Image
+                    src="/people/Sakshi_KC.jpg"
+                    className="w-full h-auto object-cover"
+                    alt="Sakshi KC, KUCC President"
+                    width={500}
+                    height={500}
+                    priority
+                  />
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-accentBlue/20" />
+                </div>
+              </div>
+
+              {/* Floating badge */}
+              <div className="absolute -bottom-6 -right-6 bg-accentBlue rounded-xl shadow-xl shadow-accentBlue/30 p-4 border border-accentBlue/30 backdrop-blur-sm">
+                <div className="text-white font-bold text-2xl tech-number">25/26</div>
+                <div className="text-white/90 text-sm font-medium tech-text">President</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
