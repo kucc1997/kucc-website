@@ -23,7 +23,7 @@ export default function Activities() {
         </div>
 
         {/* Activity Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           <ActivityCard
             title="IT Meet"
             description="IT MEET is an ICT event organized by KUCC and DoCSE to encourage interaction between students from various institutions of Nepal and youths from various walks of life."
@@ -38,6 +38,11 @@ export default function Activities() {
             title="NCCI"
             description="National Conference on Computer Innovations (NCCI) is Nepal's premier conference on computer innovations, connecting leading researchers to explore cutting-edge technologies and shape the future of technology and innovation."
             url="https://ncci.kucc.ku.edu.np"
+          />
+          <ActivityCard
+            title="KURCH"
+            description="Kathmandu University Research and Collaboration Hub (KURCH) is a platform designed to facilitate research, innovation, and collaboration among students, faculty, and research labs. Connecting researchers, fostering innovation, and advancing knowledge through collaboration."
+            url="https://rch.kucc.ku.edu.np"
           />
         </div>
       </div>
