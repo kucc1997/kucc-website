@@ -9,7 +9,7 @@ export default function KUOSC() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Logo Section */}
-          <div className="flex justify-center lg:justify-start order-2 lg:order-1">
+          <div className="flex justify-center lg:justify-start order-1 lg:order-1">
             <div className="relative">
               {/* Logo container */}
               <div className="relative bg-gray-900 rounded-3xl p-8 shadow-2xl shadow-accentBlue/20 border border-gray-700">
@@ -25,7 +25,7 @@ export default function KUOSC() {
           </div>
 
           {/* Content Section */}
-          <div className="space-y-6 order-1 lg:order-2">
+          <div className="space-y-6 order-2 lg:order-2">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-500/30 text-green-400 rounded-full text-sm font-medium backdrop-blur-sm">
               <span>Open Source Wing</span>
