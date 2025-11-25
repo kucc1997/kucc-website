@@ -1,4 +1,5 @@
 'use client'
+import { FaPeopleGroup } from 'react-icons/fa6'
 import { MdVolunteerActivism } from 'react-icons/md'
 import { GrWorkshop } from 'react-icons/gr'
 import { CalendarDays } from 'lucide-react'
@@ -8,9 +9,9 @@ export default function ActivityCard(props: { title: string; description: string
   
   function Icon() {
     if (props.title === 'IT Meet') {
-      return <CalendarDays className="text-accentBlue w-12 h-12" />
+      return <FaPeopleGroup className="text-titleColor w-10 h-10" />
     } else if (isSFD) {
-      return <MdVolunteerActivism className="text-green-400 w-12 h-12" />
+      return <MdVolunteerActivism className="text-titleColor w-10 h-10" />
     } else {
       return <GrWorkshop className="text-accentBlue w-12 h-12" />
     }

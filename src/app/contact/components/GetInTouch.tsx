@@ -5,21 +5,21 @@ const GetInTouch = () => {
   const clubRepresentatives = [
     {
       id: 1,
-      name: 'Abhiyan Dhakal',
+      name: 'Sakshi K.C.',
       position: 'President',
-      phoneNumber: '9847382531',
+      phoneNumber: '9821948158',
     },
     {
       id: 2,
-      name: 'Saroj Sigdel',
+      name: 'Kiran Dahal',
       position: 'Vice President',
-      phoneNumber: '9762513456',
+      phoneNumber: '9863008384',
     },
     {
       id: 3,
-      name: 'Mukul Aryal',
+      name: 'Saksham Gyawali',
       position: 'General Secretary',
-      phoneNumber: '9861367984',
+      phoneNumber: '9847025812',
     },
   ]
   
