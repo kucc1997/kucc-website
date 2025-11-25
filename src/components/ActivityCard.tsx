@@ -2,7 +2,7 @@
 import { FaPeopleGroup } from 'react-icons/fa6'
 import { MdVolunteerActivism } from 'react-icons/md'
 import { GrWorkshop } from 'react-icons/gr'
-import { CalendarDays } from 'lucide-react'
+import { CalendarDays, Network } from 'lucide-react'
 
 export default function ActivityCard(props: { title: string; description: string; url?: string }) {
   const isSFD = props.title === 'Software Freedom Day'
@@ -12,6 +12,8 @@ export default function ActivityCard(props: { title: string; description: string
       return <FaPeopleGroup className="text-titleColor w-10 h-10" />
     } else if (isSFD) {
       return <MdVolunteerActivism className="text-titleColor w-10 h-10" />
+    } else if (props.title === 'KURCH') {
+      return <Network className="text-accentBlue w-12 h-12" />
     } else {
       return <GrWorkshop className="text-accentBlue w-12 h-12" />
     }
