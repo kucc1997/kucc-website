@@ -62,42 +62,42 @@ const Communities = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-baseBackground tech-grid-animated py-16 px-5">
+    <div className="min-h-screen bg-baseBackground tech-grid-animated py-12 md:py-16 px-4 sm:px-5">
       {/* Decorative blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 circuit-pattern opacity-10"></div>
       </div>
 
       <div className="max-w-screen-xl mx-auto relative z-10">
-        <div className="text-center mb-12">
-          <h1 className="text-accentBlueLight text-4xl md:text-5xl font-bold mb-4 tech-text highlight-text">
+        <div className="text-center mb-8 md:mb-12">
+          <h1 className="text-accentBlueLight text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tech-text highlight-text px-4">
             Communities Under KUCC
           </h1>
-          <div className="w-32 h-1 bg-accentBlue rounded-full mx-auto"></div>
+          <div className="w-24 sm:w-32 h-1 bg-accentBlue rounded-full mx-auto"></div>
         </div>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-24">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-24">
           {communities.map((community) => (
             <Link
               href={community.path || '/communities'}
               key={community.id}
               className="group"
             >
-              <div className="relative flex items-center space-x-6 p-8 bg-gray-900 border border-gray-800/50 rounded-2xl hover:scale-105 transition-all duration-300 shadow-xl shadow-accentBlue/10 hover:shadow-accentBlue/20">
+              <div className="relative flex flex-col sm:flex-row items-center sm:space-x-6 p-6 sm:p-8 bg-gray-900 border border-gray-800/50 rounded-2xl hover:scale-105 transition-all duration-300 shadow-xl shadow-accentBlue/10 hover:shadow-accentBlue/20">
                 {/* Glow effect */}
                 <div className="absolute inset-0 rounded-2xl bg-accentBlue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 {/* Icon container */}
-                <div className="relative z-10 flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-gray-950/50 backdrop-blur-sm border border-gray-800/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <community.Icon className="text-gray-400 group-hover:text-accentBlue transition-colors duration-300 text-5xl md:text-6xl" />
+                <div className="relative z-10 flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-2xl bg-gray-950/50 backdrop-blur-sm border border-gray-800/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mb-4 sm:mb-0">
+                  <community.Icon className="text-gray-400 group-hover:text-accentBlue transition-colors duration-300 text-4xl sm:text-5xl md:text-6xl" />
                 </div>
                 
                 {/* Content */}
-                <div className="relative z-10 flex-1">
-                  <h2 className="text-xl font-semibold text-white group-hover:text-accentBlueLight transition-all duration-300 mb-2 tech-text">
+                <div className="relative z-10 flex-1 text-center sm:text-left">
+                  <h2 className="text-lg sm:text-xl font-semibold text-white group-hover:text-accentBlueLight transition-all duration-300 mb-2 tech-text">
                     {community.title}
                   </h2>
-                  <p className="text-sm text-gray-400 leading-relaxed">{community.description}</p>
+                  <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">{community.description}</p>
                 </div>
               </div>
             </Link>
