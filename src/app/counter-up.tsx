@@ -1,111 +1,66 @@
 'use client'
 import React from 'react'
 import CountUp from 'react-countup'
+import { TrendingUp, Users, Calendar, Award } from 'lucide-react'
 
 export default function CounterUp() {
-  return (
-    <div className="flex justify-around items-center h-[30vh] bg-counterBackground text-textOnDarkBg">
-      {/* mobile view upto sm */}
-      <div className="space-y-10 justify-center md:hidden">
-        <div className="flex-col font-bold tracking-wider font-sans">
-          {
-            <CountUp
-              suffix="+"
-              start={0}
-              end={120}
-              duration={1.8}
-              delay={0}
-              className="flex text-3xl sm:text-4xl justify-center"
-            />
-          }
-          <div className="flex text-xl sm:text-2xl justify-center"> EVENTS</div>
-        </div>
-        <div className="flex-col font-bold tracking-wider font-sans">
-          {
-            <CountUp
-              suffix="+"
-              start={0}
-              end={10}
-              duration={1.8}
-              delay={0}
-              className="flex text-3xl sm:text-4xl justify-center"
-            />
-          }
-          <div className="flex text-xl sm:text-2xl justify-center"> COMMUNITIES</div>
-        </div>
-      </div>
-      <div className="space-y-10 justify-center md:hidden">
-        <div className="flex-col font-bold tracking-wider font-sans">
-          {
-            <CountUp
-              suffix="+"
-              start={0}
-              end={500}
-              duration={1.8}
-              delay={0}
-              className="flex text-3xl sm:text-4xl justify-center"
-            />
-          }
-          <div className="flex text-xl sm:text-2xl justify-center"> WORKSHOPS</div>
-        </div>
-        <div className="flex-col font-bold tracking-wider font-sans">
-          <CountUp
-            suffix="+"
-            start={0}
-            end={1000}
-            duration={1.8}
-            delay={0}
-            className="flex text-3xl sm:text-4xl justify-center"
-          />
-          <div className="flex text-xl sm:text-2xl justify-center"> MEMBERS</div>
-        </div>
-      </div>
+  const stats = [
+    {
+      icon: <Calendar size={32} />,
+      end: 120,
+      label: 'Events',
+      suffix: '+'
+    },
+    {
+      icon: <TrendingUp size={32} />,
+      end: 500,
+      label: 'Workshops',
+      suffix: '+'
+    },
+    {
+      icon: <Users size={32} />,
+      end: 1000,
+      label: 'Members',
+      suffix: '+'
+    }
+  ]
 
-      {/* medium view upto large */}
-      <div className=" hidden md:flex flex-col font-bold tracking-wider font-sans">
-        <CountUp
-          suffix="+"
-          start={0}
-          end={120}
-          duration={1.8}
-          delay={0}
-          className="flex md:text-4xl lg:text-5xl justify-center"
-        />
-        <div className="flex md:text-2xl lg:text-3xl justify-center"> EVENTS</div>
+  return (
+    <section className="relative py-16 md:py-20 bg-baseBackground tech-grid-animated overflow-hidden border-y border-accentBlue/20 scanline">
+      {/* Decorative Elements */}
+      <div className="absolute inset-0 circuit-pattern opacity-20 pointer-events-none" />
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center space-y-3">
+              {/* Icon */}
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 bg-accentBlue/20 border border-accentBlue/30 rounded-2xl flex items-center justify-center text-accentBlueLight backdrop-blur-sm">
+                  {stat.icon}
+                </div>
+              </div>
+              
+              {/* Counter */}
+              <div className="space-y-1">
+                <CountUp
+                  suffix={stat.suffix}
+                  start={0}
+                  end={stat.end}
+                  duration={2}
+                  delay={0}
+                  enableScrollSpy
+                  scrollSpyOnce
+                  className="block text-4xl md:text-5xl lg:text-6xl font-bold text-white tech-number"
+                />
+                <div className="text-lg md:text-xl font-medium text-white/90 uppercase tracking-wide tech-text">
+                  {stat.label}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="hidden md:flex flex-col font-bold tracking-wider font-sans">
-        <CountUp
-          suffix="+"
-          start={0}
-          end={10}
-          duration={1.8}
-          delay={0}
-          className="flex md:text-4xl lg:text-5xl justify-center"
-        />
-        <div className="flex md:text-2xl lg:text-3xl justify-center"> COMMUNITIES</div>
-      </div>
-      <div className="hidden md:flex flex-col font-bold tracking-wider font-sans">
-        <CountUp
-          suffix="+"
-          start={0}
-          end={500}
-          duration={1.8}
-          delay={0}
-          className="flex md:text-4xl lg:text-5xl justify-center"
-        />
-        <div className="flex md:text-2xl lg:text-3xl justify-center"> WORKSHOPS</div>
-      </div>
-      <div className="hidden md:flex flex-col font-bold tracking-wider font-sans">
-        <CountUp
-          suffix="+"
-          start={0}
-          end={1000}
-          duration={1.8}
-          delay={0}
-          className="flex md:text-4xl lg:text-5xl justify-center"
-        />
-        <div className="flex md:text-2xl lg:text-3xl justify-center"> MEMBERS</div>
-      </div>
-    </div>
+    </section>
   )
 }

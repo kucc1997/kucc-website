@@ -46,8 +46,7 @@ export default function ConferencePopover() {
       <DialogContent className="sm:max-w-[700px] p-0 overflow-hidden border-0 shadow-2xl">
         <div className="relative">
           <div
-            className="text-white p-4 relative overflow-hidden"
-            style={{ background: `linear-gradient(135deg, #2596be 0%, #1e7ba8 50%, #2596be 100%)` }}
+            className="text-white p-4 relative overflow-hidden bg-gradient-to-r from-accentBlue via-accentBlueDark to-accentBlue"
           >
             <div className="absolute inset-0 opacity-15">
               <div className="absolute top-4 left-4 w-8 h-8 border border-white rounded-full"></div>
@@ -102,21 +101,21 @@ export default function ConferencePopover() {
             <div className="flex flex-wrap gap-2 justify-center">
               <Badge
                 variant="secondary"
-                style={{ backgroundColor: '#e6f3ff', color: '#2596be', borderColor: '#2596be' }}
+                className="bg-accentBlue/10 text-accentBlue border-accentBlue"
               >
                 <Users className="w-3 h-3 mr-1" />
                 Networking
               </Badge>
               <Badge
                 variant="secondary"
-                style={{ backgroundColor: '#e6f3ff', color: '#2596be', borderColor: '#2596be' }}
+                className="bg-accentBlue/10 text-accentBlue border-accentBlue"
               >
                 <MapPin className="w-3 h-3 mr-1" />
                 Kathmandu University
               </Badge>
               <Badge
                 variant="secondary"
-                style={{ backgroundColor: '#e6f3ff', color: '#2596be', borderColor: '#2596be' }}
+                className="bg-accentBlue/10 text-accentBlue border-accentBlue"
               >
                 <Sparkles className="w-3 h-3 mr-1" />
                 Innovation
@@ -131,31 +130,27 @@ export default function ConferencePopover() {
               </p>
 
               <div
-                className="rounded-lg p-4 border"
-                style={{
-                  background: 'linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%)',
-                  borderColor: '#2596be',
-                }}
+                className="rounded-lg p-4 border border-accentBlue bg-gradient-to-br from-accentBlue/5 to-techAccent/5"
               >
                 <h4 className="font-semibold text-gray-800 mb-3 flex items-center text-center w-full justify-center text-sm">
-                  <Sparkles className="w-4 h-4 mr-2" style={{ color: '#2596be' }} />
+                  <Sparkles className="w-4 h-4 mr-2 text-accentBlue" />
                   Conference Themes
                 </h4>
                 <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-gray-700">
                   <div className="flex items-center">
-                    <Brain className="w-3 h-3 mr-2 flex-shrink-0" style={{ color: '#2596be' }} />
+                    <Brain className="w-3 h-3 mr-2 flex-shrink-0 text-accentBlue" />
                     <span className="font-medium">Intelligent Systems and Data Innovation</span>
                   </div>
                   <div className="flex items-center">
-                    <Shield className="w-3 h-3 mr-2 flex-shrink-0" style={{ color: '#2596be' }} />
+                    <Shield className="w-3 h-3 mr-2 flex-shrink-0 text-accentBlue" />
                     <span className="font-medium">Secure and Scalable Computing</span>
                   </div>
                   <div className="flex items-center">
-                    <Cpu className="w-3 h-3 mr-2 flex-shrink-0" style={{ color: '#2596be' }} />
+                    <Cpu className="w-3 h-3 mr-2 flex-shrink-0 text-accentBlue" />
                     <span className="font-medium">Emerging Technologies</span>
                   </div>
                   <div className="flex items-center">
-                    <Layers className="w-3 h-3 mr-2 flex-shrink-0" style={{ color: '#2596be' }} />
+                    <Layers className="w-3 h-3 mr-2 flex-shrink-0 text-accentBlue" />
                     <span className="font-medium">Human-Centered Software and Interaction</span>
                   </div>
                 </div>
@@ -165,8 +160,7 @@ export default function ConferencePopover() {
             <div className="flex gap-3 pt-1">
               <Button
                 onClick={handleVisitConference}
-                className="flex-1 text-white shadow-lg hover:opacity-90 text-sm"
-                style={{ background: `linear-gradient(135deg, #2596be 0%, #1e7ba8 100%)` }}
+                className="flex-1 text-white shadow-lg hover:bg-accentBlueDark text-sm bg-accentBlue"
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
                 Visit Conference Website
@@ -174,8 +168,7 @@ export default function ConferencePopover() {
               <Button
                 variant="outline"
                 onClick={() => setIsOpen(false)}
-                className="px-4 hover:bg-blue-50 text-sm"
-                style={{ borderColor: '#2596be', color: '#2596be' }}
+                className="px-4 hover:bg-hoverBgColor text-sm border-accentBlue text-accentBlue"
               >
                 Later
               </Button>
@@ -195,7 +188,7 @@ export default function ConferencePopover() {
                     />
                   </div>
                 </div>
-                <span className="text-xs font-medium" style={{ color: '#2596be' }}>
+                <span className="text-xs font-medium text-accentBlue">
                   Kathmandu University Computer Club
                 </span>
               </div>
