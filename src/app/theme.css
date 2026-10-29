@@ -1,0 +1,167 @@
+/* ============ SINGLE SOURCE OF TRUTH FOR DESIGN ============
+    Light = :root, Dark = .dark (toggled from the navbar, default dark).
+    Put Aileron font files in /public/fonts/ */
+/* Put Aileron font files in /public/fonts/ */
+@font-face {
+  font-family: 'Aileron';
+  src: url('/fonts/Aileron-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aileron';
+  src: url('/fonts/Aileron-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aileron';
+  src: url('/fonts/Aileron-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Aileron', sans-serif;
+}
+  :root{
+    /* LIGHT */
+    --color-bg:#FBFCFD;
+    --color-text:#727272;        /* body text */
+    --color-muted:#727272;       /* unhovered buttons */
+    --color-primary:#394078;     /* static topic, accents */
+    --color-line:#D9DBE3;
+    --color-hover-bg:#394078;    /* pagehero button hover */
+    --color-hover-text:#FBFCFD;
+    
+    --color-frame: #394078; 
+
+    --background:210 20% 99%;
+    --foreground:233 35% 33%;
+    --primary:233 35% 33%;
+    --primary-foreground:210 20% 99%;
+    --muted-foreground:0 0% 45%;
+    --border:231 14% 87%;
+    --input:231 14% 87%;
+    --ring:233 35% 33%;
+    --card:210 20% 99%;
+    --card-foreground:233 35% 33%;
+    --popover:210 20% 99%;
+    --popover-foreground:233 35% 33%;
+    --secondary:231 14% 93%;
+    --secondary-foreground:233 35% 33%;
+    --accent:231 14% 93%;
+    --accent-foreground:233 35% 33%;
+    --destructive:0 63% 40%;
+    --destructive-foreground:210 20% 99%;
+    --radius:0px;
+
+    --font-main:'Aileron',ui-sans-serif,system-ui,sans-serif;
+    /* fluid type: shrinks on phones, full size on desktop */
+    --fs-nav:clamp(1rem,.95rem + .15vw,1.125rem);
+    --fs-text:clamp(1.125rem,1rem + .5vw,1.5rem);
+    --fs-small:clamp(1rem,.95rem + .15vw,1.125rem);
+    --space:clamp(.625rem,.5rem + .4vw,.875rem);  /* was clamp(.875rem,.7rem + .6vw,1.125rem) */
+    --nav-h:4rem;
+    color-scheme:light;
+  }
+
+  .dark{
+    /* DARK */
+   
+    --color-bg:#1E1E1E;
+    --color-text:#FBFCFD;        /* body text */
+    --color-muted:#727272;       /* unhovered buttons */
+    --color-primary:#7D88EB;     /* static topic, accents */
+    --color-line:#333333;
+    --color-hover-bg:#FBFCFD;    /* pagehero button hover */
+    --color-hover-text:#7D88EB;
+
+    --color-frame: #FBFCFD;
+
+    --background:0 0% 12%;
+    --foreground:210 20% 99%;
+    --primary:234 74% 70%;
+    --primary-foreground:0 0% 12%;
+    --muted-foreground:0 0% 45%;
+    --border:0 0% 20%;
+    --input:0 0% 20%;
+    --ring:234 74% 70%;
+    --card:0 0% 12%;
+    --card-foreground:210 20% 99%;
+    --popover:0 0% 12%;
+    --popover-foreground:210 20% 99%;
+    --secondary:0 0% 16%;
+    --secondary-foreground:210 20% 99%;
+    --accent:0 0% 16%;
+    --accent-foreground:210 20% 99%;
+    --destructive:0 63% 50%;
+    color-scheme:dark;
+  }
+  .border-frame { border-color: var(--color-frame); }
+
+  body{font-family:var(--font-main);background:var(--color-bg);color:var(--color-text);font-size:var(--fs-text)}
+  img,svg{max-width:100%}
+  html{scroll-padding-top:var(--nav-h)}
+
+  .bg-page{background:var(--color-bg)}
+  .bg-brand{background:var(--color-primary)}
+  .text-brand{color:var(--color-primary)}
+  .text-onbrand{color:var(--color-bg)}
+  .text-body{color:var(--color-text)}
+  .text-muted-c{color:var(--color-muted)}
+  .hover-brand:hover{color:var(--color-primary)}
+  .border-line{border-color:var(--color-line)}
+  .border-brand{border-color:var(--color-primary)}
+  .fs-nav{font-size:var(--fs-nav)}
+  .fs-text{font-size:var(--fs-text)}
+  .fs-small{font-size:var(--fs-small)}
+  .pad{padding:var(--space)}
+  .pad-y{padding-block:calc(var(--space)*3)}
+  .gap-s{gap:var(--space)}
+  .stack>*+*{margin-top:var(--space)}
+  .rule{border-top:1px solid var(--color-primary);padding-top:.25rem}
+  .section{padding-block:calc(var(--space)*3);background:var(--color-bg)}
+  .wrap{max-width:84rem;margin-inline:auto;padding-inline:var(--space)}
+  .rule-primary{border-top:1px solid var(--color-primary)}
+
+  /* SECONDARY BUTTON: thin bottom line, muted text, instant color swap on hover (no movement) */
+  .btn-secondary{display:flex;width:100%;justify-content:space-between;align-items:center;gap:var(--space);
+    border-bottom:1px solid var(--color-line);padding:.5rem .75rem;font-size:var(--fs-text);line-height:1.2;
+    color:var(--color-muted)}
+  .btn-secondary:hover,.btn-secondary:focus-visible{background:var(--color-hover-bg);color:var(--color-hover-text);outline:none}
+  .btn-secondary svg{flex-shrink:0}
+
+  .btn-secondary[aria-disabled='true']{cursor:not-allowed;opacity:.5}
+.btn-secondary[aria-disabled='true']:hover,
+.btn-secondary[aria-disabled='true']:focus-visible{background:transparent;color:var(--color-muted)}
+
+@keyframes preview-slide {
+  0%, 8%     { transform: translateY(0); }
+  92%, 100%  { transform: translateY(var(--slide)); }
+}
+@keyframes preview-pan {
+  0%, 8%     { object-position: top; }
+  92%, 100%  { object-position: bottom; }
+}
+
+@keyframes tab-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [role='tabpanel'] { animation: none !important; }
+}
+
+/* OUTLINE BUTTON: primary color on any theme, fills on hover */
+.btn-outline{display:inline-flex;align-items:center;justify-content:space-between;gap:.5rem;
+  border:1px solid var(--color-primary);color:var(--color-primary);background:transparent;
+  padding:.375rem .75rem;line-height:1.2;white-space:nowrap}
+.btn-outline:hover,.btn-outline:focus-visible{background:var(--color-primary);color:var(--color-bg);outline:none}
+.btn-outline svg{flex-shrink:0}
+.btn-outline[aria-disabled='true']{cursor:not-allowed;opacity:.5}
+.btn-outline[aria-disabled='true']:hover,
+.btn-outline[aria-disabled='true']:focus-visible{background:transparent;color:var(--color-primary)}

@@ -1,0 +1,18 @@
+{
+  "executive": [
+    { "name": "Abhiyan Dhakal", "position": "President", "photo": "/people/Abhiyan_Dhakal.webp", "linkedin": "https://www.linkedin.com/in/abhiyan-dhakal/", "mail": "itsabhiyandhakal@gmail.com" },
+    { "name": "Saroj Sigdel", "position": "Vice President", "photo": "/people/Saroj_Sigdel.webp", "linkedin": "https://www.linkedin.com/in/saroj-sigdel-52565a303/", "mail": "sarojsigdel883@gmail.com" },
+    { "name": "Mukul Aryal", "position": "General Secretary", "photo": "/people/Mukul_Aryal.webp", "linkedin": "https://www.linkedin.com/in/aryalmukul", "mail": "mukul.development@gmail.com" },
+    { "name": "Suyog Ghimire", "position": "Treasurer", "photo": "/people/Suyog_Ghimire.webp", "linkedin": "https://www.linkedin.com/in/suyog-ghimire-5646621a0", "mail": "ghimiresuyog9@gmail.com" },
+    { "name": "Sakshi KC", "position": "Club Secretary", "photo": "/people/Sakshi_KC.webp", "linkedin": "https://www.linkedin.com/in/sakshi-kc-732162280", "mail": "kcsakshi92@gmail.com" },
+    { "name": "Ashwini Subedi", "position": "KUOSC Coordinator", "photo": "/people/Ashwini_Subedi.webp", "linkedin": "https://www.linkedin.com/in/notashwinii", "mail": "ashwinii.subedi@gmail.com" },
+    { "name": "Aakriti Pandey", "position": "Executive Member", "photo": "/people/Aakriti_Pandey.webp", "linkedin": "https://www.linkedin.com/in/pandeyaakriti", "mail": "aakriti.pandeyyy@gmail.com" },
+    { "name": "Aatmiyata Pokhrel", "position": "Executive Member", "photo": "/people/Aatmiyata_Pokhrel.webp", "linkedin": "https://www.linkedin.com/in/aatmiyata-pokhrel-891256368", "mail": "aatmiyatap@gmail.com" },
+    { "name": "Abhinav Bhatt", "position": "Executive Member", "photo": "/people/Abhinav_Bhatt.webp", "linkedin": "https://www.linkedin.com/in/abhinav-bhatt-9a9349318", "mail": "abhi.navbhatt.ab1@gmail.com" },
+    { "name": "Bishist Bikram Pant", "position": "Executive Member", "photo": "/people/Bishist_B_Pant.webp", "linkedin": "https://www.linkedin.com/in/bishist-pant-336087286", "mail": "bishist.b.pant@gmail.com" },
+    { "name": "Kiran Dahal", "position": "Executive Member", "photo": "/people/Kiran_Dahal.webp", "linkedin": "https://www.linkedin.com/in/kiran-dahal-b0a4371a9", "mail": "dahalkiran926@gmail.com" },
+    { "name": "Lawan Poudyal", "position": "Executive Member", "photo": "/people/Lawan_Poudyal.webp", "linkedin": "https://www.linkedin.com/in/lawan-poudyal", "mail": "poudyallawan@gmail.com" },
+    { "name": "Nischal Subedi", "position": "Executive Member", "photo": "/people/Nischal_Subedi.webp", "linkedin": "https://www.linkedin.com/in/nischal0x01", "mail": "nischal1337@gmail.com" }
+  ],
+  "advisory": []
+}

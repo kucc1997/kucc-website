@@ -4,47 +4,22 @@ import { ExternalLink } from 'lucide-react'
 
 export default function KUOSC() {
   return (
-    <section className="relative py-20 md:py-28 bg-baseBackground tech-grid overflow-hidden">
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Logo Section */}
-          <div className="flex justify-center lg:justify-start order-1 lg:order-1">
-            <div className="relative">
-              {/* Logo container */}
-              <div className="relative bg-gray-900 rounded-3xl p-8 shadow-2xl shadow-accentBlue/20 border border-gray-700">
-                <Image
-                  src="/kuosc.png"
-                  alt="KUOSC Logo"
-                  className="object-contain w-64 h-64"
-                  height={256}
-                  width={256}
-                />
-              </div>
-            </div>
+    <section id="kuosc" className="section border-t border-line">
+      <div className="wrap">
+        <div className="grid lg:grid-cols-2 gap-[calc(var(--space)*3)] items-center">
+          <div className="flex justify-center lg:justify-start">
+            <Image src="/kuosc.png" alt="KUOSC Logo" className="object-contain w-64 h-64" height={256} width={256} />
           </div>
-
-          {/* Content Section */}
-          <div className="space-y-6 order-2 lg:order-2">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-500/30 text-green-400 rounded-full text-sm font-medium backdrop-blur-sm">
+          <div className="stack">
+            <div className="inline-flex border-b border-brand text-brand fs-small">
               <span>Open Source Wing</span>
             </div>
-
-            {/* Title */}
-            <h2 className="space-y-2">
-              <span className="block text-xl md:text-2xl lg:text-3xl font-bold text-gray-400 tech-text">Kathmandu University</span>
-              <span className="block text-2xl md:text-3xl lg:text-4xl font-bold text-accentBlueLight tech-text">Open Source Community</span>
+            <h2>
+              <span className="block fs-text text-muted-c">Kathmandu University</span>
+              <span className="block text-4xl font-semibold text-brand">Open Source Community</span>
             </h2>
-
-            {/* Description */}
-            <p className="text-base text-gray-400 leading-relaxed">
-              <Link
-                href="https://kuosc.org.np"
-                target="_blank"
-                rel="noreferrer"
-                className="font-semibold text-green-400 hover:text-green-300 underline decoration-2 underline-offset-2 transition-colors"
-              >
+            <p className="fs-small text-muted-c">
+              <Link href="https://kuosc.org.np" target="_blank" rel="noreferrer" className="text-brand underline underline-offset-2">
                 Kathmandu University Open Source Community (KUOSC)
               </Link>{' '}
               is the Open Source related wing of KUCC. It is a vibrant historic community from Kathmandu
@@ -54,19 +29,15 @@ export default function KUOSC() {
               Network Training to advocacy activities like Software Freedom Day celebration and
               organizing different community level workshops and events.
             </p>
-
-            {/* CTA Button */}
-            <div className="pt-2">
-              <Link
-                href="https://kuosc.org.np"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/40 transition-all group"
-              >
-                Visit KUOSC Website
-                <ExternalLink size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </Link>
-            </div>
+            <Link
+              href="https://kuosc.org.np"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 pad bg-brand text-onbrand fs-nav"
+            >
+              Visit KUOSC Website
+              <ExternalLink size={18} />
+            </Link>
           </div>
         </div>
       </div>

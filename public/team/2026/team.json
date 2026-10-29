@@ -1,0 +1,19 @@
+{
+  "executive": [
+    { "name": "Sakshi K.C.", "position": "President", "photo": "/people/sakshi-kc.webp", "linkedin": "https://www.linkedin.com/in/sakshi-kc-732162280/", "mail": "kcsakshi92@gmail.com" },
+    { "name": "Kiran Dahal", "position": "Vice-President", "photo": "/people/kiran-dahal.webp", "linkedin": "https://www.linkedin.com/in/kiran-dahal-b0a4371a9/", "mail": "dahalkiran926@gmail.com" },
+    { "name": "Saksham Gyawali", "position": "General Secretary", "photo": "/people/saksham-gyawali.webp", "linkedin": "https://www.linkedin.com/in/saksham-gyawali-0a3aa2228/", "mail": "saksamgyawali12@gmail.com" },
+    { "name": "Innima Karki", "position": "Treasurer", "photo": "/people/innima-karki.webp", "linkedin": "https://www.linkedin.com/in/innima-karki-77a8b2292/", "mail": "innimakarki07@gmail.com" },
+    { "name": "Lawan Poudyal", "position": "Club Secretary", "photo": "/people/Lawan_Poudyal.webp", "linkedin": "https://www.linkedin.com/in/lawan-poudyal", "mail": "poudyallawan@gmail.com" },
+    { "name": "Shriharsh Sharma Acharya", "position": "KUOSC Coordinator", "photo": "/people/shriharsh-sharma.webp", "linkedin": "https://www.linkedin.com/in/shriharsh-acharya-ab8642257/", "mail": "happy.irhs@gmail.com" },
+    { "name": "Mimansh Pokharel", "position": "Executive Member", "photo": "/people/mimansh-pokharel.webp", "linkedin": "https://www.linkedin.com/in/mimansh-neupane/", "mail": "neu.mimansh@gmail.com" },
+    { "name": "Abhyudaya Pokhrel", "position": "Executive Member", "photo": "/people/abhyudaya-pokhrel.webp", "linkedin": "https://www.linkedin.com/in/abhyudaya-pokhrel/", "mail": "abhyudayapokhrel23@gmail.com" },
+    { "name": "Dalton Khatri", "position": "Executive Member", "photo": "/people/dalton-khatri.webp", "linkedin": "https://www.linkedin.com/in/dalton-khatri-856259342/", "mail": "khatridalton1235@gmail.com" },
+    { "name": "Niraj Kumar Ram", "position": "Executive Member", "photo": "/people/niraj-ram.webp", "linkedin": "https://www.linkedin.com/in/nirajram/", "mail": "nirajkumarram194@gmail.com" },
+    { "name": "Sahaj Wagle", "position": "Executive Member", "photo": "/people/sahaj-wagle.webp", "linkedin": "https://www.linkedin.com/in/sahaj-wagle-4a5285385/", "mail": "sahajwagle567@gmail.com" }
+  ],
+  "advisory": [
+    { "name": "Asst. Prof. Pankaj Raj Dawadi, PhD", "position": "Acting Head of Department, DoCSE", "photo": "/people/Pankaj_Raj_Dawadi.webp", "linkedin": "https://www.linkedin.com/in/pankaj-dawadi-83467b7a/", "mail": "pdawadi@ku.edu.np" },
+    { "name": "Sanjog Sigdel", "position": "Lecturer, DoCSE", "photo": "/people/Sanjog_Sigdel1.webp", "linkedin": "https://www.linkedin.com/in/sigdelsanjog", "mail": "sanjog.sigdel@ku.edu.np" }
+  ]
+}

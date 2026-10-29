@@ -1,48 +1,32 @@
 import type { Metadata } from 'next'
-import { Inter as FontSans } from "next/font/google"
-import { Orbitron as FontTech } from "next/font/google"
+// @ts-ignore Next.js provides CSS side-effect import declarations through its generated types
 import './globals.css'
 import Footer from '../components/Footer/Footer'
-import { cn } from "@/lib/utils"
 import NavBar from '../components/Navbar/Navbar'
-
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
-
-const fontTech = FontTech({
-  subsets: ["latin"],
-  variable: "--font-tech",
-  weight: ["400", "500", "600", "700", "800", "900"],
-})
+import { PreviewHost } from '@/components/HoverPreview' // adjust path
+import { ALL_PREVIEW_LINKS } from '@/data/preview-links' 
 
 export const metadata: Metadata = {
   title: 'Kathmandu University Computer Club (KUCC)',
   description:
-    'Kathmandu University Computer Club KUCC is a non-profit, independent club formed by students of the Department of Computer Science and Engineering in the year 1997. Being registered as the first club of Kathmandu University with the registration number 001/1997 in the Student Welfare, KUCC has worked in the field of ICT for twenty years. As an autonomous community supported by the esteemed Kathmandu University Computer Club (KUCC), KUOSC radiates the same spirit of technological excellence and collaboration.',
-  icons: {
-    icon: '/kucc-logo.svg',
-  },
+    'Kathmandu University Computer Club (KUCC) is a non-profit, independent club formed by students of the Department of Computer Science and Engineering in 1997, registered as the first club of Kathmandu University (001/1997).',
+  icons: { icon: '/kucc-logo.svg' },
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+// runs before paint so there is no light/dark flash; default = dark
+const themeScript = `try{var t=localStorage.getItem('theme')||'dark';document.documentElement.classList.toggle('dark',t==='dark')}catch(e){document.documentElement.classList.add('dark')}`
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={cn(
-          "min-h-screen bg-baseBackground font-sans antialiased",
-          fontSans.variable,
-          fontTech.variable
-        )}
-      >
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body className="min-h-screen bg-page antialiased overflow-x-hidden">
         <NavBar />
-        <main className="pt-20">
-          {children}
-        </main>
+        <main style={{ paddingTop: 'var(--nav-h)' }}>{children}</main>
+          <PreviewHost links={ALL_PREVIEW_LINKS} />
         <Footer />
       </body>
     </html>
