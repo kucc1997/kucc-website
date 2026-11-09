@@ -1,0 +1,24 @@
+{
+
+  "executive": [
+    { "name": "Mimansh N. Pokharel", "position": "President", "photo": "/people/mimansh-pokharel.webp", "linkedin": "https://www.linkedin.com/in/mimansh-neupane/", "mail": "mimansh_np@proton.me","message":"blablabla" },
+    { "name": "Abhyudaya Pokhrel", "position": "Vice President", "photo": "/people/abhyudaya-pokhrel.webp", "linkedin": "https://www.linkedin.com/in/abhyudaya-pokhrel/", "mail": "abhyudayapokhrel23@gmail.com" },
+    { "name": "Bishist Bikram Pant", "position": "General Secretary", "photo": "/people/Bishist_B_Pant.webp", "linkedin": "https://www.linkedin.com/in/bishist-pant-336087286", "mail": "bishist.b.pant@gmail.com" },
+    { "name": "Srastha Tulachan", "position": "Treasurer", "photo": "/people/srastha-tulachan.webp", "linkedin": "https://www.linkedin.com/in/srashta-tulachan-1a7347291/", "mail": "tulachansrashta@gmail.com" },
+    { "name": "Abhinab Basnet", "position": "Club Secretary", "photo": "/people/abhinav-basnet.webp", "linkedin": "https://www.linkedin.com/in/abhinabbasnet/", "mail": "abhinab4724@student.ku.edu.np" },
+    { "name": "Aashish Panthi", "position": "KUOSC Coordinator", "photo": "/people/aashish-panthi.webp", "linkedin": "https://www.linkedin.com/in/aashishpanthi/", "mail": "aashish3325@student.ku.edu.np" },
+    { "name": "Aarnav Manandhar", "position": "Executive Member", "photo": "/people/aarnav-manandhar.webp", "linkedin": "https://www.linkedin.com/in/aarnav-manandhar-401687447/", "mail": "aarnavmanandhar207@gmail.com" },
+    { "name": "Anupam Parajuli", "position": "Executive Member", "photo": "/people/anupam-parajuli.webp", "linkedin": "", "mail": "anupamparajuli123@gmail.com" },
+    { "name": "Jasmine Shrestha", "position": "Executive Member", "photo": "/people/jasmine-shrestha.webp", "linkedin": "https://www.linkedin.com/in/xthajasmine/", "mail": "xthajasmine64@gmail.com" },
+    { "name": "Kritam Khatiwada", "position": "Executive Member", "photo": "/people/kritam-khatiwada.webp", "linkedin": "https://www.linkedin.com/in/kritam-khatiwada-63377a360/", "mail": "thekritamkhatiwada@gmail.com" },
+    { "name": "Nafisha Nepal", "position": "Executive Member", "photo": "/people/nafisha-nepal.webp", "linkedin": "https://www.linkedin.com/in/nafisha-nepal-b3798130a/", "mail": "nafishanepal@gmail.com" },
+    { "name": "Prativa Dhami", "position": "Executive Member", "photo": "/people/prativa-dhami.webp", "linkedin": "https://www.linkedin.com/in/prativa-dhami-230a35313/", "mail": "prativa.dhami.005@gmail.com" },
+    { "name": "Rhigsam Gautam", "position": "Executive Member", "photo": "/people/rhigsam-gautam.webp", "linkedin": "https://www.linkedin.com/in/rhigsam-gautam-3b4533432/", "mail": "grhigsam@gmail.com" },
+    { "name": "Roshan Ghimire", "position": "Executive Member", "photo": "/people/roshan-ghimire.webp", "linkedin": "https://www.linkedin.com/in/roshan-ghimire-83b149398/", "mail": "rooshanghimire@gmail.com" },
+    { "name": "Sanskar Shrestha", "position": "Executive Member", "photo": "/people/sanskar-shrestha.webp", "linkedin": "https://www.linkedin.com/in/sanskar-shresthaml/", "mail": "sanskar6125@student.ku.edu.np" }
+  ],
+  "advisory": [
+    { "name": "Asst. Prof. Pankaj Raj Dawadi, PhD", "position": "Acting Head of Department, DoCSE", "photo": "/people/Pankaj_Raj_Dawadi.webp", "linkedin": "https://www.linkedin.com/in/pankaj-dawadi-83467b7a/", "mail": "pdawadi@ku.edu.np" },
+    { "name": "Rabina Shrestha", "position": "Lecturer, DoCSE", "photo": "/people/rabina-shrestha.webp", "linkedin": "https://www.linkedin.com/in/rabina-s/", "mail": "rabina.shrestha@ku.edu.np" }
+  ]
+}
